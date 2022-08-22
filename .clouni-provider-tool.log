@@ -1,0 +1,37 @@
+2022-08-05 17:08:53,422 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-05 17:08:53,431 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-05 17:08:53,433 - INFO - MainThread - Server started
+2022-08-05 17:09:00,309 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-05 17:09:00,309 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-05 17:09:00,532 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/ISPRAS/clouni_provider_tool/venv/lib/python3.6/site-packages/clouni_provider_tool-0.0.1-py3.6.egg/grpc_server/clouni_provider_tool.py", line 73, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+TypeError: <provider_tool.providers.common.tosca_template.ProviderToscaTemplate object at 0x7fd186ea8c18> has type ProviderToscaTemplate, but expected one of: bytes, unicode
+2022-08-05 17:09:00,533 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-08-05 17:09:00,533 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-05 17:12:18,698 - INFO - MainThread - Server stopped
+2022-08-05 17:12:18,698 - INFO - MainThread - Exited
+2022-08-05 17:12:22,710 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-05 17:12:22,719 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-05 17:12:22,720 - INFO - MainThread - Server started
+2022-08-05 17:12:26,894 - INFO - MainThread - Server stopped
+2022-08-05 17:12:26,895 - INFO - MainThread - Exited
+2022-08-05 17:12:29,168 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-05 17:12:29,177 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-05 17:12:29,179 - INFO - MainThread - Server started
+2022-08-05 17:13:26,724 - INFO - MainThread - Server stopped
+2022-08-05 17:13:26,724 - INFO - MainThread - Exited
+2022-08-05 17:13:47,193 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-05 17:13:47,202 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-05 17:13:47,204 - INFO - MainThread - Server started
+2022-08-05 17:14:44,887 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-05 17:14:44,896 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-05 17:14:44,898 - INFO - MainThread - Server started
+2022-08-05 17:14:47,799 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-05 17:14:47,799 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-05 17:14:48,076 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-06 00:16:57,987 - INFO - MainThread - Server stopped
+2022-08-06 00:16:58,014 - INFO - MainThread - Server stopped
+2022-08-06 00:16:58,015 - INFO - MainThread - Exited
+2022-08-06 00:16:58,027 - INFO - MainThread - Exited
