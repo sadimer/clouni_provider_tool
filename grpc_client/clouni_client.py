@@ -1,8 +1,7 @@
-import ast
-import json
 
 import six
 import yaml
+from yaml import Loader
 
 from grpc_server.api_pb2 import ClouniProviderToolResponse, ClouniProviderToolRequest
 import grpc_server.api_pb2_grpc as api_pb2_grpc
@@ -72,7 +71,7 @@ def main(args=None):
                         help='Port of server, default 50051')
     parser.add_argument('--configuration-tool-endpoint',
                         type=str,
-                        help='Endpoint of configuration tool server, default localhost:50052')
+                        help='Endpoint of configuration tool server')
 
     (args, args_list) = parser.parse_known_args(args)
     channel = grpc.insecure_channel(args.host + ':' + str(args.port))
@@ -115,7 +114,8 @@ def main(args=None):
                     extra[k] = int(v)
                 else:
                     extra[k] = float(v)
-        request.extra = [k, v]
+
+    request.extra = yaml.dump(extra)
 
     response = stub.ClouniProviderTool(request)
     print("* Status *\n")
@@ -124,5 +124,4 @@ def main(args=None):
     print("\n* Error *\n")
     print(response.error)
     print("\n* Content *\n")
-    content = ast.literal_eval(response.content)
-    print(yaml.dump(content))
+    print(response.content)

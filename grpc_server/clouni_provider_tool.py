@@ -1,10 +1,6 @@
-import ast
-import json
-from multiprocessing import Queue, Process
 
-from time import sleep
-
-from graphlib import TopologicalSorter
+import yaml
+from yaml import Loader
 
 from grpc_server.api_pb2 import ClouniProviderToolResponse, ClouniProviderToolRequest, ClouniConfigurationToolRequest
 import grpc_server.api_pb2_grpc as api_pb2_grpc
@@ -52,6 +48,9 @@ class TranslatorServer(object):
         self.host_parameter = argv['host_parameter']
         self.public_key_path = argv['public_key_path']
 
+        if self.extra:
+            self.extra = yaml.load(self.extra, Loader=Loader)
+
         for k, v in self.extra.items():
             if isinstance(v, six.string_types):
                 if v.isnumeric():
@@ -59,21 +58,26 @@ class TranslatorServer(object):
                         self.extra[k] = int(v)
                     else:
                         self.extra[k] = float(v)
+                if v == 'true':
+                    self.extra[k] = True
+                if v == 'false':
+                    self.extra[k] = False
 
         self.working_dir = os.getcwd()
-        dict_tpl = translate(self.template_file_content, self.validate_only, self.provider,
+        dict_tpl, extra = translate(self.template_file_content, self.validate_only, self.provider,
                                                    self.configuration_tool, self.cluster_name,
                                                    public_key_path=self.public_key_path,
                                                    host_ip_parameter=self.host_parameter, is_delete=self.is_delete,
                                                    extra={'global': self.extra}, log_level=self.log_level, a_file=False)
-        self.output = str(dict_tpl)
+        self.output = yaml.dump(dict_tpl)
+        self.extra = yaml.dump(extra)
         if self.configuration_tool_endpoint:
             request = ClouniConfigurationToolRequest()
             request.provider_template = self.output
             request.cluster_name = self.cluster_name
             request.delete = self.is_delete
             request.configuration_tool = self.configuration_tool
-            # extra?
+            request.extra = self.extra
             request.log_level = self.log_level
             request.debug = self.debug
             channel = grpc.insecure_channel(self.configuration_tool_endpoint)
@@ -153,9 +157,10 @@ class ClouniProviderToolServicer(api_pb2_grpc.ClouniProviderToolServicer):
             args['configuration_tool'] = request.configuration_tool
         else:
             args['configuration_tool'] = 'ansible'
-        args['extra'] = {}
-        for key, value in request.extra.items():
-            args['extra'][key] = value
+        if request.extra != "":
+            args['extra'] = request.extra
+        else:
+            args['extra'] = None
         if request.host_parameter != "":
             args['host_parameter'] = request.host_parameter
         else:

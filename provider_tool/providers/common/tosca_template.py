@@ -87,15 +87,15 @@ class ProviderToscaTemplate(object):
         self.make_extended_notations()
         self.add_dependency_requirements()
 
-        self.dict_tpl = {}
+        self.dict_tpl = {TOPOLOGY_TEMPLATE: {}}
         if self.node_templates:
-            self.dict_tpl[NODE_TEMPLATES] = self.node_templates
+            self.dict_tpl[TOPOLOGY_TEMPLATE][NODE_TEMPLATES] = self.node_templates
         if self.relationship_templates:
-            self.dict_tpl[RELATIONSHIP_TEMPLATES] = self.relationship_templates
+            self.dict_tpl[TOPOLOGY_TEMPLATE][RELATIONSHIP_TEMPLATES] = self.relationship_templates
         if self.outputs:
-            self.dict_tpl[OUTPUTS] = self.outputs
+            self.dict_tpl[TOPOLOGY_TEMPLATE][OUTPUTS] = self.outputs
         if self.inputs:
-            self.dict_tpl[INPUTS] = self.inputs
+            self.dict_tpl[TOPOLOGY_TEMPLATE][INPUTS] = self.inputs
 
     def add_dependency_requirements(self):
         dependencies = self.translate_normative_graph()

@@ -120,4 +120,6 @@ def translate(template_file, validate_only, provider, configuration_tool, cluste
     # Parse and generate new TOSCA service template with only provider specific TOSCA types from normative types
     tosca = ProviderToscaTemplate(tosca_parser_template_object, provider, configuration_tool, cluster_name,
                                   host_ip_parameter, public_key_path, is_delete, common_map_files=default_map_files)
-    return tosca.dict_tpl
+    if not extra:
+        extra = {}
+    return tosca.dict_tpl, utils.deep_update_dict(extra, tosca.extra_configuration_tool_params.get(configuration_tool, {}))
