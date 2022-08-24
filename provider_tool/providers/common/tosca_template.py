@@ -31,7 +31,7 @@ class ProviderToscaTemplate(object):
             if not self.provider_config.config[self.provider_config.MAIN_SECTION].get(sec):
                 logging.error("Provider configuration parameter \'%s\' has missing value" % sec)
                 logging.error("Translating failed")
-                sys.exit(1)
+                raise Exception("Provider configuration parameter \'%s\' has missing value" % sec)
 
         map_files = self.provider_config.get_section(self.provider_config.MAIN_SECTION) \
             .get(TOSCA_ELEMENTS_MAP_FILE)
@@ -49,7 +49,7 @@ class ProviderToscaTemplate(object):
         for file in self.map_files:
             if not os.path.isfile(file):
                 logging.error("Mapping file for provider %s not found: %s" % (self.provider, file))
-                sys.exit(1)
+                raise Exception("Mapping file for provider %s not found: %s" % (self.provider, file))
 
         topology_template = tosca_parser_template_object.topology_template
         self.inputs = topology_template.tpl.get(INPUTS, {})
@@ -103,10 +103,10 @@ class ProviderToscaTemplate(object):
             for elem in value:
                 if elem not in self.node_templates:
                     logging.error('Unexpected values: node \'%s\' not in node templates' % elem)
-                    sys.exit(1)
+                    raise Exception('Unexpected values: node \'%s\' not in node templates' % elem)
                 if key not in self.node_templates:
                     logging.error('Unexpected values: node \'%s\' not in node templates' % key)
-                    sys.exit(1)
+                    raise Exception('Unexpected values: node \'%s\' not in node templates' % key)
                 if REQUIREMENTS not in self.node_templates[key]:
                     self.node_templates[key][REQUIREMENTS] = []
                 self.node_templates[key][REQUIREMENTS].append({'dependency': {NODE: elem}})
@@ -235,7 +235,7 @@ class ProviderToscaTemplate(object):
 
         if not os.path.isfile(file_definition):
             logging.error("TOSCA definition file not found: %s" % file_definition)
-            sys.exit(1)
+            raise Exception("TOSCA definition file not found: %s" % file_definition)
 
         return file_definition
 
@@ -254,7 +254,7 @@ class ProviderToscaTemplate(object):
                     except yaml.scanner.ScannerError as e:
                         logging.error("Mapping file \'%s\' must be of type JSON or YAMl" % file)
                         logging.error("Error parsing TOSCA template: %s%s" % (e.problem, e.context_mark))
-                        sys.exit(1)
+                        raise Exception("Error parsing TOSCA template: %s%s" % (e.problem, e.context_mark))
         return r
 
     def translate_to_provider(self):
@@ -284,7 +284,7 @@ class ProviderToscaTemplate(object):
             topology_tpl = TopologyTemplate(dict_tpl, self.definitions, rel_types=rel_types)
         except:
             logging.exception("Failed to parse intermidiate non-normative TOSCA template with OpenStack tosca-parser")
-            sys.exit(1)
+            raise Exception("Failed to parse intermidiate non-normative TOSCA template with OpenStack tosca-parser")
 
         self.extra_configuration_tool_params = utils.deep_update_dict(self.extra_configuration_tool_params, new_extra)
 
@@ -303,7 +303,7 @@ class ProviderToscaTemplate(object):
         if value[0] in [SOURCE, TARGET]:
             # TODO
             logging.critical("Not implemented")
-            sys.exit(1)
+            raise Exception("Not implemented")
         node_tmpl = self.node_templates[value[0]]
 
         if node_tmpl.get(REQUIREMENTS, None) is not None:
@@ -331,7 +331,7 @@ class ProviderToscaTemplate(object):
             tmpl_properties = tmpl_properties[key]
         if tmpl_properties is None:
             logging.error("Failed to get property: %s" % json.dumps(value))
-            sys.exit(1)
+            raise Exception("Failed to get property: %s" % json.dumps(value))
         return tmpl_properties
 
     def resolve_get_property_functions(self, data=None, tmpl_name=None):
@@ -403,7 +403,7 @@ class ProviderToscaTemplate(object):
         if parent_def_name is not None:
             if def_type == parent_def_name:
                 logging.critical("Invalid type \'%s\' is derived from itself" % def_type)
-                sys.exit(1)
+                raise Exception("Invalid type \'%s\' is derived from itself" % def_type)
             if parent_def_name in ready_set:
                 parent_definition = self.definitions[parent_def_name]
                 is_software_parent = parent_def_name in self.software_types

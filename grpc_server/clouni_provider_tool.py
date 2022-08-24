@@ -71,7 +71,7 @@ class TranslatorServer(object):
                                                    extra={'global': self.extra}, log_level=self.log_level, a_file=False)
         self.output = yaml.dump(dict_tpl)
         self.extra = yaml.dump(extra)
-        if self.configuration_tool_endpoint:
+        if self.configuration_tool_endpoint and not self.validate_only:
             request = ClouniConfigurationToolRequest()
             request.provider_template = self.output
             request.cluster_name = self.cluster_name
@@ -82,7 +82,10 @@ class TranslatorServer(object):
             request.debug = self.debug
             channel = grpc.insecure_channel(self.configuration_tool_endpoint)
             stub = api_pb2_grpc.ClouniConfigurationToolStub(channel)
-            self.output = stub.ClouniConfigurationTool(request).content
+            response = stub.ClouniConfigurationTool(request)
+            self.output = response.content
+            if response.error:
+                raise Exception(response.error)
 
 
 
@@ -216,7 +219,7 @@ def parse_args(argv):
         args, args_list = parser.parse_known_args(argv)
     except argparse.ArgumentError:
         logging.critical("Failed to parse arguments. Exiting")
-        sys.exit(1)
+        raise Exception("Failed to parse arguments. Exiting")
     return args.max_workers, args.host, args.port, args.verbose, args.no_host_error, args.stop, args.foreground
 
 
@@ -271,12 +274,12 @@ def serve(argv =  None):
     # Argument checkа
     if max_workers < 1:
         logger.critical("Invalid max_workers argument: should be greater than 0. Exiting")
-        sys.exit(1)
+        raise Exception("Invalid max_workers argument: should be greater than 0. Exiting")
     if port == 0:
         logger.warning("Port 0 given - port will be runtime chosen - may be an error")
     if port < 0:
         logger.critical("Invalid port argument: should be greater or equal than 0. Exiting")
-        sys.exit(1)
+        raise Exception("Invalid port argument: should be greater or equal than 0. Exiting")
     # Starting server
     try:
         server = grpc.server(futures.ThreadPoolExecutor(max_workers=max_workers))
@@ -293,7 +296,7 @@ def serve(argv =  None):
                     logger.warning("Failed to start server on %s:%s", host, port)
                 else:
                     logger.error("Failed to start server on %s:%s", host, port)
-                    sys.exit(1)
+                    raise Exception("Failed to start server on %s:%s", host, port)
             if host_exist:
                 with open("/tmp/.clouni-provider-tool.pid", mode='a') as f:
                     f.write(str(os.getpid()) + '\n')
@@ -302,10 +305,10 @@ def serve(argv =  None):
                 print("Server started")
             else:
                 logger.critical("No host exists")
-                sys.exit(1)
+                raise Exception("No host exists")
     except Exception:
         logger.critical("Unable to start the server")
-        sys.exit(1)
+        raise Exception("Unable to start the server")
     signal.signal(signal.SIGINT, partial(exit_gracefully, server, logger))
     signal.signal(signal.SIGTERM, partial(exit_gracefully, server, logger))
     while True:

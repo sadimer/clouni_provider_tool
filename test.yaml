@@ -1,0 +1,72 @@
+topology_template:
+  node_templates:
+    software_for_cumulus_software_component:
+      interfaces:
+        Standard:
+          create:
+            implementation: ansible-operation-example.yaml
+      requirements:
+      - host:
+          node: testing_tosca_instance
+      - dependency:
+          node: testing_tosca_instance
+      - dependency:
+          node: testing_tosca_key
+      - dependency:
+          node: testing_tosca_group
+      type: tosca.nodes.SoftwareComponent
+    testing_tosca_group:
+      properties:
+        description: testing_tosca_group
+        name: testing_tosca_group
+        rules:
+        - cidr_ip: 0.0.0.0
+          ports:
+          - 22
+          proto: tcp
+        - cidr_ip: 0.0.0.0
+        rules_egress:
+        - cidr_ip: 0.0.0.0
+      type: amazon.nodes.Group
+    testing_tosca_instance:
+      interfaces:
+        Standard:
+          create:
+            implementation: add_host.yaml
+            inputs:
+              ansible_user: xenial
+              group: testing_tosca_instance_public_address
+              host_ip: '{{ host_ip | default([]) + [[ "testing_tosca_public_address_"
+                + item, testing_tosca_instance.results[item | int - 1].instances[0].public_ip_address
+                ]] }}'
+      properties:
+        name: testing_tosca_{{ item }}
+        network:
+          assign_public_ip: true
+        tags:
+          metadata: cube_master=true
+      requirements:
+      - key_name:
+          node: testing_tosca_key
+      - vpc_subnet_id:
+          node_filter:
+            properties:
+            - id: not implemented yet
+      - instance_type:
+          node_filter:
+            properties:
+            - vcpus: 1
+            - storage: 5.0
+            - memory: 1.0
+      - security_groups:
+          node: testing_tosca_group
+      - image_id:
+          node_filter:
+            properties:
+            - image_id: not implemented yet
+      type: amazon.nodes.Instance
+    testing_tosca_key:
+      properties:
+        key_material: '{{ lookup(''file'', ''~/.ssh/id_rsa.pub'') }}'
+        name: testing_tosca_key
+      type: amazon.nodes.Key

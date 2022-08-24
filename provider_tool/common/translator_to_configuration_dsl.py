@@ -51,7 +51,7 @@ def translate(template_file, validate_only, provider, configuration_tool, cluste
     for sec in REQUIRED_CONFIGURATION_PARAMS:
         if sec not in config.get_section(config.MAIN_SECTION).keys():
             logging.error('Provider configuration parameter "%s" is missing in configuration file' % sec)
-            sys.exit(1)
+            raise Exception('Provider configuration parameter "%s" is missing in configuration file' % sec)
 
     if a_file:
         template_file = os.path.join(os.getcwd(), template_file)
@@ -64,7 +64,7 @@ def translate(template_file, validate_only, provider, configuration_tool, cluste
         template = yaml.load(template_content, Loader=yaml.SafeLoader)
     except yaml.scanner.ScannerError as e:
         logging.error("Error parsing TOSCA template: %s%s" % (e.problem, e.context_mark))
-        sys.exit(1)
+        raise Exception("Error parsing TOSCA template: %s%s" % (e.problem, e.context_mark))
 
     def_files = config.get_section(config.MAIN_SECTION).get(TOSCA_ELEMENTS_DEFINITION_FILE)
     if isinstance(def_files, six.string_types):
@@ -84,7 +84,7 @@ def translate(template_file, validate_only, provider, configuration_tool, cluste
                 elif isinstance(import_value, dict):
                     if import_value.get('file', None) is None:
                         logging.error("Imports %s doesn't contain \'file\' key" % import_key)
-                        sys.exit(1)
+                        raise Exception("Imports %s doesn't contain \'file\' key" % import_key)
                     else:
                         template[IMPORTS][i] = import_value['file']
                     if import_value.get('repository', None) is not None:
@@ -97,17 +97,13 @@ def translate(template_file, validate_only, provider, configuration_tool, cluste
         tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
     except:
         logging.exception("Got exception from OpenStack tosca-parser")
-        sys.exit(1)
+        raise Exception("Got exception from OpenStack tosca-parser")
 
     # After validation, all templates are imported
     if validate_only:
         msg = 'The input "%(template_file)s" successfully passed validation.' \
               % {'template_file': template_file if a_file else 'TOSCA template'}
-        return msg
-
-    if not provider:
-        logging.error("Provider must be specified unless \'validate-only\' flag is used")
-        sys.exit(1)
+        return msg, extra
 
     map_files = config.get_section(config.MAIN_SECTION).get(TOSCA_ELEMENTS_MAP_FILE)
     if isinstance(map_files, six.string_types):

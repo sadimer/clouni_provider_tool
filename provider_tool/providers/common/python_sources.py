@@ -43,8 +43,7 @@ def get_unit_numb(source_value, source_unit, target_unit):
     target_grade = SCALAR_UNIT_LIST_ALL.get(target_unit_up)
     if (target_grade is None):
         logging.error("Unsupported unit \'%s\'" % target_unit)
-        sys.exit(1)
-        return
+        raise Exception("Unsupported unit \'%s\'" % target_unit)
     if is_bibyte_source and is_bibyte_target:
         digit = 1024
     if is_bibyte_target and not is_bibyte_source:

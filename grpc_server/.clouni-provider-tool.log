@@ -4964,3 +4964,556 @@ grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
 2022-08-23 19:52:18,730 - INFO - ThreadPoolExecutor-0_2 - Response send
 2022-08-23 19:52:27,506 - INFO - MainThread - Server stopped
 2022-08-23 19:52:27,506 - INFO - MainThread - Exited
+2022-08-24 13:13:47,169 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 13:13:47,178 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 13:13:47,196 - INFO - MainThread - Server started
+2022-08-24 13:13:48,037 - INFO - MainThread - Server stopped
+2022-08-24 13:13:48,037 - INFO - MainThread - Exited
+2022-08-24 13:14:02,258 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 13:14:02,264 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 13:14:02,266 - INFO - MainThread - Server started
+2022-08-24 13:14:28,225 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 13:14:28,226 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 13:14:32,735 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 13:17:27,466 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 13:17:27,466 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 13:17:27,835 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 13:46:43,434 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 13:46:43,434 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 13:46:47,927 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 13:49:24,991 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 13:49:24,991 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 13:49:29,485 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 13:50:37,252 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-08-24 13:50:37,252 - INFO - ThreadPoolExecutor-0_4 - Request - status OK
+2022-08-24 13:50:41,737 - INFO - ThreadPoolExecutor-0_4 - Response send
+2022-08-24 13:51:34,664 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 13:51:34,664 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 13:51:39,159 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 13:53:38,566 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-08-24 13:53:38,567 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-08-24 13:56:29,544 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 13:56:29,544 - INFO - ThreadPoolExecutor-0_0 - Validate only request - status TEMPLATE_VALID
+2022-08-24 13:56:29,594 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 71, in __init__
+    extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+ValueError: too many values to unpack (expected 2)
+2022-08-24 13:56:29,594 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-08-24 13:56:29,595 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 13:56:48,636 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-08-24 13:56:48,636 - INFO - ThreadPoolExecutor-0_2 - Validate only request - status TEMPLATE_VALID
+2022-08-24 13:56:48,683 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 71, in __init__
+    extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+ValueError: too many values to unpack (expected 2)
+2022-08-24 13:56:48,683 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-08-24 13:56:48,683 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-08-24 13:57:38,162 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-08-24 13:57:38,162 - INFO - ThreadPoolExecutor-0_4 - Validate only request - status TEMPLATE_VALID
+2022-08-24 13:57:38,209 - ERROR - ThreadPoolExecutor-0_4 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 71, in __init__
+    extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+ValueError: too many values to unpack (expected 2)
+2022-08-24 13:57:38,209 - INFO - ThreadPoolExecutor-0_4 - Request - status ERROR
+2022-08-24 13:57:38,210 - INFO - ThreadPoolExecutor-0_4 - Response send
+2022-08-24 13:58:06,267 - INFO - ThreadPoolExecutor-0_5 - Request received
+2022-08-24 13:58:06,267 - INFO - ThreadPoolExecutor-0_5 - Validate only request - status TEMPLATE_VALID
+2022-08-24 13:58:06,312 - ERROR - ThreadPoolExecutor-0_5 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 71, in __init__
+    extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+ValueError: too many values to unpack (expected 2)
+2022-08-24 13:58:06,312 - INFO - ThreadPoolExecutor-0_5 - Request - status ERROR
+2022-08-24 13:58:06,312 - INFO - ThreadPoolExecutor-0_5 - Response send
+2022-08-24 13:59:32,396 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 13:59:32,396 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 13:59:36,894 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 14:01:58,428 - INFO - ThreadPoolExecutor-0_6 - Request received
+2022-08-24 14:01:58,428 - INFO - ThreadPoolExecutor-0_6 - Validate only request - status TEMPLATE_VALID
+2022-08-24 14:01:58,472 - ERROR - ThreadPoolExecutor-0_6 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 71, in __init__
+    extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+ValueError: too many values to unpack (expected 2)
+2022-08-24 14:01:58,472 - INFO - ThreadPoolExecutor-0_6 - Request - status ERROR
+2022-08-24 14:01:58,473 - INFO - ThreadPoolExecutor-0_6 - Response send
+2022-08-24 14:03:32,119 - INFO - MainThread - Server stopped
+2022-08-24 14:03:32,120 - INFO - MainThread - Exited
+2022-08-24 14:03:33,801 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 14:03:33,806 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 14:03:33,807 - INFO - MainThread - Server started
+2022-08-24 14:03:36,938 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:03:36,938 - INFO - ThreadPoolExecutor-0_0 - Validate only request - status TEMPLATE_VALID
+2022-08-24 14:03:37,002 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:03:44,261 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 14:03:44,262 - INFO - ThreadPoolExecutor-0_1 - Validate only request - status TEMPLATE_VALID
+2022-08-24 14:03:44,309 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 14:04:43,793 - INFO - MainThread - Server stopped
+2022-08-24 14:04:43,793 - INFO - MainThread - Exited
+2022-08-24 14:04:45,180 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 14:04:45,185 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 14:04:45,186 - INFO - MainThread - Server started
+2022-08-24 14:04:50,797 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:04:50,797 - INFO - ThreadPoolExecutor-0_0 - Validate only request - status TEMPLATE_VALID
+2022-08-24 14:04:50,854 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:04:55,507 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:04:55,507 - INFO - ThreadPoolExecutor-0_0 - Validate only request - status TEMPLATE_VALID
+2022-08-24 14:04:55,550 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:12:03,111 - INFO - MainThread - Server stopped
+2022-08-24 14:12:03,112 - INFO - MainThread - Exited
+2022-08-24 14:12:05,536 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 14:12:05,541 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 14:12:05,542 - INFO - MainThread - Server started
+2022-08-24 14:12:25,493 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:12:25,493 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:12:29,992 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:12:44,078 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:12:44,078 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:12:48,554 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:13:26,970 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 14:13:26,971 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 14:13:31,455 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 14:13:33,516 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:13:33,516 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:13:33,899 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:15:42,399 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-08-24 14:15:42,400 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-08-24 14:15:42,735 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-08-24 14:15:53,807 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 14:15:53,808 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 14:15:55,227 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 14:16:12,196 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-08-24 14:16:12,197 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-08-24 14:16:13,602 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-08-24 14:16:44,124 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:16:44,124 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:16:45,442 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:16:48,255 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-08-24 14:16:48,255 - INFO - ThreadPoolExecutor-0_4 - Request - status OK
+2022-08-24 14:16:51,623 - INFO - ThreadPoolExecutor-0_4 - Response send
+2022-08-24 14:17:35,487 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-08-24 14:17:35,487 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-08-24 14:17:38,850 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-08-24 14:20:39,181 - INFO - ThreadPoolExecutor-0_5 - Request received
+2022-08-24 14:20:39,181 - INFO - ThreadPoolExecutor-0_5 - Request - status OK
+2022-08-24 14:20:39,459 - INFO - ThreadPoolExecutor-0_5 - Response send
+2022-08-24 14:21:17,686 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 14:21:17,686 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 14:21:19,001 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 14:21:38,769 - INFO - MainThread - Server stopped
+2022-08-24 14:21:38,770 - INFO - MainThread - Exited
+2022-08-24 14:21:42,561 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 14:21:42,569 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 14:21:42,571 - INFO - MainThread - Server started
+2022-08-24 14:21:46,269 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:21:46,269 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:22:30,705 - INFO - MainThread - Server stopped
+2022-08-24 14:22:30,706 - INFO - MainThread - Exited
+2022-08-24 14:22:33,843 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 14:22:33,848 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 14:22:33,851 - INFO - MainThread - Server started
+2022-08-24 14:23:27,431 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:23:27,431 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:24:47,892 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 85, in __init__
+    self.output = stub.ClouniConfigurationTool(request).content
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1661340287.892578255","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-08-24 14:24:47,893 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-08-24 14:24:47,893 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:24:53,011 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 14:24:53,012 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 14:25:00,458 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 14:27:38,439 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:27:38,439 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:27:41,767 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:33:23,167 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 14:33:23,167 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 14:33:26,506 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 14:33:58,167 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-08-24 14:33:58,167 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-08-24 14:34:19,231 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:34:19,231 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:34:33,426 - INFO - ThreadPoolExecutor-0_6 - Request received
+2022-08-24 14:34:33,426 - INFO - ThreadPoolExecutor-0_6 - Request - status OK
+2022-08-24 14:34:44,040 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 14:34:44,040 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 14:34:44,313 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 14:38:00,552 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-08-24 14:38:00,552 - INFO - ThreadPoolExecutor-0_4 - Request - status OK
+2022-08-24 14:38:17,557 - INFO - MainThread - Server stopped
+2022-08-24 14:38:17,557 - INFO - MainThread - Exited
+2022-08-24 14:38:19,255 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 14:38:19,259 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 14:38:19,261 - INFO - MainThread - Server started
+2022-08-24 14:38:22,150 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:38:22,150 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:38:22,209 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 97, in translate
+    tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py", line 115, in __init__
+    self.verify_template()
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py", line 312, in verify_template
+    '\n\t'.join(ExceptionCollector.getExceptionsReport()))
+toscaparser.common.exception.ValidationError: 
+The pre-parsed input failed validation with the following error(s): 
+
+	UnknownFieldError: "properties" of template "testing_tosca" contains unknown field "ip_addres". Refer to the definition to verify valid values.
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 884, in _bootstrap
+			self._bootstrap_inner()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 916, in _bootstrap_inner
+			self.run()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 864, in run
+			self._target(*self._args, **self._kwargs)
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/concurrent/futures/thread.py, line 69, in _worker
+			work_item.run()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/concurrent/futures/thread.py, line 56, in run
+			result = self.fn(*self.args, **self.kwargs)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_server.py, line 553, in _unary_response_in_pool
+			argument, request_deserializer)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_server.py, line 435, in _call_behavior
+			response_or_iterator = behavior(argument, context)
+		File /home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py, line 106, in ClouniProviderTool
+			response.content = TranslatorServer(args).output
+		File /home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py, line 71, in __init__
+			extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+		File /home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py, line 97, in translate
+			tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py, line 103, in __init__
+			self.topology_template = self._topology_template()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py, line 122, in _topology_template
+			None)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/topology_template.py, line 57, in __init__
+			self.nodetemplates = self._nodetemplates()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/topology_template.py, line 97, in _nodetemplates
+			tpl.validate(self)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/nodetemplate.py, line 188, in validate
+			self._validate_capabilities()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 185, in _validate_capabilities
+			self._validate_capabilities_properties(capabilities)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 194, in _validate_capabilities_properties
+			props[self.PROPERTIES])
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 228, in _common_validate_properties
+			'properties')
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 272, in _common_validate_field
+			field=name))
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 71, in __init__
+    extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 100, in translate
+    raise Exception("Got exception from OpenStack tosca-parser")
+Exception: Got exception from OpenStack tosca-parser
+2022-08-24 14:38:22,210 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-08-24 14:38:22,210 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:38:35,140 - INFO - MainThread - Server stopped
+2022-08-24 14:38:35,140 - INFO - MainThread - Exited
+2022-08-24 14:38:37,148 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 14:38:37,153 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 14:38:37,154 - INFO - MainThread - Server started
+2022-08-24 14:38:39,968 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:38:39,968 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:54:08,597 - INFO - MainThread - Server stopped
+2022-08-24 14:54:08,597 - INFO - MainThread - Exited
+2022-08-24 14:54:10,777 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 14:54:10,781 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 14:54:10,784 - INFO - MainThread - Server started
+2022-08-24 14:54:20,104 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:54:20,105 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:54:20,162 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 97, in translate
+    tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py", line 115, in __init__
+    self.verify_template()
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py", line 312, in verify_template
+    '\n\t'.join(ExceptionCollector.getExceptionsReport()))
+toscaparser.common.exception.ValidationError: 
+The pre-parsed input failed validation with the following error(s): 
+
+	UnknownFieldError: "properties" of template "testing_tosca" contains unknown field "ip_addres". Refer to the definition to verify valid values.
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 884, in _bootstrap
+			self._bootstrap_inner()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 916, in _bootstrap_inner
+			self.run()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 864, in run
+			self._target(*self._args, **self._kwargs)
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/concurrent/futures/thread.py, line 69, in _worker
+			work_item.run()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/concurrent/futures/thread.py, line 56, in run
+			result = self.fn(*self.args, **self.kwargs)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_server.py, line 553, in _unary_response_in_pool
+			argument, request_deserializer)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_server.py, line 435, in _call_behavior
+			response_or_iterator = behavior(argument, context)
+		File /home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py, line 106, in ClouniProviderTool
+			response.content = TranslatorServer(args).output
+		File /home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py, line 71, in __init__
+			extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+		File /home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py, line 97, in translate
+			tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py, line 103, in __init__
+			self.topology_template = self._topology_template()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py, line 122, in _topology_template
+			None)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/topology_template.py, line 57, in __init__
+			self.nodetemplates = self._nodetemplates()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/topology_template.py, line 97, in _nodetemplates
+			tpl.validate(self)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/nodetemplate.py, line 188, in validate
+			self._validate_capabilities()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 185, in _validate_capabilities
+			self._validate_capabilities_properties(capabilities)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 194, in _validate_capabilities_properties
+			props[self.PROPERTIES])
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 228, in _common_validate_properties
+			'properties')
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 272, in _common_validate_field
+			field=name))
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 71, in __init__
+    extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 100, in translate
+    raise Exception("Got exception from OpenStack tosca-parser")
+Exception: Got exception from OpenStack tosca-parser
+2022-08-24 14:54:20,163 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-08-24 14:54:20,163 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:54:27,881 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:54:27,882 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:54:28,158 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:54:44,355 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-08-24 14:54:44,355 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-08-24 14:54:44,401 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 97, in translate
+    tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py", line 115, in __init__
+    self.verify_template()
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py", line 312, in verify_template
+    '\n\t'.join(ExceptionCollector.getExceptionsReport()))
+toscaparser.common.exception.ValidationError: 
+The pre-parsed input failed validation with the following error(s): 
+
+	UnknownFieldError: "properties" of template "testing_tosca" contains unknown field "ip_addres". Refer to the definition to verify valid values.
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 884, in _bootstrap
+			self._bootstrap_inner()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 916, in _bootstrap_inner
+			self.run()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 864, in run
+			self._target(*self._args, **self._kwargs)
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/concurrent/futures/thread.py, line 69, in _worker
+			work_item.run()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/concurrent/futures/thread.py, line 56, in run
+			result = self.fn(*self.args, **self.kwargs)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_server.py, line 553, in _unary_response_in_pool
+			argument, request_deserializer)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_server.py, line 435, in _call_behavior
+			response_or_iterator = behavior(argument, context)
+		File /home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py, line 106, in ClouniProviderTool
+			response.content = TranslatorServer(args).output
+		File /home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py, line 71, in __init__
+			extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+		File /home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py, line 97, in translate
+			tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py, line 103, in __init__
+			self.topology_template = self._topology_template()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py, line 122, in _topology_template
+			None)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/topology_template.py, line 57, in __init__
+			self.nodetemplates = self._nodetemplates()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/topology_template.py, line 97, in _nodetemplates
+			tpl.validate(self)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/nodetemplate.py, line 188, in validate
+			self._validate_capabilities()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 185, in _validate_capabilities
+			self._validate_capabilities_properties(capabilities)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 194, in _validate_capabilities_properties
+			props[self.PROPERTIES])
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 228, in _common_validate_properties
+			'properties')
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/entity_template.py, line 272, in _common_validate_field
+			field=name))
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 71, in __init__
+    extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 100, in translate
+    raise Exception("Got exception from OpenStack tosca-parser")
+Exception: Got exception from OpenStack tosca-parser
+2022-08-24 14:54:44,401 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-08-24 14:54:44,401 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-08-24 14:54:50,954 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 14:54:50,954 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 14:54:54,323 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 14:58:59,545 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 14:58:59,546 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 15:00:22,131 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 85, in __init__
+    self.output = stub.ClouniConfigurationTool(request).content
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1661342422.130701335","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-08-24 15:00:22,131 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-08-24 15:00:22,131 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 15:00:27,265 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-08-24 15:00:27,265 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-08-24 15:00:27,601 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-08-24 15:00:32,955 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-08-24 15:00:32,955 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-08-24 15:00:33,289 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-08-24 15:00:48,657 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 15:00:48,658 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 15:01:56,236 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 85, in __init__
+    self.output = stub.ClouniConfigurationTool(request).content
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1661342516.236484990","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-08-24 15:01:56,238 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-08-24 15:01:56,238 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 15:02:00,621 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-08-24 15:02:00,621 - INFO - ThreadPoolExecutor-0_4 - Request - status OK
+2022-08-24 15:02:04,637 - ERROR - ThreadPoolExecutor-0_4 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 106, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 85, in __init__
+    self.output = stub.ClouniConfigurationTool(request).content
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1661342524.637023286","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-08-24 15:02:04,637 - INFO - ThreadPoolExecutor-0_4 - Request - status ERROR
+2022-08-24 15:02:04,637 - INFO - ThreadPoolExecutor-0_4 - Response send
+2022-08-24 15:02:18,368 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 15:02:18,368 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 15:02:18,705 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 15:45:30,095 - INFO - MainThread - Server stopped
+2022-08-24 15:45:30,096 - INFO - MainThread - Exited
+2022-08-24 15:45:32,906 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 15:45:32,914 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 15:45:32,917 - INFO - MainThread - Server started
+2022-08-24 15:45:37,663 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 15:45:37,663 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 15:46:38,904 - INFO - MainThread - Server stopped
+2022-08-24 15:46:38,906 - INFO - MainThread - Exited
+2022-08-24 15:46:41,496 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 15:46:41,501 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 15:46:41,502 - INFO - MainThread - Server started
+2022-08-24 15:46:45,876 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 15:46:45,876 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 15:46:46,236 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 109, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 88, in __init__
+    raise Exception(response.error)
+Exception: Configuration parameter 'initial_artifacts_directory' is missing in Ansible configuration
+2022-08-24 15:46:46,237 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-08-24 15:46:46,237 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 15:56:17,377 - INFO - MainThread - Server stopped
+2022-08-24 15:56:17,377 - INFO - MainThread - Exited
+2022-08-24 15:56:35,055 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 15:56:35,060 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 15:56:35,062 - INFO - MainThread - Server started
+2022-08-24 15:56:36,888 - INFO - MainThread - Server stopped
+2022-08-24 15:56:36,889 - INFO - MainThread - Exited
+2022-08-24 15:56:44,992 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 15:56:44,996 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 15:56:44,998 - INFO - MainThread - Server started
+2022-08-24 15:56:49,944 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 15:56:49,944 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 15:56:50,336 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 109, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 88, in __init__
+    raise Exception(response.error)
+Exception: Configuration parameter 'initial_artifacts_directory' is missing in Ansible configuration
+2022-08-24 15:56:50,337 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-08-24 15:56:50,337 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 15:56:56,388 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 15:56:56,388 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 15:56:59,749 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 15:58:26,025 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 15:58:26,025 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-08-24 15:58:29,391 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 15:58:57,359 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 15:58:57,359 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 15:58:57,649 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 16:02:03,241 - INFO - MainThread - Server stopped
+2022-08-24 16:02:03,241 - INFO - MainThread - Exited
+2022-08-24 16:02:04,791 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 16:02:04,795 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 16:02:04,797 - INFO - MainThread - Server started
+2022-08-24 16:13:32,331 - INFO - MainThread - Server stopped
+2022-08-24 16:13:32,331 - INFO - MainThread - Exited
+2022-08-24 16:13:33,852 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 16:13:33,857 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 16:13:33,859 - INFO - MainThread - Server started
+2022-08-24 16:14:04,472 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 16:14:04,472 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 16:14:04,760 - INFO - ThreadPoolExecutor-0_0 - Response send

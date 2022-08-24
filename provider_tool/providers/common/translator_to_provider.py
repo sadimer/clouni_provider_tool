@@ -1,3 +1,5 @@
+from provider_tool.providers.common.provider_artifacts import ARTIFACT_RANGE_START, ARTIFACT_RANGE_END
+
 from provider_tool.common import utils
 from provider_tool.providers.common import provider_artifacts
 from provider_tool.common.tosca_reserved_keys import *
@@ -103,7 +105,7 @@ def get_structure_of_mapped_param(mapped_param, value, input_value=None, indivis
             assert False
 
     logging.critical("Unable to parse the following parameter: %s" % json.dumps(mapped_param))
-    sys.exit(1)
+    raise Exception("Unable to parse the following parameter: %s" % json.dumps(mapped_param))
 
 
 def restructure_value(mapping_value, self, if_format_str=True, if_upper=True):
@@ -124,14 +126,15 @@ def restructure_value(mapping_value, self, if_format_str=True, if_upper=True):
                                                        if_upper=False)
                 if restructured_value is None:
                     logging.critical("Unable to parse the following parameter: %s" % json.dumps(mapping_value))
-                    sys.exit(1)
+                    raise Exception("Unable to parse the following parameter: %s" % json.dumps(mapping_value))
                 flat_mapping_value[key] = restructured_value
 
         # NOTE: the case when value has keys ERROR and REASON
         if flat_mapping_value.get(ERROR, False):
             logging.error('Unable to use unsupported TOSCA parameter: %s'
                           % flat_mapping_value.get(REASON).format(self=self))
-            sys.exit(1)
+            raise Exception('Unable to use unsupported TOSCA parameter: %s'
+                          % flat_mapping_value.get(REASON).format(self=self))
 
         # NOTE: the case when value has keys PARAMETER, VALUE, KEYNAME
         parameter = flat_mapping_value.get(PARAMETER)
@@ -149,11 +152,12 @@ def restructure_value(mapping_value, self, if_format_str=True, if_upper=True):
         if parameter is not None:
             if not isinstance(parameter, six.string_types):
                 logging.critical("Unable to parse the following parameter: %s" % json.dumps(parameter))
-                sys.exit(1)
+                raise Exception("Unable to parse the following parameter: %s" % json.dumps(parameter))
             if parameter[:6] == '{self[' and parameter[-1] == '}':
                 logging.critical("Parameter is format value, but has to be resolved on this stage: %s"
                                  % json.dumps(parameter))
-                sys.exit(1)
+                raise Exception("Parameter is format value, but has to be resolved on this stage: %s"
+                                 % json.dumps(parameter))
             r = dict()
             r[parameter] = value
 
@@ -191,7 +195,7 @@ def restructure_value(mapping_value, self, if_format_str=True, if_upper=True):
             return artifact_name
 
         logging.error("Unable to parse the following parameter: %s" % json.dumps(mapping_value))
-        sys.exit(1)
+        raise Exception("Unable to parse the following parameter: %s" % json.dumps(mapping_value))
 
     elif isinstance(mapping_value, list):
         return [restructure_value(v, self, if_upper=False) for v in mapping_value]
@@ -342,7 +346,7 @@ def get_resulted_mapping_values(parameter, mapping_value, value, self):
                     return r
 
             logging.critical("Unable to parse the following parameter: %s" % json.dumps(mapping_value))
-            sys.exit(1)
+            raise Exception("Unable to parse the following parameter: %s" % json.dumps(mapping_value))
 
     return dict(
         parameter=parameter,
@@ -495,13 +499,14 @@ def restructure_mapping(service_tmpl, node_tmpl, tmpl_name, self):
         node_type = service_tmpl.definitions[node_type].get(DERIVED_FROM)
     if prev_node_type == node_type:
         logging.critical("Type \'%s\' is derived from itself" % node_type)
-        sys.exit(1)
+        raise Exception("Type \'%s\' is derived from itself" % node_type)
     for i in range(len(r)):
         # NOTE: the case when value has keys ERROR and REASON
         if r[i][MAP_KEY].get(ERROR, False):
             logging.error("Unable to use unsupported TOSCA parameter \'%s\': %s" %
                           (r[i][PARAMETER], r[i][MAP_KEY].get(REASON).format(self=self)))
-            sys.exit(1)
+            raise Exception("Unable to use unsupported TOSCA parameter \'%s\': %s" %
+                          (r[i][PARAMETER], r[i][MAP_KEY].get(REASON).format(self=self)))
         parameter_node_type = get_node_type_from_parameter(r[i][PARAMETER])
         mapping_node_type = get_node_type_from_parameter(r[i][MAP_KEY][PARAMETER])
         if parameter_node_type == mapping_node_type and parameter_node_type != node_tmpl[TYPE]:
@@ -566,7 +571,7 @@ def get_keyname_from_type(keyname, node_type):
     (_, _, type_name) = utils.tosca_type_parse(node_type)
     if not type_name:
         logging.critical("Unable to parse type name: %s" % json.dumps(node_type))
-        sys.exit(1)
+        raise Exception("Unable to parse type name: %s" % json.dumps(node_type))
     return keyname + "_" + utils.snake_case(type_name)
 
 
@@ -738,7 +743,7 @@ def restructure_mapping_facts(elements_map, self, is_delete, cluster_name, extra
                     break
             if not target_short_parameter or not target_type:
                 logging.critical("Unable to parse the following parameter: %s" % json.dumps(target_parameter))
-                sys.exit(1)
+                raise Exception("Unable to parse the following parameter: %s" % json.dumps(target_parameter))
 
             input_parameter = new_elements_map[PARAMETER]
             input_value = new_elements_map[VALUE]
@@ -846,16 +851,17 @@ def restructure_get_attribute(data, service_tmpl, self):
                         attribute_items.append(item)
                 if len(attribute_items) == 0:
                     logging.error("Can not parse \'get_attribute\', mapping not found: %s" % json.dumps(args))
-                    sys.exit(1)
+                    raise Exception("Can not parse \'get_attribute\', mapping not found: %s" % json.dumps(args))
                 if len(attribute_items) > 1:
                     logging.critical("Not implemented, must have an example to work through logic")
-                    sys.exit(1)
+                    raise Exception("Not implemented, must have an example to work through logic")
                 mapping_parameter = attribute_items[0][MAP_KEY][PARAMETER]
                 map_node_type, splitted_param = split_parameter(mapping_parameter)
                 if splitted_param[0] != ATTRIBUTES:
                     logging.error("Attributes can only be mapped to the attributes, error occured with %s"
                                   % json.dumps(data))
-                    sys.exit(1)
+                    raise Exception("Attributes can only be mapped to the attributes, error occured with %s"
+                                  % json.dumps(data))
                 r[k] = [get_keyname_from_type(self[KEYNAME], map_node_type)] + splitted_param[1:]
             else:
                 r[k] = restructure_get_attribute(v, service_tmpl, self)
