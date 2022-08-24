@@ -5517,3 +5517,85 @@ Exception: Configuration parameter 'initial_artifacts_directory' is missing in A
 2022-08-24 16:14:04,472 - INFO - ThreadPoolExecutor-0_0 - Request received
 2022-08-24 16:14:04,472 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
 2022-08-24 16:14:04,760 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 17:28:37,719 - INFO - MainThread - Server stopped
+2022-08-24 17:28:37,720 - INFO - MainThread - Exited
+2022-08-24 17:29:04,200 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 17:29:04,207 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 17:29:04,209 - INFO - MainThread - Server started
+2022-08-24 17:29:39,025 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 17:29:39,025 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 17:29:39,341 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 17:34:32,954 - INFO - MainThread - Server stopped
+2022-08-24 17:34:32,955 - INFO - MainThread - Exited
+2022-08-24 17:35:01,084 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 17:35:01,089 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 17:35:01,108 - INFO - MainThread - Server started
+2022-08-24 17:35:32,141 - INFO - MainThread - Server stopped
+2022-08-24 17:35:32,142 - INFO - MainThread - Exited
+2022-08-24 18:15:52,815 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 18:15:52,820 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 18:15:52,828 - INFO - MainThread - Server started
+2022-08-24 18:26:12,213 - INFO - MainThread - Server stopped
+2022-08-24 18:26:12,213 - INFO - MainThread - Exited
+2022-08-24 18:26:46,596 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 18:26:46,601 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 18:26:46,602 - INFO - MainThread - Server started
+2022-08-24 18:27:40,905 - INFO - MainThread - Server stopped
+2022-08-24 18:27:40,905 - INFO - MainThread - Exited
+2022-08-24 18:27:46,898 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 18:27:46,903 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 18:27:46,904 - INFO - MainThread - Server started
+2022-08-24 18:40:07,674 - INFO - MainThread - Server stopped
+2022-08-24 18:40:07,674 - INFO - MainThread - Exited
+2022-08-24 18:40:10,004 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 18:40:10,012 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 18:40:10,014 - INFO - MainThread - Server started
+2022-08-24 18:40:25,422 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 18:40:25,422 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 18:40:51,114 - INFO - MainThread - Server stopped
+2022-08-24 18:40:51,116 - INFO - MainThread - Exited
+2022-08-24 18:40:58,390 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 18:40:58,394 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 18:40:58,396 - INFO - MainThread - Server started
+2022-08-24 18:41:02,254 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 18:41:02,255 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 18:41:02,543 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 18:42:10,463 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 18:42:10,463 - INFO - ThreadPoolExecutor-0_0 - Validate only request - status TEMPLATE_VALID
+2022-08-24 18:42:10,506 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 18:43:16,524 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-08-24 18:43:16,525 - INFO - ThreadPoolExecutor-0_1 - Validate only request - status TEMPLATE_VALID
+2022-08-24 18:43:16,568 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-08-24 18:44:01,257 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 18:44:01,257 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 18:44:04,681 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 18:44:17,936 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-08-24 18:44:17,936 - INFO - ThreadPoolExecutor-0_2 - Validate only request - status TEMPLATE_VALID
+2022-08-24 18:44:17,980 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-08-24 18:49:31,812 - INFO - MainThread - Server stopped
+2022-08-24 18:49:31,813 - INFO - MainThread - Exited
+2022-08-24 18:49:33,203 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 18:49:33,209 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 18:49:33,211 - INFO - MainThread - Server started
+2022-08-24 18:49:43,093 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 18:49:43,093 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 18:49:43,399 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 18:49:49,913 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 18:49:49,913 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 18:49:50,256 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 111, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 83, in __init__
+    request.database_api_endpoint = self.database_api_endpoint
+TypeError: None has type NoneType, but expected one of: bytes, unicode
+2022-08-24 18:49:50,257 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-08-24 18:49:50,257 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-08-24 18:50:56,634 - INFO - MainThread - Server stopped
+2022-08-24 18:50:56,634 - INFO - MainThread - Exited
+2022-08-24 18:50:58,457 - INFO - MainThread - Logging clouni-provider-tool started
+2022-08-24 18:50:58,462 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-08-24 18:50:58,472 - INFO - MainThread - Server started
+2022-08-24 18:51:02,413 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-08-24 18:51:02,414 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-08-24 18:51:05,868 - INFO - ThreadPoolExecutor-0_0 - Response send

@@ -96,6 +96,7 @@ class ProviderToscaTemplate(object):
             self.dict_tpl[TOPOLOGY_TEMPLATE][OUTPUTS] = self.outputs
         if self.inputs:
             self.dict_tpl[TOPOLOGY_TEMPLATE][INPUTS] = self.inputs
+        self.dict_tpl[TOSCA_DEFINITIONS_VERSION] = tosca_parser_template_object.version
 
     def add_dependency_requirements(self):
         dependencies = self.translate_normative_graph()

@@ -32,6 +32,7 @@ class TranslatorServer(object):
     def __init__(self, argv):
         self.template_file_content = argv['template_file_content']
         self.configuration_tool_endpoint = argv['configuration_tool_endpoint']
+        self.database_api_endpoint = argv['database_api_endpoint']
         self.cluster_name = argv['cluster_name']
         self.is_delete = argv['delete']
         self.provider = argv['provider']
@@ -79,6 +80,10 @@ class TranslatorServer(object):
             request.configuration_tool = self.configuration_tool
             request.extra = self.extra
             request.log_level = self.log_level
+            if self.database_api_endpoint is not None:
+                request.database_api_endpoint = self.database_api_endpoint
+            else:
+                request.database_api_endpoint = ""
             request.debug = self.debug
             channel = grpc.insecure_channel(self.configuration_tool_endpoint)
             stub = api_pb2_grpc.ClouniConfigurationToolStub(channel)
@@ -156,6 +161,10 @@ class ClouniProviderToolServicer(api_pb2_grpc.ClouniProviderToolServicer):
             args['configuration_tool_endpoint'] = request.configuration_tool_endpoint
         else:
             args['configuration_tool_endpoint'] = None
+        if request.database_api_endpoint != "":
+            args['database_api_endpoint'] = request.database_api_endpoint
+        else:
+            args['database_api_endpoint'] = None
         if request.configuration_tool != "":
             args['configuration_tool'] = request.configuration_tool
         else:

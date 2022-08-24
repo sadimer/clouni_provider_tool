@@ -86,6 +86,10 @@ def main(args=None):
                         default='localhost:50052',
                         type=str,
                         help='endpoint of configuration tool server, default - localhost:50052')
+    parser.add_argument('--database-api-endpoint',
+                        metavar='<host:port>',
+                        type=str,
+                        help='endpoint of database api for tosca template storage, default - localhost:5000')
 
     (args, args_list) = parser.parse_known_args(args)
     response = None
@@ -136,6 +140,11 @@ def main(args=None):
         else:
             request.configuration_tool_endpoint = ""
 
+        if args.database_api_endpoint is not None:
+            request.database_api_endpoint = args.database_api_endpoint
+        else:
+            request.database_api_endpoint = ""
+
         request.extra = yaml.dump(extra)
         response = stub.ClouniProviderTool(request)
     elif args.module in ['configuration_tool']:
@@ -152,6 +161,12 @@ def main(args=None):
         request.configuration_tool = args.configuration_tool
         request.log_level = args.log_level
         request.debug = args.debug
+        request.validate_only = args.validate_only
+
+        if args.database_api_endpoint is not None:
+            request.database_api_endpoint = args.database_api_endpoint
+        else:
+            request.database_api_endpoint = ""
 
         request.extra = yaml.dump({'global': extra})
         response = stub.ClouniConfigurationTool(request)
