@@ -144,6 +144,10 @@ def main(args=None):
             request.database_api_endpoint = args.database_api_endpoint
         else:
             request.database_api_endpoint = ""
+        if args.grpc_cotea_endpoint is not None:
+            request.grpc_cotea_endpoint = args.grpc_cotea_endpoint
+        else:
+            request.grpc_cotea_endpoint = ""
 
         request.extra = yaml.dump(extra)
         response = stub.ClouniProviderTool(request)
@@ -167,6 +171,11 @@ def main(args=None):
             request.database_api_endpoint = args.database_api_endpoint
         else:
             request.database_api_endpoint = ""
+
+        if args.grpc_cotea_endpoint is not None:
+            request.grpc_cotea_endpoint = args.grpc_cotea_endpoint
+        else:
+            request.grpc_cotea_endpoint = ""
 
         request.extra = yaml.dump({'global': extra})
         response = stub.ClouniConfigurationTool(request)
