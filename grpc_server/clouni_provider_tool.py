@@ -66,11 +66,14 @@ class TranslatorServer(object):
                     self.extra[k] = False
 
         self.working_dir = os.getcwd()
+        if self.debug:
+            self.grpc_cotea_endpoint = None
         dict_tpl, extra = translate(self.template_file_content, self.validate_only, self.provider,
                                                    self.configuration_tool, self.cluster_name,
                                                    public_key_path=self.public_key_path,
                                                    host_ip_parameter=self.host_parameter, is_delete=self.is_delete,
-                                                   extra={'global': self.extra}, log_level=self.log_level, a_file=False)
+                                                   extra={'global': self.extra}, log_level=self.log_level, a_file=False,
+                                                   grpc_cotea_endpoint=self.grpc_cotea_endpoint)
         self.output = yaml.dump(dict_tpl)
         self.extra = yaml.dump(extra)
         if self.configuration_tool_endpoint and not self.validate_only:

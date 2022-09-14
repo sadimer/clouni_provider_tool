@@ -90,6 +90,10 @@ def main(args=None):
                         metavar='<host:port>',
                         type=str,
                         help='endpoint of database api for tosca template storage, default - localhost:5000')
+    parser.add_argument('--grpc-cotea-endpoint',
+                        metavar='<host:port>',
+                        type=str,
+                        help='endpoint of grpc-cotea, default - localhost:5061')
 
     (args, args_list) = parser.parse_known_args(args)
     response = None

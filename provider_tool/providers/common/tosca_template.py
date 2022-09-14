@@ -19,8 +19,9 @@ class ProviderToscaTemplate(object):
     DEFAULT_ARTIFACTS_DIRECTOR = ARTIFACTS
 
     def __init__(self, tosca_parser_template_object, provider, configuration_tool, cluster_name, host_ip_parameter, public_key_path,
-                 is_delete, common_map_files=[]):
+                 is_delete, common_map_files=[], grpc_cotea_endpoint=None):
         self.provider = provider
+        self.grpc_cotea_endpoint = grpc_cotea_endpoint
         self.is_delete = is_delete
         self.host_ip_parameter = host_ip_parameter
         self.public_key_path = public_key_path

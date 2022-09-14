@@ -7,7 +7,7 @@ from provider_tool.common.tosca_reserved_keys import *
 from random import randint, seed
 from time import time
 
-import copy, six, logging, sys, json, re
+import copy, six, logging,  json, re
 
 SEPARATOR = '.'
 MAP_KEY = "map"
@@ -134,7 +134,7 @@ def restructure_value(mapping_value, self, if_format_str=True, if_upper=True):
             logging.error('Unable to use unsupported TOSCA parameter: %s'
                           % flat_mapping_value.get(REASON).format(self=self))
             raise Exception('Unable to use unsupported TOSCA parameter: %s'
-                          % flat_mapping_value.get(REASON).format(self=self))
+                            % flat_mapping_value.get(REASON).format(self=self))
 
         # NOTE: the case when value has keys PARAMETER, VALUE, KEYNAME
         parameter = flat_mapping_value.get(PARAMETER)
@@ -157,7 +157,7 @@ def restructure_value(mapping_value, self, if_format_str=True, if_upper=True):
                 logging.critical("Parameter is format value, but has to be resolved on this stage: %s"
                                  % json.dumps(parameter))
                 raise Exception("Parameter is format value, but has to be resolved on this stage: %s"
-                                 % json.dumps(parameter))
+                                % json.dumps(parameter))
             r = dict()
             r[parameter] = value
 
@@ -506,7 +506,7 @@ def restructure_mapping(service_tmpl, node_tmpl, tmpl_name, self):
             logging.error("Unable to use unsupported TOSCA parameter \'%s\': %s" %
                           (r[i][PARAMETER], r[i][MAP_KEY].get(REASON).format(self=self)))
             raise Exception("Unable to use unsupported TOSCA parameter \'%s\': %s" %
-                          (r[i][PARAMETER], r[i][MAP_KEY].get(REASON).format(self=self)))
+                            (r[i][PARAMETER], r[i][MAP_KEY].get(REASON).format(self=self)))
         parameter_node_type = get_node_type_from_parameter(r[i][PARAMETER])
         mapping_node_type = get_node_type_from_parameter(r[i][MAP_KEY][PARAMETER])
         if parameter_node_type == mapping_node_type and parameter_node_type != node_tmpl[TYPE]:
@@ -614,7 +614,8 @@ def translate_node_from_tosca(restructured_mapping, tpl_name, self):
     return resulted_structure
 
 
-def get_source_structure_from_facts(condition, fact_name, value, arguments, executor, self, is_delete, cluster_name, provider):
+def get_source_structure_from_facts(condition, fact_name, value, arguments, executor, self, is_delete,
+                                    grpc_cotea_endpoint):
     """
     :param condition:
     :param fact_name:
@@ -695,11 +696,12 @@ def get_source_structure_from_facts(condition, fact_name, value, arguments, exec
     ]
 
     new_global_elements_map_total_implementation += addition_for_elements_map_total_implementation
-    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, cluster_name, provider, value)
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
 
 
-def restructure_mapping_facts(elements_map, self, is_delete, cluster_name, extra_elements_map=None, target_parameter=None, source_parameter=None,
-                              source_value=None):
+def restructure_mapping_facts(elements_map, self, is_delete, extra_elements_map=None,
+                              target_parameter=None, source_parameter=None,
+                              source_value=None, grpc_cotea_endpoint=None):
     """
     Function is used to restructure mapping values with the case of `facts`, `condition`, `arguments`, `value` keys
     :param elements_map:
@@ -727,9 +729,11 @@ def restructure_mapping_facts(elements_map, self, is_delete, cluster_name, extra
                 target_parameter = cur_parameter
         new_elements_map = dict()
         for k, v in elements_map.items():
-            cur_elements, extra_elements_map = restructure_mapping_facts(v, self, is_delete, cluster_name, extra_elements_map,
+            cur_elements, extra_elements_map = restructure_mapping_facts(v, self, is_delete,
+                                                                         extra_elements_map,
                                                                          target_parameter,
-                                                                         source_parameter, source_value)
+                                                                         source_parameter, source_value,
+                                                                         grpc_cotea_endpoint=grpc_cotea_endpoint)
             new_elements_map.update({k: cur_elements})
 
         if isinstance(new_elements_map.get(PARAMETER, ''), dict):
@@ -804,8 +808,8 @@ def restructure_mapping_facts(elements_map, self, is_delete, cluster_name, extra
             value = new_elements_map[VALUE]
             arguments = new_elements_map[ARGUMENTS]
             executor = new_elements_map[EXECUTOR]
-            provider = target_parameter.split(SEPARATOR)[0]
-            new_value = get_source_structure_from_facts(condition, fact_name, value, arguments, executor, self, is_delete, cluster_name, provider)
+            new_value = get_source_structure_from_facts(condition, fact_name, value, arguments, executor, self,
+                                                        is_delete, grpc_cotea_endpoint)
             return new_value, extra_elements_map
 
         return new_elements_map, extra_elements_map
@@ -813,13 +817,16 @@ def restructure_mapping_facts(elements_map, self, is_delete, cluster_name, extra
     if isinstance(elements_map, list):
         new_elements_map = []
         for k in elements_map:
-            cur_elements, extra_elements_map = restructure_mapping_facts(k, self, is_delete, cluster_name, extra_elements_map,
+            cur_elements, extra_elements_map = restructure_mapping_facts(k, self, is_delete,
+                                                                         extra_elements_map,
                                                                          target_parameter,
-                                                                         source_parameter, source_value)
+                                                                         source_parameter, source_value,
+                                                                         grpc_cotea_endpoint=grpc_cotea_endpoint)
             new_elements_map.append(cur_elements)
         return new_elements_map, extra_elements_map
 
     return elements_map, extra_elements_map
+
 
 def restructure_get_attribute(data, service_tmpl, self):
     r = data
@@ -861,7 +868,7 @@ def restructure_get_attribute(data, service_tmpl, self):
                     logging.error("Attributes can only be mapped to the attributes, error occured with %s"
                                   % json.dumps(data))
                     raise Exception("Attributes can only be mapped to the attributes, error occured with %s"
-                                  % json.dumps(data))
+                                    % json.dumps(data))
                 r[k] = [get_keyname_from_type(self[KEYNAME], map_node_type)] + splitted_param[1:]
             else:
                 r[k] = restructure_get_attribute(v, service_tmpl, self)
@@ -897,7 +904,9 @@ def translate(service_tmpl):
             restructured_mapping = restructure_mapping(service_tmpl, element, tmpl_name, self)
             restructured_mapping = sort_host_ip_parameter(restructured_mapping, service_tmpl.host_ip_parameter)
             restructured_mapping = restructure_mapping_buffer(restructured_mapping, self)
-            restructured_mapping, extra_mappings = restructure_mapping_facts(restructured_mapping, self, service_tmpl.is_delete, service_tmpl.cluster_name)
+            restructured_mapping, extra_mappings = restructure_mapping_facts(restructured_mapping, self,
+                                                                             service_tmpl.is_delete,
+                                                                             grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
             restructured_mapping.extend(extra_mappings)
             restructured_mapping = restructure_get_attribute(restructured_mapping, service_tmpl, self)
 
@@ -918,9 +927,11 @@ def translate(service_tmpl):
 
     self_extra = utils.replace_brackets(self[EXTRA], False)
     self_artifacts = utils.replace_brackets(self[ARTIFACTS], False)
-    provider_artifacts.execute(self_artifacts, service_tmpl.is_delete, service_tmpl.cluster_name, service_tmpl.provider)
+    provider_artifacts.execute(self_artifacts, service_tmpl.is_delete,
+                               grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
 
     return new_element_templates, self_extra, template_mapping
+
 
 def sort_host_ip_parameter(restructured_mapping, host_ip_parameter):
     host_ip_mapping_key = SEPARATOR.join(['tosca.nodes.Compute', PROPERTIES, host_ip_parameter])

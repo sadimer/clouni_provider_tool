@@ -1,11 +1,13 @@
 import copy
 import sys
 import logging
+from multiprocessing import Queue
 
 from random import seed, randint
 from time import time
 
 from provider_tool.common.configuration import Configuration
+from provider_tool.providers.common.ansible_runner.runner import grpc_cotea_run_ansible
 
 ARTIFACT_RANGE_START = 1000
 ARTIFACT_RANGE_END = 9999
@@ -82,7 +84,7 @@ def get_initial_artifacts_directory():
     return config.get_section(config.MAIN_SECTION).get(DEFAULT_ARTIFACTS_DIRECTORY)
 
 
-def execute(new_global_elements_map_total_implementation, is_delete, cluster_name, provider, target_parameter=None):
+def execute(new_global_elements_map_total_implementation, is_delete, target_parameter=None, grpc_cotea_endpoint=None):
     if not is_delete:
         default_executor = ANSIBLE
         new_ansible_artifacts = copy.deepcopy(new_global_elements_map_total_implementation)
@@ -98,8 +100,24 @@ def execute(new_global_elements_map_total_implementation, is_delete, cluster_nam
                                                                    get_initial_artifacts_directory(),
                                                                    store=False)
         os.remove(filename)
-        playbook = {
-            'hosts': 'localhost',
-            'tasks': new_ansible_tasks
-        }
-    return 'not implemented yet'
+        q = Queue()
+        if grpc_cotea_endpoint:
+            grpc_cotea_run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, None, None, q)
+            results = q.get()
+            if target_parameter is not None:
+                value = None
+                if_failed = False
+                for result in results:
+                    if result.is_failed or result.is_unreachable:
+                        logging.error("Task %s has failed because of exception: \n%s" %
+                                      (result.task_name, result.result.get('exception', '(Unknown reason)')))
+                        if_failed = True
+                    if 'results' in result.result and len(result.result['results']) > 0 and 'ansible_facts' in \
+                            result.result['results'][0] and 'matched_object' in result.result['results'][0][
+                        'ansible_facts']:
+                        value = result.result['results'][0]['ansible_facts']['matched_object'][
+                            target_parameter.split('.')[-1]]
+                if if_failed:
+                    value = None
+                return value
+    return None
