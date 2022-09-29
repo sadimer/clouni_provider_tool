@@ -5835,3 +5835,609 @@ Exception: execute() takes from 2 to 4 positional arguments but 5 were given
 2022-09-14 18:57:40,167 - INFO - ThreadPoolExecutor-0_0 - Request received
 2022-09-14 18:57:40,167 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
 2022-09-14 18:57:43,838 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-14 19:03:17,682 - INFO - MainThread - Server stopped
+2022-09-14 19:03:17,682 - INFO - MainThread - Exited
+2022-09-20 16:25:53,156 - INFO - MainThread - Logging clouni-provider-tool started
+2022-09-20 16:25:53,309 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-09-20 16:25:53,322 - INFO - MainThread - Server started
+2022-09-20 16:25:56,164 - INFO - MainThread - Server stopped
+2022-09-20 16:25:56,165 - INFO - MainThread - Exited
+2022-09-20 17:48:13,661 - INFO - MainThread - Logging clouni-provider-tool started
+2022-09-20 17:48:13,667 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-09-20 17:48:13,673 - INFO - MainThread - Server started
+2022-09-20 17:48:26,430 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-20 17:48:26,430 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-20 18:03:44,134 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 98, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1663686224.134233537","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-09-20 18:03:44,174 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-20 18:03:44,174 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-20 18:03:59,469 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-20 18:03:59,469 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-20 18:03:59,880 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: 'dict' object has no attribute 'udpate'
+2022-09-20 18:03:59,880 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-20 18:03:59,880 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-20 18:04:48,812 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-09-20 18:04:48,813 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-09-20 18:04:49,250 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: too many values to unpack (expected 2)
+2022-09-20 18:04:49,251 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-09-20 18:04:49,251 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-09-20 18:05:27,230 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-09-20 18:05:27,230 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-09-20 18:05:27,636 - ERROR - ThreadPoolExecutor-0_3 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: too many values to unpack (expected 2)
+2022-09-20 18:05:27,636 - INFO - ThreadPoolExecutor-0_3 - Request - status ERROR
+2022-09-20 18:05:27,636 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-09-20 18:06:06,202 - INFO - MainThread - Server stopped
+2022-09-20 18:06:06,202 - INFO - MainThread - Exited
+2022-09-20 18:06:12,327 - INFO - MainThread - Logging clouni-provider-tool started
+2022-09-20 18:06:12,331 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-09-20 18:06:12,332 - INFO - MainThread - Server started
+2022-09-20 18:06:16,329 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-20 18:06:16,329 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-20 18:06:16,781 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: too many values to unpack (expected 2)
+2022-09-20 18:06:16,781 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-20 18:06:16,782 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-20 18:06:34,778 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-20 18:06:34,778 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-20 18:06:51,640 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-20 18:09:02,041 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-09-20 18:09:02,042 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-09-20 18:25:03,860 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 98, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1663687503.860493858","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-09-20 18:25:03,861 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-09-20 18:25:03,861 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-09-20 18:25:09,923 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-20 18:25:09,923 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-20 18:25:15,872 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Failed to parse json response from db
+2022-09-20 18:25:15,872 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-20 18:25:15,873 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-20 18:26:15,145 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-09-20 18:26:15,145 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-09-20 18:26:20,720 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: the JSON object must be str, bytes or bytearray, not 'dict'
+2022-09-20 18:26:20,720 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-09-20 18:26:20,721 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-09-20 18:27:03,398 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-09-20 18:27:03,399 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-09-20 18:27:17,618 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: must have exactly one of create/read/write/append mode
+2022-09-20 18:27:17,618 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-09-20 18:27:17,618 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-09-20 18:28:48,958 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-09-20 18:28:48,958 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-09-20 18:29:02,204 - ERROR - ThreadPoolExecutor-0_3 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: [Errno 2] No such file or directory: '/tmp/clouni/template.yaml'
+2022-09-20 18:29:02,205 - INFO - ThreadPoolExecutor-0_3 - Request - status ERROR
+2022-09-20 18:29:02,205 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-09-20 18:29:15,199 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-20 18:29:15,199 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-20 18:29:29,614 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Failed to parse json response from db on loading template
+2022-09-20 18:29:29,614 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-20 18:29:29,614 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-20 18:33:37,319 - INFO - ThreadPoolExecutor-0_8 - Request received
+2022-09-20 18:33:37,319 - INFO - ThreadPoolExecutor-0_8 - Request - status OK
+2022-09-20 18:33:52,198 - ERROR - ThreadPoolExecutor-0_8 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Failed to parse json response from db on loading template
+2022-09-20 18:33:52,198 - INFO - ThreadPoolExecutor-0_8 - Request - status ERROR
+2022-09-20 18:33:52,198 - INFO - ThreadPoolExecutor-0_8 - Response send
+2022-09-20 18:36:03,249 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-09-20 18:36:03,250 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-09-20 18:36:17,417 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 400, msg: The browser (or proxy) sent a request that this server could not understand.
+2022-09-20 18:36:17,418 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-09-20 18:36:17,418 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-09-20 18:48:33,340 - INFO - ThreadPoolExecutor-0_5 - Request received
+2022-09-20 18:48:33,341 - INFO - ThreadPoolExecutor-0_5 - Request - status OK
+2022-09-20 19:07:29,018 - ERROR - ThreadPoolExecutor-0_5 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 98, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1663690049.017893127","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-09-20 19:07:29,018 - INFO - ThreadPoolExecutor-0_5 - Request - status ERROR
+2022-09-20 19:07:29,018 - INFO - ThreadPoolExecutor-0_5 - Response send
+2022-09-20 19:07:34,821 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-09-20 19:07:34,821 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-09-20 19:07:50,278 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 400, msg: The browser (or proxy) sent a request that this server could not understand.
+2022-09-20 19:07:50,278 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-09-20 19:07:50,278 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-09-20 19:14:59,070 - INFO - ThreadPoolExecutor-0_6 - Request received
+2022-09-20 19:14:59,070 - INFO - ThreadPoolExecutor-0_6 - Request - status OK
+2022-09-20 19:15:14,132 - ERROR - ThreadPoolExecutor-0_6 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 400, msg: The browser (or proxy) sent a request that this server could not understand.
+2022-09-20 19:15:14,132 - INFO - ThreadPoolExecutor-0_6 - Request - status ERROR
+2022-09-20 19:15:14,132 - INFO - ThreadPoolExecutor-0_6 - Response send
+2022-09-20 19:16:02,550 - INFO - MainThread - Server stopped
+2022-09-20 19:16:02,550 - INFO - MainThread - Exited
+2022-09-29 17:11:45,488 - INFO - MainThread - Logging clouni-provider-tool started
+2022-09-29 17:11:45,532 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-09-29 17:11:45,544 - INFO - MainThread - Server started
+2022-09-29 17:11:49,216 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 17:11:49,216 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 17:11:49,896 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Failed to parse json response from db
+2022-09-29 17:11:49,897 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 17:11:49,897 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 17:11:54,251 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 17:11:54,251 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 17:11:54,729 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Failed to parse json response from db
+2022-09-29 17:11:54,729 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 17:11:54,730 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 17:12:19,679 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-09-29 17:12:19,679 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-09-29 17:19:08,108 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 98, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664461148.108168516","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-09-29 17:19:08,126 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-09-29 17:19:08,126 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-09-29 17:19:14,410 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 17:19:14,410 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 17:19:28,889 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 400, msg: The browser (or proxy) sent a request that this server could not understand.
+2022-09-29 17:19:28,889 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 17:19:28,890 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 17:23:11,606 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-09-29 17:23:11,606 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-09-29 17:26:08,423 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 400, msg: The browser (or proxy) sent a request that this server could not understand.
+2022-09-29 17:26:08,423 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-09-29 17:26:08,423 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-09-29 17:27:28,229 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-09-29 17:27:28,229 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-09-29 17:30:10,861 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 98, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664461810.860983375","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-09-29 17:30:10,861 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-09-29 17:30:10,861 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-09-29 17:30:24,455 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-09-29 17:30:24,455 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-09-29 17:38:29,004 - ERROR - ThreadPoolExecutor-0_3 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 98, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664462309.004468789","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-09-29 17:38:29,005 - INFO - ThreadPoolExecutor-0_3 - Request - status ERROR
+2022-09-29 17:38:29,005 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-09-29 17:38:48,558 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 17:38:48,559 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 18:12:29,243 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 400, msg: The browser (or proxy) sent a request that this server could not understand.
+2022-09-29 18:12:29,243 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 18:12:29,243 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 18:31:04,295 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-09-29 18:31:04,296 - INFO - ThreadPoolExecutor-0_4 - Request - status OK
+2022-09-29 18:31:05,162 - ERROR - ThreadPoolExecutor-0_4 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: HTTPConnectionPool(host='10.100.151.115', port=5000): Max retries exceeded with url: /v0.1/all_dependencies/TOSCA_DEFINITIONS/node_type/tosca.nodes.SoftwareComponent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0aac489390>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2022-09-29 18:31:05,162 - INFO - ThreadPoolExecutor-0_4 - Request - status ERROR
+2022-09-29 18:31:05,162 - INFO - ThreadPoolExecutor-0_4 - Response send
+2022-09-29 18:31:20,537 - INFO - MainThread - Logging clouni-provider-tool started
+2022-09-29 18:31:20,541 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-09-29 18:31:20,543 - INFO - MainThread - Server started
+2022-09-29 18:31:24,614 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 18:31:24,615 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 18:31:25,368 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: HTTPConnectionPool(host='10.100.151.115', port=5000): Max retries exceeded with url: /v0.1/all_dependencies/TOSCA_DEFINITIONS/node_type/tosca.nodes.SoftwareComponent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0aac39eac8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2022-09-29 18:31:25,369 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 18:31:25,369 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 18:31:28,015 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-09-29 18:31:28,016 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-09-29 18:31:28,759 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: HTTPConnectionPool(host='10.100.151.115', port=5000): Max retries exceeded with url: /v0.1/all_dependencies/TOSCA_DEFINITIONS/node_type/tosca.nodes.SoftwareComponent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0aac277e48>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2022-09-29 18:31:28,759 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-09-29 18:31:28,759 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-09-29 18:31:38,225 - INFO - MainThread - Server stopped
+2022-09-29 18:31:38,225 - INFO - MainThread - Exited
+2022-09-29 18:31:40,436 - INFO - MainThread - Logging clouni-provider-tool started
+2022-09-29 18:31:40,440 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-09-29 18:31:40,442 - INFO - MainThread - Server started
+2022-09-29 18:31:45,076 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 18:31:45,076 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 18:31:45,851 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: HTTPConnectionPool(host='10.100.151.115', port=5000): Max retries exceeded with url: /v0.1/all_dependencies/TOSCA_DEFINITIONS/node_type/tosca.nodes.SoftwareComponent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0aac2914a8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2022-09-29 18:31:45,851 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 18:31:45,852 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 18:32:11,431 - INFO - MainThread - Server stopped
+2022-09-29 18:32:11,431 - INFO - MainThread - Server stopped
+2022-09-29 18:32:11,431 - INFO - MainThread - Exited
+2022-09-29 18:32:11,431 - INFO - MainThread - Exited
+2022-09-29 18:32:40,044 - INFO - MainThread - Logging clouni-provider-tool started
+2022-09-29 18:32:40,049 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-09-29 18:32:40,058 - INFO - MainThread - Server started
+2022-09-29 18:32:43,189 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 18:32:43,189 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 18:32:43,716 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: HTTPConnectionPool(host='10.100.151.115', port=5000): Max retries exceeded with url: /v0.1/all_dependencies/TOSCA_DEFINITIONS/node_type/tosca.nodes.SoftwareComponent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb0b0346fd0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2022-09-29 18:32:43,716 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 18:32:43,716 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 18:32:48,105 - INFO - MainThread - Server stopped
+2022-09-29 18:32:48,106 - INFO - MainThread - Exited
+2022-09-29 18:33:30,936 - INFO - MainThread - Logging clouni-provider-tool started
+2022-09-29 18:33:30,940 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-09-29 18:33:30,942 - INFO - MainThread - Server started
+2022-09-29 18:33:34,373 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 18:33:34,374 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 18:33:34,900 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: HTTPConnectionPool(host='10.100.151.115', port=5000): Max retries exceeded with url: /v0.1/all_dependencies/TOSCA_DEFINITIONS/node_type/tosca.nodes.SoftwareComponent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa8a027ec88>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2022-09-29 18:33:34,900 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 18:33:34,900 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 18:38:43,775 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-09-29 18:38:43,775 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-09-29 18:38:47,544 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Failed to parse json response from db
+2022-09-29 18:38:47,544 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-09-29 18:38:47,544 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-09-29 18:39:21,167 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 18:39:21,168 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 18:39:24,751 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Failed to parse json response from db
+2022-09-29 18:39:24,752 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 18:39:24,752 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 18:39:41,142 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-09-29 18:39:41,143 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-09-29 18:41:43,419 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 98, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664466103.418847938","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-09-29 18:41:43,419 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-09-29 18:41:43,419 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-09-29 18:41:51,670 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-09-29 18:41:51,670 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-09-29 18:41:56,204 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Failed to parse json response from db
+2022-09-29 18:41:56,204 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-09-29 18:41:56,204 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-09-29 18:42:19,272 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 18:42:19,272 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 19:14:22,422 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 98, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664468062.422076110","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-09-29 19:14:22,422 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 19:14:22,422 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 19:14:27,634 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-09-29 19:14:27,634 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-09-29 19:14:32,501 - ERROR - ThreadPoolExecutor-0_3 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Failed to parse json response from db
+2022-09-29 19:14:32,501 - INFO - ThreadPoolExecutor-0_3 - Request - status ERROR
+2022-09-29 19:14:32,501 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-09-29 19:14:50,643 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-09-29 19:14:50,644 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-09-29 19:18:10,060 - INFO - MainThread - Server stopped
+2022-09-29 19:18:10,061 - INFO - MainThread - Exited
+2022-09-29 19:18:12,022 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 98, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664468292.022492430","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-09-29 19:18:12,023 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-09-29 19:18:12,023 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-09-29 19:18:18,179 - INFO - MainThread - Logging clouni-provider-tool started
+2022-09-29 19:18:18,183 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-09-29 19:18:18,184 - INFO - MainThread - Server started
+2022-09-29 19:18:21,278 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 19:18:21,278 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 19:18:50,393 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 400, msg: The browser (or proxy) sent a request that this server could not understand.
+2022-09-29 19:18:50,394 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 19:18:50,394 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 19:19:12,410 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 19:19:12,410 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 19:27:09,050 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 98, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664468829.050520919","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-09-29 19:27:09,051 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 19:27:09,051 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 19:27:14,137 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-09-29 19:27:14,137 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-09-29 19:27:44,964 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 400, msg: The browser (or proxy) sent a request that this server could not understand.
+2022-09-29 19:27:44,964 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-09-29 19:27:44,964 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-09-29 19:30:01,073 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-09-29 19:30:01,073 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-09-29 19:30:30,700 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 400, msg: The browser (or proxy) sent a request that this server could not understand.
+2022-09-29 19:30:30,700 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-09-29 19:30:30,700 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-09-29 19:32:51,590 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-09-29 19:32:51,590 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-09-29 19:33:25,572 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 200, msg: cluster_name: example_2 was deployed
+2022-09-29 19:33:25,572 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-09-29 19:33:25,572 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-09-29 19:33:36,214 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-09-29 19:33:36,214 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-09-29 19:34:13,321 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 101, in __init__
+    raise Exception(response.error)
+Exception: Error in db! Status code: 200, msg: cluster_name: example_3 was deployed
+2022-09-29 19:34:13,321 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-09-29 19:34:13,321 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-09-29 19:35:38,605 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-09-29 19:35:38,606 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-09-29 19:36:17,440 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-09-29 19:40:51,065 - INFO - MainThread - Server stopped
+2022-09-29 19:40:51,065 - INFO - MainThread - Exited
