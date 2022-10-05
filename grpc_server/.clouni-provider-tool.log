@@ -6441,3 +6441,1428 @@ Exception: Error in db! Status code: 200, msg: cluster_name: example_3 was deplo
 2022-09-29 19:36:17,440 - INFO - ThreadPoolExecutor-0_3 - Response send
 2022-09-29 19:40:51,065 - INFO - MainThread - Server stopped
 2022-09-29 19:40:51,065 - INFO - MainThread - Exited
+2022-10-05 16:44:52,462 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 16:44:52,466 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 16:44:52,468 - INFO - MainThread - Server started
+2022-10-05 16:47:43,161 - INFO - MainThread - Server stopped
+2022-10-05 16:47:43,162 - INFO - MainThread - Exited
+2022-10-05 16:48:07,381 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 16:48:07,386 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 16:48:07,387 - INFO - MainThread - Server started
+2022-10-05 16:48:09,286 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 16:48:09,287 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 16:48:09,648 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 16:48:11,888 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 16:48:11,888 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 16:48:12,237 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 16:48:16,128 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-05 16:48:16,129 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-05 16:48:16,477 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-05 16:52:02,169 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 16:52:02,170 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 16:52:02,535 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 16:52:20,658 - INFO - MainThread - Server stopped
+2022-10-05 16:52:20,658 - INFO - MainThread - Exited
+2022-10-05 16:52:21,943 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 16:52:21,948 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 16:52:21,949 - INFO - MainThread - Server started
+2022-10-05 16:52:24,836 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 16:52:24,836 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 16:52:25,215 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 16:53:11,419 - INFO - MainThread - Server stopped
+2022-10-05 16:53:11,420 - INFO - MainThread - Exited
+2022-10-05 16:53:13,606 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 16:53:13,615 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 16:53:13,617 - INFO - MainThread - Server started
+2022-10-05 16:53:19,913 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 16:53:19,913 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 16:54:22,561 - INFO - MainThread - Server stopped
+2022-10-05 16:54:22,562 - INFO - MainThread - Exited
+2022-10-05 16:54:26,180 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 16:54:26,193 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 16:54:26,196 - INFO - MainThread - Server started
+2022-10-05 16:54:31,637 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 16:54:31,637 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 16:54:39,724 - INFO - MainThread - Server stopped
+2022-10-05 16:54:39,725 - INFO - MainThread - Exited
+2022-10-05 16:55:23,629 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 16:55:23,637 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 16:55:23,639 - INFO - MainThread - Server started
+2022-10-05 16:55:25,414 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 16:55:25,415 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 16:56:54,140 - INFO - MainThread - Server stopped
+2022-10-05 16:56:54,141 - INFO - MainThread - Exited
+2022-10-05 16:56:57,969 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 16:56:57,977 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 16:56:57,980 - INFO - MainThread - Server started
+2022-10-05 16:56:59,678 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 16:58:08,789 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 16:58:39,470 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-05 16:58:41,541 - INFO - MainThread - Server stopped
+2022-10-05 16:58:41,542 - INFO - MainThread - Exited
+2022-10-05 16:58:44,139 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 16:58:44,144 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 16:58:44,146 - INFO - MainThread - Server started
+2022-10-05 16:58:49,164 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 16:58:49,165 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 16:58:49,376 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 76, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    results = grpc_cotea_run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {})
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 69, in grpc_cotea_run_ansible
+    return run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 24, in run_ansible
+    stub = cotea_pb2_grpc.AnsibleExecutorStub(channel)
+AttributeError: module 'provider_tool.providers.common.ansible_runner.cotea_pb2_grpc' has no attribute 'AnsibleExecutorStub'
+2022-10-05 16:58:49,377 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 16:58:49,378 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 16:59:58,352 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 16:59:58,352 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 16:59:58,546 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 76, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    results = grpc_cotea_run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {})
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 69, in grpc_cotea_run_ansible
+    return run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 24, in run_ansible
+    stub = cotea_pb2_grpc.CoteaGatewayStub(channel)
+AttributeError: module 'provider_tool.providers.common.ansible_runner.cotea_pb2_grpc' has no attribute 'AnsibleExecutorStub'
+2022-10-05 16:59:58,546 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 16:59:58,546 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:00:03,483 - INFO - MainThread - Server stopped
+2022-10-05 17:00:03,483 - INFO - MainThread - Exited
+2022-10-05 17:00:04,592 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:00:04,597 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:00:04,611 - INFO - MainThread - Server started
+2022-10-05 17:00:06,562 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:00:06,562 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:00:06,781 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 122, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 76, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    results = grpc_cotea_run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {})
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 69, in grpc_cotea_run_ansible
+    return run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 35, in run_ansible
+    request.pb_path = tmp_current_dir
+AttributeError: 'Config' object has no attribute 'pb_path'
+2022-10-05 17:00:06,783 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:00:06,783 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:03:30,677 - INFO - MainThread - Server stopped
+2022-10-05 17:03:30,677 - INFO - MainThread - Exited
+2022-10-05 17:04:01,975 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:04:01,979 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:04:01,981 - INFO - MainThread - Server started
+2022-10-05 17:04:20,587 - INFO - MainThread - Server stopped
+2022-10-05 17:04:20,587 - INFO - MainThread - Exited
+2022-10-05 17:04:22,174 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:04:22,179 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:04:22,180 - INFO - MainThread - Server started
+2022-10-05 17:04:30,667 - INFO - MainThread - Server stopped
+2022-10-05 17:04:30,667 - INFO - MainThread - Exited
+2022-10-05 17:04:32,087 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:04:32,091 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:04:32,092 - INFO - MainThread - Server started
+2022-10-05 17:04:39,061 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:04:39,062 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:04:39,280 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    results = grpc_cotea_run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 69, in grpc_cotea_run_ansible
+    return run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars, hosts)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 37, in run_ansible
+    request.emty_task_name = 'Init'
+AttributeError: 'Config' object has no attribute 'emty_task_name'
+2022-10-05 17:04:39,282 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:04:39,282 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:05:09,764 - INFO - MainThread - Server stopped
+2022-10-05 17:05:09,764 - INFO - MainThread - Exited
+2022-10-05 17:05:11,039 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:05:11,044 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:05:11,053 - INFO - MainThread - Server started
+2022-10-05 17:05:13,565 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:05:13,565 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:06:27,932 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-05 17:06:27,932 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-05 17:06:33,287 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    results = grpc_cotea_run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 68, in grpc_cotea_run_ansible
+    return run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars, hosts)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 47, in run_ansible
+    response = stub.InitExecution(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50155 {created_time:"2022-10-05T17:06:33.285716765+03:00", grpc_status:14, grpc_message:"Socket closed"}"
+>"
+	debug_error_string = "{"created":"@1664978793.287434843","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception calling application: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = "Socket closed"\n\tdebug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50155 {created_time:"2022-10-05T17:06:33.285716765+03:00", grpc_status:14, grpc_message:"Socket closed"}"\n>","grpc_status":2}"
+>
+2022-10-05 17:06:33,289 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:06:33,289 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:06:33,335 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    results = grpc_cotea_run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 68, in grpc_cotea_run_ansible
+    return run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars, hosts)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 26, in run_ansible
+    response = stub.StartSession(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664978793.334782164","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-05 17:06:33,335 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-05 17:06:33,335 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-05 17:06:52,028 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:06:52,028 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:08:21,723 - INFO - MainThread - Server stopped
+2022-10-05 17:08:21,724 - INFO - MainThread - Exited
+2022-10-05 17:08:25,531 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:08:25,539 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:08:25,541 - INFO - MainThread - Server started
+2022-10-05 17:08:31,036 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:08:35,799 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:09:10,883 - INFO - MainThread - Server stopped
+2022-10-05 17:09:10,884 - INFO - MainThread - Exited
+2022-10-05 17:09:28,598 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:09:28,605 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:09:28,607 - INFO - MainThread - Server started
+2022-10-05 17:09:35,645 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:09:35,646 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:12:29,049 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-05 17:12:29,049 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-05 17:23:01,247 - INFO - MainThread - Server stopped
+2022-10-05 17:23:01,247 - INFO - MainThread - Exited
+2022-10-05 17:23:28,978 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:23:28,982 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:23:28,983 - INFO - MainThread - Server started
+2022-10-05 17:23:32,838 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:23:32,839 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:23:35,579 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 54, in run_ansible
+    request.task_str = task
+TypeError: {'os_subnets_facts': {}, 'register': 'target_objects'} has type dict, but expected one of: bytes, unicode
+2022-10-05 17:23:35,580 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:23:35,580 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:24:54,620 - INFO - MainThread - Server stopped
+2022-10-05 17:24:54,620 - INFO - MainThread - Exited
+2022-10-05 17:24:55,805 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:24:55,810 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:24:55,811 - INFO - MainThread - Server started
+2022-10-05 17:25:01,710 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:25:01,710 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:25:05,068 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 54, in run_ansible
+    request.task_str = task
+TypeError: {'os_subnets_facts': {}, 'register': 'target_objects'} has type dict, but expected one of: bytes, unicode
+2022-10-05 17:25:05,069 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:25:05,069 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:25:39,875 - INFO - MainThread - Server stopped
+2022-10-05 17:25:39,876 - INFO - MainThread - Exited
+2022-10-05 17:25:41,951 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:25:41,958 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:25:41,961 - INFO - MainThread - Server started
+2022-10-05 17:25:45,218 - INFO - MainThread - Server stopped
+2022-10-05 17:25:45,219 - INFO - MainThread - Exited
+2022-10-05 17:25:47,099 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:25:47,107 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:25:47,109 - INFO - MainThread - Server started
+2022-10-05 17:25:48,269 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:25:48,269 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:26:17,086 - INFO - MainThread - Server stopped
+2022-10-05 17:26:17,086 - INFO - MainThread - Exited
+2022-10-05 17:26:20,667 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:26:20,671 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:26:20,673 - INFO - MainThread - Server started
+2022-10-05 17:26:23,907 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:26:23,908 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:26:26,253 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    raise Exception(response.task_adding_error)
+Exception: You must add 1 new task. Instead you add: {'os_subnets_facts': {}, 'register': 'target_objects'}
+2022-10-05 17:26:26,254 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:26:26,254 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:27:44,379 - INFO - MainThread - Server stopped
+2022-10-05 17:27:44,379 - INFO - MainThread - Exited
+2022-10-05 17:27:46,751 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:27:46,760 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:27:46,762 - INFO - MainThread - Server started
+2022-10-05 17:28:12,108 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:28:12,109 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:39:00,054 - INFO - MainThread - Server stopped
+2022-10-05 17:39:00,056 - INFO - MainThread - Exited
+2022-10-05 17:39:02,696 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:39:02,703 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:39:02,706 - INFO - MainThread - Server started
+2022-10-05 17:39:06,652 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:39:06,653 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:39:28,501 - INFO - MainThread - Server stopped
+2022-10-05 17:39:28,504 - INFO - MainThread - Exited
+2022-10-05 17:39:31,407 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:39:31,415 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:39:31,417 - INFO - MainThread - Server started
+2022-10-05 17:39:33,299 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:39:33,300 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:39:53,276 - INFO - MainThread - Server stopped
+2022-10-05 17:39:53,277 - INFO - MainThread - Exited
+2022-10-05 17:39:56,172 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:39:56,179 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:39:56,182 - INFO - MainThread - Server started
+2022-10-05 17:39:58,612 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:39:58,612 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:40:21,622 - INFO - MainThread - Server stopped
+2022-10-05 17:40:21,622 - INFO - MainThread - Exited
+2022-10-05 17:40:23,980 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:40:23,985 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:40:23,986 - INFO - MainThread - Server started
+2022-10-05 17:40:26,172 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:40:26,172 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:40:28,519 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    raise Exception(response.task_adding_error)
+Exception: You must add 1 new task. Instead you add: {'os_subnets_facts': {}, 'register': 'target_objects'}
+2022-10-05 17:40:28,520 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:40:28,520 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:40:35,831 - INFO - MainThread - Server stopped
+2022-10-05 17:40:35,832 - INFO - MainThread - Exited
+2022-10-05 17:40:37,295 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:40:37,299 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:40:37,301 - INFO - MainThread - Server started
+2022-10-05 17:40:40,732 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:40:40,733 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:40:40,955 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(string_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 47, in run_ansible
+    response = stub.InitExecution(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: Failed to connect to remote host: Connection refused"
+	debug_error_string = "UNKNOWN:Failed to pick subchannel {created_time:"2022-10-05T17:40:40.953742579+03:00", children:[UNKNOWN:failed to connect to all addresses; last error: UNKNOWN: Failed to connect to remote host: Connection refused {created_time:"2022-10-05T17:40:40.953739311+03:00", grpc_status:14}]}"
+>"
+	debug_error_string = "{"created":"@1664980840.955345773","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception calling application: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = "failed to connect to all addresses; last error: UNKNOWN: Failed to connect to remote host: Connection refused"\n\tdebug_error_string = "UNKNOWN:Failed to pick subchannel {created_time:"2022-10-05T17:40:40.953742579+03:00", children:[UNKNOWN:failed to connect to all addresses; last error: UNKNOWN: Failed to connect to remote host: Connection refused {created_time:"2022-10-05T17:40:40.953739311+03:00", grpc_status:14}]}"\n>","grpc_status":2}"
+>
+2022-10-05 17:40:40,957 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:40:40,958 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:40:50,028 - INFO - MainThread - Server stopped
+2022-10-05 17:40:50,028 - INFO - MainThread - Exited
+2022-10-05 17:41:30,348 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:41:30,352 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:41:30,353 - INFO - MainThread - Server started
+2022-10-05 17:41:33,234 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:41:33,235 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:41:37,309 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(string_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    raise Exception(response.task_adding_error)
+Exception: Exception during loader.load call                (from str to python ds): We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 5 (char 4)
+
+Syntax Error while loading YAML.
+  did not find expected <document start>
+
+The error appears to be in '<string>': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+2022-10-05 17:41:37,311 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:41:37,311 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:42:34,836 - INFO - MainThread - Server stopped
+2022-10-05 17:42:34,836 - INFO - MainThread - Exited
+2022-10-05 17:42:40,311 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:42:40,318 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:42:40,321 - INFO - MainThread - Server started
+2022-10-05 17:42:42,295 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:42:42,295 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:43:13,181 - INFO - MainThread - Server stopped
+2022-10-05 17:43:13,182 - INFO - MainThread - Exited
+2022-10-05 17:43:15,978 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:43:15,986 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:43:15,988 - INFO - MainThread - Server started
+2022-10-05 17:43:24,192 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:43:24,192 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:44:17,514 - INFO - MainThread - Server stopped
+2022-10-05 17:44:17,515 - INFO - MainThread - Exited
+2022-10-05 17:44:22,554 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:44:22,562 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:44:22,564 - INFO - MainThread - Server started
+2022-10-05 17:44:25,131 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:44:25,131 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:44:41,950 - INFO - MainThread - Server stopped
+2022-10-05 17:44:41,951 - INFO - MainThread - Exited
+2022-10-05 17:44:47,588 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:44:47,592 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:44:47,594 - INFO - MainThread - Server started
+2022-10-05 17:44:56,903 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:44:56,903 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:45:00,811 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(string_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 62, in run_ansible
+    raise Exception('Task with name %s failed with exception: %s' % (result.task_name, result.stderr))
+Exception: Task with name set_fact failed with exception: 
+2022-10-05 17:45:00,812 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:45:00,812 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:48:55,670 - INFO - MainThread - Server stopped
+2022-10-05 17:48:55,670 - INFO - MainThread - Exited
+2022-10-05 17:48:57,215 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 17:48:57,220 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 17:48:57,221 - INFO - MainThread - Server started
+2022-10-05 17:49:01,420 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 17:49:01,420 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 17:49:04,938 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(string_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 62, in run_ansible
+    raise Exception('Task with name %s failed with exception: %s' % (result.task_name, result.msg))
+Exception: Task with name set_fact failed with exception: The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'ansible_facts'
+2022-10-05 17:49:04,940 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 17:49:04,941 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 17:55:49,132 - INFO - MainThread - Server stopped
+2022-10-05 17:55:49,133 - INFO - MainThread - Exited
+2022-10-05 18:08:52,722 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 18:08:52,726 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 18:08:52,727 - INFO - MainThread - Server started
+2022-10-05 18:09:45,760 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 18:09:45,760 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 18:09:48,126 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 56, in run_ansible
+    request.task_str = json.loads(task)
+  File "/home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/json/__init__.py", line 348, in loads
+    'not {!r}'.format(s.__class__.__name__))
+TypeError: the JSON object must be str, bytes or bytearray, not 'dict'
+2022-10-05 18:09:48,128 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 18:09:48,128 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 18:10:15,238 - INFO - MainThread - Server stopped
+2022-10-05 18:10:15,239 - INFO - MainThread - Exited
+2022-10-05 18:10:17,041 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 18:10:17,045 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 18:10:17,046 - INFO - MainThread - Server started
+2022-10-05 18:10:22,742 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 18:10:22,742 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 18:10:26,731 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 64, in run_ansible
+    raise Exception('Task with name %s failed with exception: %s' % (result.task_name, result.msg))
+Exception: Task with name set_fact failed with exception: The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'ansible_facts'
+2022-10-05 18:10:26,733 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 18:10:26,733 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 18:15:45,194 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 18:15:45,194 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 18:15:49,497 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 64, in run_ansible
+    raise Exception('Task with name %s failed with exception: %s' % (result.task_name, result.msg))
+Exception: Task with name set_fact failed with exception: template error while templating string: No filter named 'combine'.. String: {{ new_target_objects + [item | combine({ 'allocation_pool_start': item['allocation_pools'][0]['start'] | default([]), 'allocation_pool_end': item['allocation_pools'][0]['end'] | default([]) })] }}
+2022-10-05 18:15:49,498 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 18:15:49,498 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 18:25:18,658 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-10-05 18:25:18,658 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-10-05 18:25:22,870 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 64, in run_ansible
+    raise Exception('Task with name %s failed with exception: %s' % (result.task_name, result.msg))
+Exception: Task with name set_fact failed with exception: template error while templating string: No filter named 'combine'.. String: {{ new_target_objects + [item | combine({ 'allocation_pool_start': item['allocation_pools'][0]['start'] | default([]), 'allocation_pool_end': item['allocation_pools'][0]['end'] | default([]) })] }}
+2022-10-05 18:25:22,870 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-10-05 18:25:22,871 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-10-05 18:36:02,040 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 18:36:02,041 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 18:45:42,795 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664984742.794931914","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-05 18:45:42,796 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 18:45:42,796 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 18:45:46,901 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-05 18:45:46,901 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-05 18:46:06,226 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664984766.226110737","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-05 18:46:06,227 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-05 18:46:06,227 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-05 18:46:09,390 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-10-05 18:46:09,390 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-10-05 18:48:02,831 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1664984882.831151166","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-05 18:48:02,832 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-10-05 18:48:02,832 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-10-05 18:48:07,342 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-10-05 18:48:07,343 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-10-05 18:48:46,741 - ERROR - ThreadPoolExecutor-0_3 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50156 {grpc_message:"Connection reset by peer", grpc_status:14, created_time:"2022-10-05T18:48:46.724347661+03:00"}"
+>"
+	debug_error_string = "{"created":"@1664984926.741401690","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception calling application: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = "Connection reset by peer"\n\tdebug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50156 {grpc_message:"Connection reset by peer", grpc_status:14, created_time:"2022-10-05T18:48:46.724347661+03:00"}"\n>","grpc_status":2}"
+>
+2022-10-05 18:48:46,742 - INFO - ThreadPoolExecutor-0_3 - Request - status ERROR
+2022-10-05 18:48:46,742 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-10-05 18:48:54,237 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 18:48:54,237 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 18:49:06,607 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50156 {grpc_message:"Connection reset by peer", grpc_status:14, created_time:"2022-10-05T18:49:06.605247464+03:00"}"
+>"
+	debug_error_string = "{"created":"@1664984946.606728601","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception calling application: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = "Connection reset by peer"\n\tdebug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50156 {grpc_message:"Connection reset by peer", grpc_status:14, created_time:"2022-10-05T18:49:06.605247464+03:00"}"\n>","grpc_status":2}"
+>
+2022-10-05 18:49:06,607 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 18:49:06,607 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-05 18:49:14,234 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-10-05 18:49:14,235 - INFO - ThreadPoolExecutor-0_4 - Request - status OK
+2022-10-05 18:56:12,320 - ERROR - ThreadPoolExecutor-0_4 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50156 {created_time:"2022-10-05T18:56:12.318076049+03:00", grpc_status:14, grpc_message:"Socket closed"}"
+>"
+	debug_error_string = "{"created":"@1664985372.319894562","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception calling application: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = "Socket closed"\n\tdebug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50156 {created_time:"2022-10-05T18:56:12.318076049+03:00", grpc_status:14, grpc_message:"Socket closed"}"\n>","grpc_status":2}"
+>
+2022-10-05 18:56:12,320 - INFO - ThreadPoolExecutor-0_4 - Request - status ERROR
+2022-10-05 18:56:12,320 - INFO - ThreadPoolExecutor-0_4 - Response send
+2022-10-05 18:56:22,052 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-05 18:56:22,052 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-05 18:56:35,470 - INFO - MainThread - Server stopped
+2022-10-05 18:56:35,470 - INFO - MainThread - Exited
+2022-10-05 18:56:40,679 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50156 {created_time:"2022-10-05T18:56:40.678228068+03:00", grpc_status:14, grpc_message:"Socket closed"}"
+>"
+	debug_error_string = "{"created":"@1664985400.679743401","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception calling application: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = "Socket closed"\n\tdebug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50156 {created_time:"2022-10-05T18:56:40.678228068+03:00", grpc_status:14, grpc_message:"Socket closed"}"\n>","grpc_status":2}"
+>
+2022-10-05 18:56:40,680 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-05 18:56:40,680 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-05 18:56:47,337 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-05 18:56:47,341 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-05 18:56:47,342 - INFO - MainThread - Server started
+2022-10-05 18:56:49,621 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-05 18:56:49,621 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-05 19:00:46,620 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 117, in execute
+    results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 57, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50156 {created_time:"2022-10-05T19:00:46.61813841+03:00", grpc_status:14, grpc_message:"Connection reset by peer"}"
+>"
+	debug_error_string = "{"created":"@1664985646.620177630","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception calling application: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = "Connection reset by peer"\n\tdebug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:50156 {created_time:"2022-10-05T19:00:46.61813841+03:00", grpc_status:14, grpc_message:"Connection reset by peer"}"\n>","grpc_status":2}"
+>
+2022-10-05 19:00:46,636 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-05 19:00:46,636 - INFO - ThreadPoolExecutor-0_0 - Response send

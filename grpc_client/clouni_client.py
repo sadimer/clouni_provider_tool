@@ -93,7 +93,7 @@ def main(args=None):
     parser.add_argument('--grpc-cotea-endpoint',
                         metavar='<host:port>',
                         type=str,
-                        help='endpoint of grpc-cotea, default - localhost:5061')
+                        help='endpoint of grpc-cotea, default - localhost:50151')
 
     (args, args_list) = parser.parse_known_args(args)
     response = None

@@ -66,8 +66,6 @@ class TranslatorServer(object):
                     self.extra[k] = False
 
         self.working_dir = os.getcwd()
-        if self.debug:
-            self.grpc_cotea_endpoint = None
         dict_tpl, extra = translate(self.template_file_content, self.validate_only, self.provider,
                                                    self.configuration_tool, self.cluster_name,
                                                    public_key_path=self.public_key_path,

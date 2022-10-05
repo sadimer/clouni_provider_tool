@@ -7,7 +7,7 @@ from random import seed, randint
 from time import time
 
 from provider_tool.common.configuration import Configuration
-from provider_tool.providers.common.ansible_runner.runner import grpc_cotea_run_ansible
+from provider_tool.providers.common.ansible_runner.runner import run_ansible
 
 ARTIFACT_RANGE_START = 1000
 ARTIFACT_RANGE_END = 9999
@@ -99,11 +99,22 @@ def execute(new_global_elements_map_total_implementation, is_delete, target_para
         new_ansible_tasks, filename = generate_artifacts(default_executor, artifacts_with_brackets,
                                                                    get_initial_artifacts_directory(),
                                                                    store=False)
+        # временный костыль
+        string_tasks = []
+        with open(filename, "r") as f:
+            new_string = ''
+            first = True
+            for line in f:
+                if line[0] == '-' and not first:
+                    string_tasks += [new_string]
+                    new_string = line
+                else:
+                    new_string += line
+                first = False
+
         os.remove(filename)
-        q = Queue()
         if grpc_cotea_endpoint:
-            grpc_cotea_run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, None, None, q)
-            results = q.get()
+            results = run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost') # добавить переменную для дефолт хоста
             if target_parameter is not None:
                 value = None
                 if_failed = False
