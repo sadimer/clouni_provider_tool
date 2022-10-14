@@ -927,8 +927,7 @@ def translate(service_tmpl):
 
     self_extra = utils.replace_brackets(self[EXTRA], False)
     self_artifacts = utils.replace_brackets(self[ARTIFACTS], False)
-    provider_artifacts.execute(self_artifacts, service_tmpl.is_delete, service_tmpl.extra,
-                               grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+    provider_artifacts.execute(self_artifacts, service_tmpl.is_delete, grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
 
     return new_element_templates, self_extra, template_mapping
 
