@@ -27,3 +27,6 @@ my_templates
 
 test
 artifacts
+
+
+*.log

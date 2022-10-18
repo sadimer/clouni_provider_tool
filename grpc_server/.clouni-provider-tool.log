@@ -15629,3 +15629,1096 @@ Exception: Deploy failed with Task with name debug failed with exception: The ta
 2022-10-14 16:25:55,702 - INFO - ThreadPoolExecutor-0_8 - Response send
 2022-10-14 16:43:23,360 - INFO - MainThread - Server stopped
 2022-10-14 16:43:23,361 - INFO - MainThread - Exited
+2022-10-14 17:54:02,420 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-14 17:54:02,425 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-14 17:54:02,426 - INFO - MainThread - Server started
+2022-10-14 17:54:16,278 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-14 17:54:16,278 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-14 17:55:00,600 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name Create OpenStack component security group rule failed with exception: All items completed
+2022-10-14 17:55:00,601 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-14 17:55:00,601 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-14 17:56:23,320 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-14 17:56:23,320 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-14 17:57:06,914 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name Create OpenStack component security group rule failed with exception: All items completed
+2022-10-14 17:57:06,915 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-14 17:57:06,915 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-14 18:03:17,721 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-14 18:03:17,721 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-14 18:04:01,947 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name Create OpenStack component security group rule failed with exception: All items completed
+2022-10-14 18:04:01,948 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-14 18:04:01,948 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-14 18:05:12,897 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-14 18:05:12,898 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-14 18:05:12,939 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 98, in translate
+    tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py", line 115, in __init__
+    self.verify_template()
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py", line 312, in verify_template
+    '\n\t'.join(ExceptionCollector.getExceptionsReport()))
+toscaparser.common.exception.ValidationError: 
+The pre-parsed input failed validation with the following error(s): 
+
+	KeyError: 'Node template "test" was not found in "software_for_cumulus".'
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 884, in _bootstrap
+			self._bootstrap_inner()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 916, in _bootstrap_inner
+			self.run()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 864, in run
+			self._target(*self._args, **self._kwargs)
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/concurrent/futures/thread.py, line 69, in _worker
+			work_item.run()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/concurrent/futures/thread.py, line 56, in run
+			result = self.fn(*self.args, **self.kwargs)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_server.py, line 553, in _unary_response_in_pool
+			argument, request_deserializer)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_server.py, line 435, in _call_behavior
+			response_or_iterator = behavior(argument, context)
+		File /home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py, line 120, in ClouniProviderTool
+			response.content = TranslatorServer(args).output
+		File /home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py, line 74, in __init__
+			grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+		File /home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py, line 98, in translate
+			tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py, line 103, in __init__
+			self.topology_template = self._topology_template()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py, line 122, in _topology_template
+			None)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/topology_template.py, line 60, in __init__
+			self.graph = ToscaGraph(self.nodetemplates)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tpl_relationship_graph.py, line 19, in __init__
+			self._create()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tpl_relationship_graph.py, line 40, in _create
+			relation = node.relationships
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/nodetemplate.py, line 61, in relationships
+			explicit = self._get_explicit_relationship(r, value)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/nodetemplate.py, line 94, in _get_explicit_relationship
+			% {'node': node, 'name': self.name}))
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 101, in translate
+    raise Exception("Got exception from OpenStack tosca-parser")
+Exception: Got exception from OpenStack tosca-parser
+2022-10-14 18:05:12,940 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-14 18:05:12,940 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-14 18:05:27,679 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-10-14 18:05:27,679 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-10-14 18:06:15,456 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name Debug Registr failed with exception: The task includes an option with an undefined variable. The error was: {'vars': {'initiator': ['ingress'], 'port': [22], 'protocol': ['tcp']}, 'with_sequence': 'start=0 end={{ [protocol | length, port | length, initiator | length] | max - 1 }} format=%d'}: 'protocol' is undefined
+
+The error appears to be in '/home/sadimer/Desktop/ISPRAS/grpc-cotea/pb_starts/role/tasks/main.yaml': line 28, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Debug Registr
+  ^ here
+
+2022-10-14 18:06:15,456 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-10-14 18:06:15,456 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-10-14 18:11:08,521 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-14 18:11:08,522 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-14 18:11:43,486 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-14 18:12:32,768 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-10-14 18:12:32,769 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-10-14 18:13:20,114 - ERROR - ThreadPoolExecutor-0_3 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name Debug Registr failed with exception: The task includes an option with an undefined variable. The error was: {'vars': {'initiator': ['ingress'], 'port': [22], 'protocol': ['tcp']}, 'with_sequence': 'start=0 end={{ [protocol | length, port | length, initiator | length] | max - 1 }} format=%d'}: 'protocol' is undefined
+
+The error appears to be in '/home/sadimer/Desktop/ISPRAS/grpc-cotea/pb_starts/role/tasks/main.yaml': line 28, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Debug Registr
+  ^ here
+
+2022-10-14 18:13:20,114 - INFO - ThreadPoolExecutor-0_3 - Request - status ERROR
+2022-10-14 18:13:20,115 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-10-14 18:28:08,778 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-14 18:28:08,779 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-14 18:28:55,760 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name role : debug failed with exception: The task includes an option with an undefined variable. The error was: {'vars': {'initiator': ['ingress'], 'port': [22], 'protocol': ['tcp']}, 'with_sequence': 'start=0 end={{ [protocol | length, port | length, initiator | length] | max - 1 }} format=%d'}: 'protocol' is undefined
+
+The error appears to be in '/home/sadimer/Desktop/ISPRAS/grpc-cotea/pb_starts/role/tasks/main.yaml': line 28, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- debug:
+  ^ here
+
+2022-10-14 18:28:55,760 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-14 18:28:55,760 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-17 18:33:15,024 - INFO - MainThread - Server stopped
+2022-10-17 18:33:15,024 - INFO - MainThread - Exited
+2022-10-17 18:33:23,828 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-17 18:33:23,833 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-17 18:33:23,835 - INFO - MainThread - Server started
+2022-10-17 18:45:42,622 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-17 18:45:42,623 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-17 18:45:42,833 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    return run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost', target_parameter) # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 46, in run_ansible
+    response = stub.InitExecution(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Exception deserializing request!"
+	debug_error_string = "{"created":"@1666021542.833376761","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception deserializing request!","grpc_status":13}"
+>
+2022-10-17 18:45:42,836 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-17 18:45:42,836 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-17 18:46:13,980 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-17 18:46:13,980 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-17 18:46:18,332 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    return run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost', target_parameter) # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 56, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666021578.330489346","description":"Error received from peer ipv6:[::1]:50156","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>"
+	debug_error_string = "{"created":"@1666021578.332526026","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception calling application: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = "Socket closed"\n\tdebug_error_string = "{"created":"@1666021578.330489346","description":"Error received from peer ipv6:[::1]:50156","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"\n>","grpc_status":2}"
+>
+2022-10-17 18:46:18,333 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-17 18:46:18,333 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-17 18:46:58,270 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-17 18:46:58,271 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-17 18:47:03,140 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    return run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost', target_parameter) # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 56, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666021623.138486740","description":"Error received from peer ipv6:[::1]:50156","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>"
+	debug_error_string = "{"created":"@1666021623.140243702","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception calling application: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = "Socket closed"\n\tdebug_error_string = "{"created":"@1666021623.138486740","description":"Error received from peer ipv6:[::1]:50156","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"\n>","grpc_status":2}"
+>
+2022-10-17 18:47:03,140 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-17 18:47:03,141 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-17 18:48:47,646 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-17 18:48:47,646 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-17 18:49:39,952 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name lineinfile failed with exception: The conditional check 'testing_tosca_security_group_rule.id is defined' failed. The error was: error while evaluating conditional (testing_tosca_security_group_rule.id is defined): {'vars': {'initiator': ['ingress'], 'port': [22], 'protocol': ['tcp']}, 'with_sequence': 'start=0 end={{ [protocol | length, port | length, initiator | length] | max - 1 }} format=%d'}: 'protocol' is undefined
+2022-10-17 18:49:39,952 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-17 18:49:39,952 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-17 19:04:14,834 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-10-17 19:04:14,834 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-10-17 19:05:06,313 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name lineinfile failed with exception: The conditional check 'testing_tosca_security_group_rule.id is defined' failed. The error was: error while evaluating conditional (testing_tosca_security_group_rule.id is defined): {'vars': {'initiator': ['ingress'], 'port': [22], 'protocol': ['tcp']}, 'with_sequence': 'start=0 end={{ [protocol | length, port | length, initiator | length] | max - 1 }} format=%d'}: 'protocol' is undefined
+2022-10-17 19:05:06,313 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-10-17 19:05:06,313 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-10-17 19:34:24,422 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-17 19:34:24,422 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-17 19:35:16,750 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name lineinfile failed with exception: The conditional check 'testing_tosca_security_group_rule.id is defined' failed. The error was: error while evaluating conditional (testing_tosca_security_group_rule.id is defined): {'vars': {'initiator': ['ingress'], 'port': [22], 'protocol': ['tcp']}, 'with_sequence': 'start=0 end={{ [protocol | length, port | length, initiator | length] | max - 1 }} format=%d'}: 'protocol' is undefined
+2022-10-17 19:35:16,750 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-17 19:35:16,751 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-17 20:03:24,440 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-10-17 20:03:24,440 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-10-17 20:04:15,752 - ERROR - ThreadPoolExecutor-0_3 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name lineinfile failed with exception: The conditional check 'testing_tosca_security_group_rule.id is defined' failed. The error was: error while evaluating conditional (testing_tosca_security_group_rule.id is defined): {'vars': {'initiator': ['ingress'], 'port': [22], 'protocol': ['tcp']}, 'with_sequence': 'start=0 end={{ [protocol | length, port | length, initiator | length] | max - 1 }} format=%d'}: 'protocol' is undefined
+2022-10-17 20:04:15,752 - INFO - ThreadPoolExecutor-0_3 - Request - status ERROR
+2022-10-17 20:04:15,753 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-10-18 14:13:59,371 - INFO - ThreadPoolExecutor-0_7 - Request received
+2022-10-18 14:13:59,371 - INFO - ThreadPoolExecutor-0_7 - Request - status OK
+2022-10-18 14:13:59,561 - ERROR - ThreadPoolExecutor-0_7 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    return run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost', target_parameter) # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 29, in run_ansible
+    response = stub.StartSession(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1666091639.561500966","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":5419,"referenced_errors":[{"created":"@1666091639.561498559","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":397,"grpc_status":14}]}"
+>
+2022-10-18 14:13:59,562 - INFO - ThreadPoolExecutor-0_7 - Request - status ERROR
+2022-10-18 14:13:59,562 - INFO - ThreadPoolExecutor-0_7 - Response send
+2022-10-18 14:14:19,993 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-10-18 14:14:19,993 - INFO - ThreadPoolExecutor-0_4 - Request - status OK
+2022-10-18 14:15:03,566 - INFO - ThreadPoolExecutor-0_4 - Response send
+2022-10-18 14:26:06,550 - INFO - MainThread - Server stopped
+2022-10-18 14:26:06,550 - INFO - MainThread - Exited
+2022-10-18 14:26:11,243 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 14:26:11,247 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 14:26:11,248 - INFO - MainThread - Server started
+2022-10-18 14:26:32,315 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 14:26:32,316 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 14:29:31,910 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 96, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666092571.910530313","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-18 14:29:31,911 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 14:29:31,911 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 14:30:36,380 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 14:30:36,380 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 14:31:31,028 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name lineinfile failed with exception: The conditional check 'testing_tosca_security_group_rule.id is defined' failed. The error was: error while evaluating conditional (testing_tosca_security_group_rule.id is defined): {'vars': {'initiator': ['ingress'], 'port': [22], 'protocol': ['tcp']}, 'with_sequence': 'start=0 end={{ [protocol | length, port | length, initiator | length] | max - 1 }} format=%d'}: 'protocol' is undefined
+2022-10-18 14:31:31,028 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 14:31:31,028 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 16:59:35,507 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 16:59:35,508 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 17:00:20,207 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 17:01:19,749 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 17:01:19,750 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 17:04:47,584 - INFO - MainThread - Server stopped
+2022-10-18 17:04:47,585 - INFO - MainThread - Exited
+2022-10-18 17:05:50,555 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 96, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666101950.555217497","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-18 17:05:50,555 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 17:05:50,556 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 17:05:55,648 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 17:05:55,657 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 17:05:55,691 - INFO - MainThread - Server started
+2022-10-18 17:05:56,040 - INFO - MainThread - Server stopped
+2022-10-18 17:05:56,040 - INFO - MainThread - Exited
+2022-10-18 17:05:57,846 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 17:05:57,851 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 17:05:57,856 - INFO - MainThread - Server started
+2022-10-18 17:06:09,163 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 17:06:09,163 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 17:08:51,072 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 96, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666102131.072465825","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-18 17:08:51,073 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 17:08:51,073 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 17:08:53,092 - INFO - MainThread - Server stopped
+2022-10-18 17:08:53,092 - INFO - MainThread - Exited
+2022-10-18 17:12:44,005 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 17:12:44,010 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 17:12:44,011 - INFO - MainThread - Server started
+2022-10-18 17:13:20,871 - INFO - MainThread - Server stopped
+2022-10-18 17:13:20,872 - INFO - MainThread - Exited
+2022-10-18 17:13:22,544 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 17:13:22,548 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 17:13:22,549 - INFO - MainThread - Server started
+2022-10-18 17:13:34,698 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 17:13:34,698 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 17:15:18,848 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Special task with name Internal-Empty-Task was not found
+2022-10-18 17:15:18,849 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 17:15:18,849 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 17:26:11,839 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 17:26:11,839 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 17:27:54,615 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: local variable 'file' referenced before assignment
+2022-10-18 17:27:54,616 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 17:27:54,616 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 17:32:16,335 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 17:32:16,336 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 17:34:00,159 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Special task with name Internal-Empty-Task was not found
+2022-10-18 17:34:00,160 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-18 17:34:00,160 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 17:34:38,707 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 17:34:38,708 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 17:35:23,334 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 17:36:52,713 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-10-18 17:36:52,713 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-10-18 17:38:30,161 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 17:38:30,162 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 17:38:34,659 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 17:38:55,667 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-10-18 17:38:55,667 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-10-18 17:39:46,465 - ERROR - ThreadPoolExecutor-0_3 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name lineinfile failed with exception: Destination /home/sadimer/Desktop/clouni_configuration_tool/grpc_server/id_vars_example.yaml does not exist !
+2022-10-18 17:39:46,465 - INFO - ThreadPoolExecutor-0_3 - Request - status ERROR
+2022-10-18 17:39:46,466 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-10-18 17:41:05,206 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 17:41:05,207 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 17:41:51,325 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 17:43:48,851 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 96, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666104228.851424464","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-18 17:43:48,852 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-10-18 17:43:48,852 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-10-18 17:43:58,028 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-10-18 17:43:58,029 - INFO - ThreadPoolExecutor-0_4 - Request - status OK
+2022-10-18 17:44:23,389 - INFO - ThreadPoolExecutor-0_5 - Request received
+2022-10-18 17:44:23,389 - INFO - ThreadPoolExecutor-0_5 - Request - status OK
+2022-10-18 17:44:49,236 - ERROR - ThreadPoolExecutor-0_4 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name include_vars failed with exception: 
+2022-10-18 17:44:49,237 - INFO - ThreadPoolExecutor-0_4 - Request - status ERROR
+2022-10-18 17:44:49,237 - INFO - ThreadPoolExecutor-0_4 - Response send
+2022-10-18 17:46:10,502 - ERROR - ThreadPoolExecutor-0_5 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Special task with name Internal-Empty-Task was not found
+2022-10-18 17:46:10,503 - INFO - ThreadPoolExecutor-0_5 - Request - status ERROR
+2022-10-18 17:46:10,503 - INFO - ThreadPoolExecutor-0_5 - Response send
+2022-10-18 17:47:58,457 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 17:47:58,458 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 17:50:19,908 - INFO - ThreadPoolExecutor-0_6 - Request received
+2022-10-18 17:50:19,908 - INFO - ThreadPoolExecutor-0_6 - Request - status OK
+2022-10-18 17:51:04,738 - ERROR - ThreadPoolExecutor-0_6 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name include_vars failed with exception: 
+2022-10-18 17:51:04,738 - INFO - ThreadPoolExecutor-0_6 - Request - status ERROR
+2022-10-18 17:51:04,738 - INFO - ThreadPoolExecutor-0_6 - Response send
+2022-10-18 17:51:33,437 - INFO - MainThread - Server stopped
+2022-10-18 17:51:33,438 - INFO - MainThread - Exited
+2022-10-18 17:51:49,445 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 17:51:49,450 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 17:51:49,452 - INFO - MainThread - Server started
+2022-10-18 17:51:53,265 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 17:51:53,265 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 17:52:39,206 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 17:55:51,842 - INFO - MainThread - Server stopped
+2022-10-18 17:55:51,842 - INFO - MainThread - Exited
+2022-10-18 17:55:53,230 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 17:55:53,235 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 17:55:53,243 - INFO - MainThread - Server started
+2022-10-18 17:56:12,587 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 17:56:12,587 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 17:58:01,510 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Special task with name Internal-Empty-Task was not found
+2022-10-18 17:58:01,511 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 17:58:01,511 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 18:03:32,851 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 18:03:32,851 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 18:04:23,666 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 18:12:50,229 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 18:12:50,229 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 18:13:41,114 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 18:14:21,855 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 18:14:21,855 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 18:15:21,776 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name Create OpenStack component security group rule failed with exception: All items completed
+2022-10-18 18:15:21,777 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 18:15:21,777 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 18:19:06,852 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-10-18 18:19:06,852 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-10-18 18:20:56,299 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Special task with name Internal-Empty-Task was not found
+2022-10-18 18:20:56,299 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-10-18 18:20:56,300 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-10-18 18:23:28,114 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 18:23:28,115 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 18:24:38,153 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-10-18 18:24:38,153 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-10-18 18:26:36,538 - ERROR - ThreadPoolExecutor-0_3 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name fail failed with exception: Input is undefined
+2022-10-18 18:26:36,538 - INFO - ThreadPoolExecutor-0_3 - Request - status ERROR
+2022-10-18 18:26:36,539 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-10-18 18:28:39,676 - INFO - MainThread - Server stopped
+2022-10-18 18:28:39,677 - INFO - MainThread - Exited
+2022-10-18 18:28:42,815 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 18:28:42,819 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 18:28:42,821 - INFO - MainThread - Server started
+2022-10-18 18:28:47,984 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 18:28:47,984 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 18:28:48,085 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 98, in translate
+    tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py", line 115, in __init__
+    self.verify_template()
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py", line 312, in verify_template
+    '\n\t'.join(ExceptionCollector.getExceptionsReport()))
+toscaparser.common.exception.ValidationError: 
+The pre-parsed input failed validation with the following error(s): 
+
+	UnknownFieldError: Node template "software_for_cumulus" contains unknown field "inputs". Refer to the definition to verify valid values.
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 884, in _bootstrap
+			self._bootstrap_inner()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 916, in _bootstrap_inner
+			self.run()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/threading.py, line 864, in run
+			self._target(*self._args, **self._kwargs)
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/concurrent/futures/thread.py, line 69, in _worker
+			work_item.run()
+		File /home/sadimer/.pyenv/versions/3.6.9/lib/python3.6/concurrent/futures/thread.py, line 56, in run
+			result = self.fn(*self.args, **self.kwargs)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_server.py, line 553, in _unary_response_in_pool
+			argument, request_deserializer)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_server.py, line 435, in _call_behavior
+			response_or_iterator = behavior(argument, context)
+		File /home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py, line 120, in ClouniProviderTool
+			response.content = TranslatorServer(args).output
+		File /home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py, line 74, in __init__
+			grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+		File /home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py, line 98, in translate
+			tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py, line 103, in __init__
+			self.topology_template = self._topology_template()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/tosca_template.py, line 122, in _topology_template
+			None)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/topology_template.py, line 57, in __init__
+			self.nodetemplates = self._nodetemplates()
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/topology_template.py, line 92, in _nodetemplates
+			self.rel_types)
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/nodetemplate.py, line 45, in __init__
+			self._validate_fields(node_templates[name])
+		File /home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/toscaparser/nodetemplate.py, line 302, in _validate_fields
+			field=name))
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 101, in translate
+    raise Exception("Got exception from OpenStack tosca-parser")
+Exception: Got exception from OpenStack tosca-parser
+2022-10-18 18:28:48,086 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 18:28:48,086 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 18:31:08,391 - INFO - MainThread - Server stopped
+2022-10-18 18:31:08,391 - INFO - MainThread - Exited
+2022-10-18 18:31:09,818 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 18:31:09,822 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 18:31:09,824 - INFO - MainThread - Server started
+2022-10-18 18:31:14,891 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 18:31:14,892 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 18:32:38,341 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 18:32:38,341 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 18:34:29,761 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 18:36:13,893 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 96, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666107373.893629497","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-18 18:36:13,894 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 18:36:13,894 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 18:38:20,876 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 18:38:20,877 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 18:42:48,439 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 96, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666107768.438712788","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-18 18:42:48,439 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-18 18:42:48,439 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 18:42:54,416 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 18:42:54,416 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 18:42:55,899 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: node <configuration_tool.providers.common.provider_resource.ProviderResource object at 0x7ff37e1e4828> was already marked done
+2022-10-18 18:42:55,900 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 18:42:55,900 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 18:43:10,853 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-10-18 18:43:10,853 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-10-18 18:43:12,309 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: node <configuration_tool.providers.common.provider_resource.ProviderResource object at 0x7ff37c094e48> was already marked done
+2022-10-18 18:43:12,309 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-10-18 18:43:12,309 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-10-18 18:44:49,230 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 18:44:49,230 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 18:44:58,719 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name Delete OpenStack component floating ip failed with exception: All items completed
+2022-10-18 18:44:58,719 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-18 18:44:58,719 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 18:45:29,414 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-10-18 18:45:29,414 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-10-18 18:47:14,186 - INFO - ThreadPoolExecutor-0_3 - Response send
+2022-10-18 18:47:19,979 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 18:47:19,979 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 18:49:21,327 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 96, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666108161.327340696","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-18 18:49:21,327 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 18:49:21,328 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 18:49:31,060 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-10-18 18:49:31,061 - INFO - ThreadPoolExecutor-0_4 - Request - status OK
+2022-10-18 18:49:44,702 - ERROR - ThreadPoolExecutor-0_4 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name include_vars failed with exception: 
+2022-10-18 18:49:44,703 - INFO - ThreadPoolExecutor-0_4 - Request - status ERROR
+2022-10-18 18:49:44,703 - INFO - ThreadPoolExecutor-0_4 - Response send
+2022-10-18 18:51:43,171 - INFO - ThreadPoolExecutor-0_2 - Request received
+2022-10-18 18:51:43,171 - INFO - ThreadPoolExecutor-0_2 - Request - status OK
+2022-10-18 18:51:47,646 - ERROR - ThreadPoolExecutor-0_2 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with error
+2022-10-18 18:51:47,646 - INFO - ThreadPoolExecutor-0_2 - Request - status ERROR
+2022-10-18 18:51:47,646 - INFO - ThreadPoolExecutor-0_2 - Response send
+2022-10-18 18:53:56,253 - INFO - ThreadPoolExecutor-0_5 - Request received
+2022-10-18 18:53:56,254 - INFO - ThreadPoolExecutor-0_5 - Request - status OK
+2022-10-18 18:54:00,739 - ERROR - ThreadPoolExecutor-0_5 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name include_vars failed with exception: 
+2022-10-18 18:54:00,739 - INFO - ThreadPoolExecutor-0_5 - Request - status ERROR
+2022-10-18 18:54:00,740 - INFO - ThreadPoolExecutor-0_5 - Response send
+2022-10-18 18:54:24,491 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 18:54:24,491 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 18:56:23,184 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 96, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666108583.184351460","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-18 18:56:23,185 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-18 18:56:23,185 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 18:56:27,352 - INFO - ThreadPoolExecutor-0_6 - Request received
+2022-10-18 18:56:27,352 - INFO - ThreadPoolExecutor-0_6 - Request - status OK
+2022-10-18 18:56:32,826 - ERROR - ThreadPoolExecutor-0_6 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 99, in __init__
+    raise Exception(response.error)
+Exception: Deploy failed with Task with name include_vars failed with exception: {"failed": true, "message": "Could not find or access '/home/sadimer/Desktop/clouni_configuration_tool/grpc_server/id_vars_example.yaml' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option", "ansible_included_var_files": [], "ansible_facts": {}, "_ansible_no_log": false, "changed": false}
+2022-10-18 18:56:32,827 - INFO - ThreadPoolExecutor-0_6 - Request - status ERROR
+2022-10-18 18:56:32,827 - INFO - ThreadPoolExecutor-0_6 - Response send
+2022-10-18 19:04:36,959 - INFO - MainThread - Server stopped
+2022-10-18 19:04:36,959 - INFO - MainThread - Exited
+2022-10-18 19:04:38,693 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 19:04:38,698 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 19:04:38,699 - INFO - MainThread - Server started
+2022-10-18 19:05:07,023 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 19:05:07,023 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 19:05:23,469 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    return run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost', target_parameter) # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 56, in run_ansible
+    response = stub.RunTask(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666109123.467313248","description":"Error received from peer ipv6:[::1]:50154","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>"
+	debug_error_string = "{"created":"@1666109123.468995793","description":"Error received from peer ipv4:127.0.0.1:50151","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Exception calling application: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = "Socket closed"\n\tdebug_error_string = "{"created":"@1666109123.467313248","description":"Error received from peer ipv6:[::1]:50154","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"\n>","grpc_status":2}"
+>
+2022-10-18 19:05:23,498 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 19:05:23,498 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 19:05:41,121 - INFO - MainThread - Server stopped
+2022-10-18 19:05:41,121 - INFO - MainThread - Exited
+2022-10-18 19:05:43,019 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 19:05:43,023 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 19:05:43,024 - INFO - MainThread - Server started
+2022-10-18 19:05:51,101 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 19:05:51,101 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 19:05:51,315 - ERROR - ThreadPoolExecutor-0_0 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 74, in __init__
+    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/common/translator_to_configuration_dsl.py", line 120, in translate
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 87, in __init__
+    self.translate_to_provider()
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/tosca_template.py", line 263, in translate_to_provider
+    new_element_templates, new_extra, template_mapping = translate_to_provider(self)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 909, in translate
+    grpc_cotea_endpoint=service_tmpl.grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 736, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 824, in restructure_mapping_facts
+    grpc_cotea_endpoint=grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 812, in restructure_mapping_facts
+    is_delete, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/translator_to_provider.py", line 699, in get_source_structure_from_facts
+    return provider_artifacts.execute(new_global_elements_map_total_implementation, is_delete, value, grpc_cotea_endpoint)
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/provider_artifacts.py", line 104, in execute
+    return run_ansible(new_ansible_tasks, grpc_cotea_endpoint, {}, {}, 'localhost', target_parameter) # добавить переменную для дефолт хоста
+  File "/home/sadimer/Desktop/clouni_provider_tool/provider_tool/providers/common/ansible_runner/runner.py", line 29, in run_ansible
+    response = stub.StartSession(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1666109151.315518622","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":5419,"referenced_errors":[{"created":"@1666109151.315516330","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":397,"grpc_status":14}]}"
+>
+2022-10-18 19:05:51,316 - INFO - ThreadPoolExecutor-0_0 - Request - status ERROR
+2022-10-18 19:05:51,317 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 19:05:57,206 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 19:05:57,206 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 19:06:43,617 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 19:06:51,870 - INFO - MainThread - Server stopped
+2022-10-18 19:06:51,870 - INFO - MainThread - Exited
+2022-10-18 19:06:53,105 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 19:06:53,109 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 19:06:53,111 - INFO - MainThread - Server started
+2022-10-18 19:07:07,654 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 19:07:07,654 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 19:07:49,343 - INFO - MainThread - Server stopped
+2022-10-18 19:07:49,344 - INFO - MainThread - Exited
+2022-10-18 19:07:55,394 - INFO - MainThread - Logging clouni-provider-tool started
+2022-10-18 19:07:55,398 - INFO - MainThread - Server is going to start on 127.0.0.1:50051
+2022-10-18 19:07:55,400 - INFO - MainThread - Server started
+2022-10-18 19:07:58,874 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 19:07:58,874 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 19:08:44,645 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 19:10:13,941 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 19:10:13,941 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 19:12:00,020 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 19:13:23,050 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 19:13:23,050 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 19:18:06,744 - ERROR - ThreadPoolExecutor-0_1 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 96, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666109886.744029018","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-18 19:18:06,745 - INFO - ThreadPoolExecutor-0_1 - Request - status ERROR
+2022-10-18 19:18:06,745 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 19:18:14,028 - INFO - ThreadPoolExecutor-0_0 - Request received
+2022-10-18 19:18:14,029 - INFO - ThreadPoolExecutor-0_0 - Request - status OK
+2022-10-18 19:20:02,940 - INFO - ThreadPoolExecutor-0_0 - Response send
+2022-10-18 19:20:07,967 - INFO - ThreadPoolExecutor-0_4 - Request received
+2022-10-18 19:20:07,967 - INFO - ThreadPoolExecutor-0_4 - Request - status OK
+2022-10-18 19:21:32,237 - INFO - ThreadPoolExecutor-0_1 - Request received
+2022-10-18 19:21:32,238 - INFO - ThreadPoolExecutor-0_1 - Request - status OK
+2022-10-18 19:23:17,680 - INFO - ThreadPoolExecutor-0_1 - Response send
+2022-10-18 19:23:44,976 - ERROR - ThreadPoolExecutor-0_4 - 
+Traceback (most recent call last):
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 120, in ClouniProviderTool
+    response.content = TranslatorServer(args).output
+  File "/home/sadimer/Desktop/clouni_provider_tool/grpc_server/clouni_provider_tool.py", line 96, in __init__
+    response = stub.ClouniConfigurationTool(request)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/sadimer/Desktop/clouni_provider_tool/venv/lib/python3.6/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "{"created":"@1666110224.976286715","description":"Error received from peer ipv4:127.0.0.1:50052","file":"src/core/lib/surface/call.cc","file_line":1067,"grpc_message":"Socket closed","grpc_status":14}"
+>
+2022-10-18 19:23:44,976 - INFO - ThreadPoolExecutor-0_4 - Request - status ERROR
+2022-10-18 19:23:44,977 - INFO - ThreadPoolExecutor-0_4 - Response send
+2022-10-18 19:23:55,852 - INFO - ThreadPoolExecutor-0_3 - Request received
+2022-10-18 19:23:55,853 - INFO - ThreadPoolExecutor-0_3 - Request - status OK
+2022-10-18 19:24:50,738 - INFO - ThreadPoolExecutor-0_3 - Response send
