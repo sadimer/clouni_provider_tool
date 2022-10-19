@@ -672,23 +672,18 @@ def get_source_structure_from_facts(condition, fact_name, value, arguments, exec
             VALUE: "tmp_value"
         },
         {
-            SOURCE: SET_FACT_SOURCE,
+            SOURCE: condition,
             PARAMETERS: {
-                "input_args": arguments
+                "input_args": arguments,
+                "input_facts": "\{\{ input_facts \}\}"
             },
             EXECUTOR: executor,
             VALUE: "tmp_value"
         },
         {
-            SOURCE: IMPORT_TASKS_MODULE,
-            PARAMETERS: "artifacts/" + condition + ".yaml",
-            EXECUTOR: executor,
-            VALUE: "tmp_value"
-        },
-        {
             SOURCE: SET_FACT_SOURCE,
             PARAMETERS: {
-                value: "\{\{ matched_object[\"" + value + "\"] \}\}"
+                value: "\{\{ tmp_value.matched_object[\"" + value + "\"] \}\}"
             },
             VALUE: "tmp_value",
             EXECUTOR: executor

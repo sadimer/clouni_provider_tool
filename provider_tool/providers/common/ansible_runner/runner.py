@@ -21,7 +21,7 @@ def close_session(session_id, stub):
         raise Exception(response.error_msg)
 
 
-def run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars, hosts, target_parameter=None):
+def run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars, hosts, target_parameter=None, ansible_library=None):
     options = [('grpc.max_send_message_length', 100 * 1024 * 1024), ('grpc.max_receive_message_length', 100 * 1024 * 1024)]
     channel = grpc.insecure_channel(grpc_cotea_endpoint, options=options)
     stub = cotea_pb2_grpc.CoteaGatewayStub(channel)
@@ -38,6 +38,8 @@ def run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars, hosts
     request.hosts = hosts
     request.inv_path = os.path.join(tmp_current_dir, 'hosts.ini')
     request.extra_vars = str(extra_vars)
+    if ansible_library:
+        request.ansible_library = ansible_library
     for key, val in extra_env.items():
         obj = MapFieldEntry()
         obj.key = key
@@ -71,9 +73,7 @@ def run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars, hosts
                 raise Exception('Task with name %s failed with exception: %s' % (result.task_name, error))
             if target_parameter:
                 result = json.loads(result.results_dict_str)
-                if 'results' in result and len(result['results']) > 0 and 'ansible_facts' in \
-                        result['results'][0] and 'matched_object' in result['results'][0]['ansible_facts']:
-                    matched_object = result['results'][0]['ansible_facts']['matched_object'][
-                        target_parameter.split('.')[-1]]
+                if 'ansible_facts' in result and target_parameter.split('.')[-1] in result['ansible_facts']:
+                    matched_object = result['ansible_facts'][target_parameter.split('.')[-1]]
     close_session(session_id, stub)
     return matched_object

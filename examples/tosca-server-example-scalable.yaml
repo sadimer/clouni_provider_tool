@@ -24,7 +24,8 @@ topology_template:
             ip_address: 0.0.0.0
         os:
           properties:
-            type: debian
+            distribution: ubuntu
+            version: 21.04
         scalable:
           properties:
             min_instances: 1
