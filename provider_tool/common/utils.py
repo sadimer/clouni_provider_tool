@@ -62,10 +62,6 @@ def get_project_root_path():
     return os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 
-def get_tmp_clouni_dir():
-    return '/home/sadimer/Desktop/ISPRAS/grpc-cotea'
-
-
 def get_random_int(start, end):
     seed(time())
     r = randint(start, end)

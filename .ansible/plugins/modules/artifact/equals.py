@@ -39,13 +39,21 @@ def main():
     )
     ansible_module = AnsibleModule(argument_spec=argument_spec, supports_check_mode=True)
     input_facts = ansible_module.params['input_facts']
-    if len(ansible_module.params['input_args']) != 2:
-        ansible_module.fail_json(msg="Bad input args, should use 0 arg for match parameter and 1 arg for match value")
-    match_param = ansible_module.params['input_args'][0]
-    match_val = ansible_module.params['input_args'][1]
+    if len(ansible_module.params['input_args']) % 2 != 0:
+        ansible_module.fail_json(msg="Bad input args, should use input_args % 2 = 0 arg for match parameter and input_args % 2 = 1 arg for match value")
+    match_params = []
+    match_vals = []
+    for i in range(0, len(ansible_module.params['input_args']), 2):
+        match_params += [ansible_module.params['input_args'][i]]
+        match_vals += [ansible_module.params['input_args'][i + 1]]
     results = []
     for elem in input_facts:
-        if elem.get(match_param) == match_val:
+        flag = True
+        for i in range(len(match_params)):
+            if elem.get(match_params[i]) != match_vals[i]:
+                flag = False
+                break
+        if flag:
             results.append(elem)
     if len(results) == 0:
         ansible_module.fail_json(msg="There are no matchable objects")

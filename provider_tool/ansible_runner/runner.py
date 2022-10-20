@@ -6,8 +6,8 @@ import grpc
 from tqdm import tqdm
 
 from provider_tool.common import utils
-from provider_tool.providers.common.ansible_runner import cotea_pb2_grpc
-from provider_tool.providers.common.ansible_runner.cotea_pb2 import SessionID, EmptyMsg, Config, MapFieldEntry, Task
+from provider_tool.ansible_runner import cotea_pb2_grpc
+from provider_tool.ansible_runner.cotea_pb2 import SessionID, EmptyMsg, Config, MapFieldEntry, Task
 
 SEPARATOR = '.'
 
@@ -34,9 +34,8 @@ def run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars, hosts
 
     request = Config()
     request.session_ID = session_id
-    tmp_current_dir = utils.get_tmp_clouni_dir()
     request.hosts = hosts
-    request.inv_path = os.path.join(tmp_current_dir, 'hosts.ini')
+    request.inv_path = os.path.join('pb_starts', 'hosts.ini')
     request.extra_vars = str(extra_vars)
     if ansible_library:
         request.ansible_library = ansible_library

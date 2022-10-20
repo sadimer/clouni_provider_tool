@@ -649,14 +649,6 @@ def get_source_structure_from_facts(condition, fact_name, value, arguments, exec
                 },
                 VALUE: "tmp_value",
                 EXECUTOR: executor
-            },
-            {
-                SOURCE: 'debug',
-                PARAMETERS: {
-                    'var': 'target_objects'
-                },
-                VALUE: "tmp_value",
-                EXECUTOR: executor
             }
         ]
     else:
@@ -664,26 +656,18 @@ def get_source_structure_from_facts(condition, fact_name, value, arguments, exec
 
     addition_for_elements_map_total_implementation = [
         {
-            SOURCE: SET_FACT_SOURCE,
-            PARAMETERS: {
-                "input_facts": '{{ target_objects }}'
-            },
-            EXECUTOR: executor,
-            VALUE: "tmp_value"
-        },
-        {
             SOURCE: condition,
             PARAMETERS: {
                 "input_args": arguments,
-                "input_facts": "\{\{ input_facts \}\}"
+                "input_facts": "\{\{ target_objects \}\}"
             },
             EXECUTOR: executor,
-            VALUE: "tmp_value"
+            VALUE: "result"
         },
         {
             SOURCE: SET_FACT_SOURCE,
             PARAMETERS: {
-                value: "\{\{ tmp_value.matched_object[\"" + value + "\"] \}\}"
+                value: "\{\{ result.matched_object[\"" + value + "\"] \}\}"
             },
             VALUE: "tmp_value",
             EXECUTOR: executor
