@@ -68,7 +68,7 @@ def create_artifact(filename, data, executor):
         os.makedirs(os.path.dirname(filename), exist_ok=True)
         tasks = create_artifact_data(data, executor)
         with open(filename, "w") as f:
-            filedata = yaml.dump(tasks, default_flow_style=False, sort_keys=False)
+            filedata = yaml.dump(tasks, default_flow_style=False)
             f.write(filedata)
             logging.info("Artifact for executor %s was created: %s" % (executor, filename))
 
