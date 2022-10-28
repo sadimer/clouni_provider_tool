@@ -1,4 +1,5 @@
 import itertools
+import json
 import os
 import importlib
 
@@ -41,6 +42,14 @@ def execute_function(module_name, function_name, params):
             return r
         except:
             return
+
+
+def unique_list(lst):
+    if isinstance(lst, list):
+        new_lst = [json.dumps(x) for x in lst]
+        new_lst = list(set(new_lst))
+        return [json.loads(x) for x in new_lst]
+    return lst
 
 
 def deep_update_dict(source, overrides):

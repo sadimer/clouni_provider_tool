@@ -160,7 +160,6 @@ node_types:
           github_url:
             type: string
 
-
   tosca.nodes.Container.Application.Docker:
     derived_from: tosca.nodes.Container.Application
     requirements:

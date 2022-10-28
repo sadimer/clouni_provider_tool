@@ -478,6 +478,32 @@ tosca.nodes.network.Port:
         parameter: openstack.nodes.Port.requirements.network.relationship
         value: "{self[value]}_links_to"
 
+tosca.nodes.network.Trunk:
+  - parameter: openstack.nodes.Trunk.properties.name
+    value: "{self[keyname]}"
+  - parameter: openstack.nodes.Trunk.requirements.port.node
+    value: "{self[name]}_port"
+  - interfaces: openstack.nodes.Port.interfaces
+  - properties:
+      segmentations.segmentation_id:
+        - parameter: "{self[extra][ansible][{self[keyname]}_trunk][vars][segmentation_ids]}"
+          value:
+           - "{self[value]}"
+        - parameter: "{self[extra][ansible][{self[keyname]}_trunk][vars][segmentation_types]}"
+          value:
+            - vlan
+      segmentations.port_id:
+        - parameter: openstack.nodes.Trunk.properties.add_sub_port
+          value:
+            port_id: "\\{\\{ port_ids[item | int] | default(omit) \\}\\}"
+            segmentation_id: "\\{\\{ segmentation_ids[item | int] | default(omit) \\}\\}"
+            segmentation_type: "\\{\\{ segmentation_types[item | int] | default(omit) \\}\\}"
+        - parameter: "{self[extra][ansible][{self[keyname]}_trunk][with_sequence]}"
+          value: "start=0 end=\\{\\{ [port_ids | length, segmentation_ids | length, segmentation_types | length] | max - 1 \\}\\} format=%d"
+        - parameter: "{self[extra][ansible][{self[keyname]}_trunk][vars][port_ids]}"
+          value:
+           - "{self[value]}"
+
 tosca.nodes.SoftwareComponent:
   - requirements:
     - host.node:

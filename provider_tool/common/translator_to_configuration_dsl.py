@@ -96,9 +96,9 @@ def translate(template_file, validate_only, provider, configuration_tool, cluste
 
     try:
         tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
-    except:
-        logging.exception("Got exception from OpenStack tosca-parser")
-        raise Exception("Got exception from OpenStack tosca-parser")
+    except Exception as e:
+        logging.exception("Got exception from OpenStack tosca-parser: %s" % e)
+        raise Exception("Got exception from OpenStack tosca-parser: %s" % e)
 
     # After validation, all templates are imported
     if validate_only:

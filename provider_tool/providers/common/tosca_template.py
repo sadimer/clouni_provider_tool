@@ -284,9 +284,9 @@ class ProviderToscaTemplate(object):
 
         try:
             topology_tpl = TopologyTemplate(dict_tpl, self.definitions, rel_types=rel_types)
-        except:
-            logging.exception("Failed to parse intermidiate non-normative TOSCA template with OpenStack tosca-parser")
-            raise Exception("Failed to parse intermidiate non-normative TOSCA template with OpenStack tosca-parser")
+        except Exception as e:
+            logging.exception("Failed to parse intermidiate non-normative TOSCA template with OpenStack tosca-parser with error: %s" % e)
+            raise Exception("Failed to parse intermidiate non-normative TOSCA template with OpenStack tosca-parser with error: %s" % e)
 
         self.extra_configuration_tool_params = utils.deep_update_dict(self.extra_configuration_tool_params, new_extra)
 
