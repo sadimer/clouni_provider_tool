@@ -492,7 +492,7 @@ tosca.nodes.network.Trunk:
         - parameter: "{self[extra][ansible][{self[keyname]}_trunk][vars][segmentation_types]}"
           value:
             - vlan
-      segmentations.*.port_name:
+      segmentations.*.port_name: # TODO: not works correctly
         parameter: "{self[extra][ansible][{self[keyname]}_trunk][vars][port_ids]}"
         value:
             - value: id

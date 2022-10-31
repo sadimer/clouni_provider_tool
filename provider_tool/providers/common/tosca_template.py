@@ -74,13 +74,14 @@ class ProviderToscaTemplate(object):
         self.used_conditions_set = set()
         self.extra_configuration_tool_params = dict()
         self.make_extended_notations()
-        self.node_templates = self.resolve_get_property_functions(self.node_templates)
-        self.relationship_templates = self.resolve_get_property_functions(self.relationship_templates)
 
         # resolving template dependencies fo normative templates
         self.template_dependencies = dict()
         self._relation_target_source = dict()
         self.resolve_in_template_dependencies()
+
+        self.node_templates = self.resolve_get_property_functions(self.node_templates)
+        self.relationship_templates = self.resolve_get_property_functions(self.relationship_templates)
 
         self.normative_nodes_graph = self.normative_nodes_graph_dependency()
 
@@ -88,7 +89,9 @@ class ProviderToscaTemplate(object):
         self.make_extended_notations()
         self.add_dependency_requirements()
 
-        self.dict_tpl = {TOPOLOGY_TEMPLATE: {}}
+        self.dict_tpl = tosca_parser_template_object.tpl
+        self.dict_tpl[TOPOLOGY_TEMPLATE] = {}
+        del self.dict_tpl[IMPORTS]
         if self.node_templates:
             self.dict_tpl[TOPOLOGY_TEMPLATE][NODE_TEMPLATES] = self.node_templates
         if self.relationship_templates:
@@ -298,33 +301,54 @@ class ProviderToscaTemplate(object):
         prop_keys = []
         tmpl_properties = None
 
-        if value[0] == SELF:
+        if value[0] == 'SELF':
             value[0] = tmpl_name
-        if value[0] == HOST:
+        if value[0] == 'HOST':
             value = [tmpl_name, 'host'] + value[1:]
-        if value[0] in [SOURCE, TARGET]:
-            # TODO
-            logging.critical("Not implemented")
-            raise Exception("Not implemented")
-        node_tmpl = self.node_templates[value[0]]
-
-        if node_tmpl.get(REQUIREMENTS, None) is not None:
-            for req in node_tmpl[REQUIREMENTS]:
-                if req.get(value[1], None) is not None:
-                    if req[value[1]].get(NODE, None) is not None:
-                        return self._get_property_value([req[value[1]][NODE]] + value[2:], req[value[1]][NODE])
-                    if req[value[1]].get(NODE_FILTER, None) is not None:
-                        tmpl_properties = {}
-                        node_filter_props = req[value[1]][NODE_FILTER].get(PROPERTIES, [])
-                        for prop in node_filter_props:
-                            tmpl_properties.update(prop)
-                        prop_keys = value[2:]
-        if node_tmpl.get(CAPABILITIES, {}).get(value[1], None) is not None:
-            tmpl_properties = node_tmpl[CAPABILITIES][value[1]].get(PROPERTIES, {})
-            prop_keys = value[2:]
-        if node_tmpl.get(PROPERTIES, {}).get(value[1], None) is not None:
-            tmpl_properties = node_tmpl[PROPERTIES]
-            prop_keys = value[1:]
+        if value[0] in ['SOURCE', 'TARGET']:
+            if not self.relationship_templates.get(tmpl_name):
+                logging.error("Relationship %s not found" % tmpl_name)
+                raise Exception("Relationship %s not found" % tmpl_name)
+            else:
+                for k, v in self.template_dependencies.items():
+                    for elem in v:
+                        if elem == tmpl_name:
+                            if value[0] == 'SOURCE':
+                                value[0] = k
+                                break
+                            if value[0] == 'TARGET':
+                                for elem in self.node_templates.get(k).get(REQUIREMENTS):
+                                    for req, reqv in elem.items():
+                                        if reqv.get(RELATIONSHIP) == tmpl_name:
+                                            value[0] = reqv.get(NODE)
+                                            break
+        if self.node_templates.get(value[0]):
+            node_tmpl = self.node_templates[value[0]]
+            if node_tmpl.get(REQUIREMENTS, None) is not None:
+                for req in node_tmpl[REQUIREMENTS]:
+                    if req.get(value[1], None) is not None:
+                        if req[value[1]].get(NODE, None) is not None:
+                            return self._get_property_value([req[value[1]][NODE]] + value[2:], req[value[1]][NODE])
+                        if req[value[1]].get(NODE_FILTER, None) is not None:
+                            tmpl_properties = {}
+                            node_filter_props = req[value[1]][NODE_FILTER].get(PROPERTIES, [])
+                            for prop in node_filter_props:
+                                tmpl_properties.update(prop)
+                            prop_keys = value[2:]
+            if node_tmpl.get(CAPABILITIES, {}).get(value[1], None) is not None:
+                tmpl_properties = node_tmpl[CAPABILITIES][value[1]].get(PROPERTIES, {})
+                prop_keys = value[2:]
+            if node_tmpl.get(PROPERTIES, {}).get(value[1], None) is not None:
+                tmpl_properties = node_tmpl[PROPERTIES]
+                prop_keys = value[1:]
+        elif self.relationship_templates.get(value[0]):
+            rel_tmpl = self.relationship_templates[value[0]]
+            if rel_tmpl.get(PROPERTIES, {}).get(value[1], None) is not None:
+                tmpl_properties = rel_tmpl[PROPERTIES]
+                prop_keys = value[1:]
+        else:
+            logging.error("Value %s not found in %s" % (value[0], tmpl_name))
+            raise Exception("Value %s not found in %s" % (value[0], tmpl_name))
 
         for key in prop_keys:
             if tmpl_properties.get(key, None) is None:
