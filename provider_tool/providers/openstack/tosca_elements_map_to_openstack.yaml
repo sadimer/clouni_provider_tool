@@ -485,14 +485,37 @@ tosca.nodes.network.Trunk:
     value: "{self[name]}_port"
   - interfaces: openstack.nodes.Port.interfaces
   - properties:
-      segmentations.segmentation_id:
+      segmentations.*.segmentation_id:
         - parameter: "{self[extra][ansible][{self[keyname]}_trunk][vars][segmentation_ids]}"
           value:
            - "{self[value]}"
         - parameter: "{self[extra][ansible][{self[keyname]}_trunk][vars][segmentation_types]}"
           value:
             - vlan
-      segmentations.port_id:
+      segmentations.*.port_name:
+        parameter: "{self[extra][ansible][{self[keyname]}_trunk][vars][port_ids]}"
+        value:
+            - value: id
+              facts: os_port_facts.ansible_facts.openstack_ports
+              executor: ansible
+              condition: equals
+              arguments:
+                - name
+                - "{self[value]}"
+      segmentations.*.mac_address:
+        - parameter: openstack.nodes.Trunk.properties.add_sub_port
+          value:
+            port_id:
+                value: id
+                facts: os_port_facts.ansible_facts.openstack_ports
+                executor: ansible
+                condition: equals
+                arguments:
+                  - mac_address
+                  - "{self[buffer][mac_address]}"
+        - parameter: "{self[buffer][mac_address]}"
+          value: "{self[value]}"
+      segmentations.*.port_id:
         - parameter: openstack.nodes.Trunk.properties.add_sub_port
           value:
             port_id: "\\{\\{ port_ids[item | int] | default(omit) \\}\\}"
