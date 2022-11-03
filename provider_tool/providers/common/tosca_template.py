@@ -366,7 +366,6 @@ class ProviderToscaTemplate(object):
             for key, value in data.items():
                 if key == GET_PROPERTY:
                     new_data = self._get_property_value(value, tmpl_name)
-                    None
                 elif key == CONCAT:
                     if isinstance(value, list):
                         new_data = ""
@@ -424,8 +423,6 @@ class ProviderToscaTemplate(object):
         elif isinstance(data, GetProperty):
             value = data.args
             return self._get_property_value(value, tmpl_name)
-        elif isinstance(data, Concat):
-            None
         return data
 
     def make_extended_notations(self):
