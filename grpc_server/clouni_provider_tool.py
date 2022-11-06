@@ -5,6 +5,8 @@ from yaml import Loader
 from grpc_server.api_pb2 import ClouniProviderToolResponse, ClouniProviderToolRequest, ClouniConfigurationToolRequest
 import grpc_server.api_pb2_grpc as api_pb2_grpc
 from provider_tool.common.translator_to_configuration_dsl import translate
+
+from provider_tool.common.utils import NoAliasDumper
 from toscaparser.common.exception import ValidationError
 from concurrent import futures
 import logging
@@ -72,8 +74,8 @@ class TranslatorServer(object):
                                                    host_ip_parameter=self.host_parameter, is_delete=self.is_delete,
                                                    extra={'global': self.extra}, log_level=self.log_level, a_file=False,
                                                    grpc_cotea_endpoint=self.grpc_cotea_endpoint)
-        self.output = yaml.dump(dict_tpl)
-        self.extra = yaml.dump(extra)
+        self.output = yaml.dump(dict_tpl, Dumper=NoAliasDumper)
+        self.extra = yaml.dump(extra, Dumper=NoAliasDumper)
         if self.configuration_tool_endpoint and not self.validate_only:
             request = ClouniConfigurationToolRequest()
             request.provider_template = self.output
