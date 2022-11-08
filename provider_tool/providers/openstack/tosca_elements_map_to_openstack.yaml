@@ -390,21 +390,7 @@ tosca.nodes.Compute:
                     - properties
                   - "{self[buffer][os]}"
       scalable.properties:
-        min_instances:
-          - parameter: "{self[extra][ansible][{self[keyname]}_server][with_sequence]}"
-            value: "start=1 end={self[value]} format=%d"
-          - parameter: "{self[extra][ansible][{self[name]}_floating_ip][with_sequence]}"
-            value: "start=1 end={self[value]} format=%d"
-          - parameter: openstack.nodes.Server.properties.name
-            value: "{self[name]}_\\{\\{ item \\}\\}"
         default_instances:
-          - parameter: "{self[extra][ansible][{self[keyname]}_server][with_sequence]}"
-            value: "start=1 end={self[value]} format=%d"
-          - parameter: "{self[extra][ansible][{self[name]}_floating_ip][with_sequence]}"
-            value: "start=1 end={self[value]} format=%d"
-          - parameter: openstack.nodes.Server.properties.name
-            value: "{self[name]}_\\{\\{ item \\}\\}"
-        max_instances:
           - parameter: "{self[extra][ansible][{self[keyname]}_server][with_sequence]}"
             value: "start=1 end={self[value]} format=%d"
           - parameter: "{self[extra][ansible][{self[name]}_floating_ip][with_sequence]}"

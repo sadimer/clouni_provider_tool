@@ -16,7 +16,7 @@ SEPARATOR = ':'
 class ProviderToscaTemplate(object):
     REQUIRED_CONFIG_PARAMS = (TOSCA_ELEMENTS_MAP_FILE, TOSCA_ELEMENTS_DEFINITION_FILE)
     DEPENDENCY_FUNCTIONS = (GET_PROPERTY, GET_ATTRIBUTE, GET_OPERATION_OUTPUT)
-    DEFAULT_ARTIFACTS_DIRECTOR = ARTIFACTS
+    DEFAULT_ARTIFACTS_DIRECTORY = ARTIFACTS
 
     def __init__(self, tosca_parser_template_object, provider, configuration_tool, cluster_name, host_ip_parameter, public_key_path,
                  is_delete, common_map_files=[], grpc_cotea_endpoint=None):

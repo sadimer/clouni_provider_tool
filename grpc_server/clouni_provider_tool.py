@@ -44,8 +44,6 @@ class TranslatorServer(object):
         self.extra = argv['extra']
         self.log_level = argv['log_level']
         self.debug = False
-        if self.log_level == 'debug':
-            self.debug = True
         if argv['debug']:
             self.debug = True
             self.log_level = 'debug'
