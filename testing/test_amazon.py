@@ -19,7 +19,7 @@ class TestAmazonOutput (unittest.TestCase, TestProvider):
 
     def test_server_name(self):
         template = copy.deepcopy(self.DEFAULT_TEMPLATE)
-        provider_template = self.get_provider_template_output(template)
+        provider_template = self.get_provider_template_output(template, test_name=self.test_server_name.__name__)
 
         server = self.get_default_node(provider_template)
         self.assertIsNotNone(server.get(PROPERTIES))

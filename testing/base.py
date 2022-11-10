@@ -93,7 +93,7 @@ class BaseProvider:
         return relation
 
     def get_provider_template_output(self, template, template_filename=None, extra=None, delete_template=True,
-                                  host_ip_parameter='public_address', return_extra_vars=False):
+                                  host_ip_parameter='public_address', return_extra_vars=False, test_name=None):
         if not template_filename:
             template_filename = self.template_filename()
         self.write_template(self.prepare_yaml(template))
@@ -102,6 +102,8 @@ class BaseProvider:
         if delete_template:
             self.delete_template(template_filename)
         print(yaml.dump(r))
+        with open(os.path.join('testing', 'examples', test_name + '_' + self.PROVIDER + '.yaml'), 'w+') as f:
+            print(yaml.dump(r), file=f)
         if return_extra_vars:
             return r, extra
         return r
@@ -157,8 +159,9 @@ class TestProvider(BaseProvider):
             testing_parameter = {
                 "meta": testing_value
             }
+
             template = self.update_template_property(template, self.NODE_NAME, testing_parameter)
-            provider_template = self.get_provider_template_output(template, extra=extra)
+            provider_template = self.get_provider_template_output(template, extra=extra, test_name=self.test_meta.__name__)
 
             if extra:
                 self.check_meta(provider_template, testing_value=testing_value, extra=extra)
@@ -173,7 +176,7 @@ class TestProvider(BaseProvider):
                 "private_address": testing_value
             }
             template = self.update_template_property(template, self.NODE_NAME, testing_parameter)
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_private_address.__name__)
 
             self.check_private_address(provider_template, testing_value)
 
@@ -185,7 +188,7 @@ class TestProvider(BaseProvider):
                 "public_address": testing_value
             }
             template = self.update_template_property(template, self.NODE_NAME, testing_parameter)
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_public_address.__name__)
 
             self.check_public_address(provider_template, testing_value)
 
@@ -201,7 +204,7 @@ class TestProvider(BaseProvider):
                 }
             }
             template = self.update_template_property(template, self.NODE_NAME, testing_parameter)
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_network_name.__name__)
 
             self.check_network_name(provider_template, testing_value)
 
@@ -214,7 +217,7 @@ class TestProvider(BaseProvider):
                 "mem_size": "1 GiB"
             }
             template = self.update_template_capability_properties(template, self.NODE_NAME, "host", testing_parameter)
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_host_capabilities.__name__)
 
             self.check_host_capabilities(provider_template, testing_parameter)
 
@@ -232,7 +235,7 @@ class TestProvider(BaseProvider):
                 }
             }
             template = self.update_template_capability(template, self.NODE_NAME, testing_parameter)
-            provider_template, extra = self.get_provider_template_output(template, return_extra_vars=True)
+            provider_template, extra = self.get_provider_template_output(template, return_extra_vars=True, test_name=self.test_endpoint_capabilities.__name__)
 
             self.check_endpoint_capabilities(provider_template, extra)
 
@@ -246,7 +249,7 @@ class TestProvider(BaseProvider):
                 "version": 16.04
             }
             template = self.update_template_capability_properties(template, self.NODE_NAME, "os", testing_parameter)
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_os_capabilities.__name__)
 
             self.check_os_capabilities(provider_template)
 
@@ -260,7 +263,7 @@ class TestProvider(BaseProvider):
             }
             template = self.update_template_capability_properties(template, self.NODE_NAME, "scalable",
                                                                   testing_parameter)
-            provider_template, extra = self.get_provider_template_output(template, return_extra_vars=True)
+            provider_template, extra = self.get_provider_template_output(template, return_extra_vars=True, test_name=self.test_scalable_capabilities.__name__)
 
             testing_value = '2'
             self.check_scalable_capabilities(provider_template, extra, testing_value)
@@ -277,6 +280,13 @@ class TestProvider(BaseProvider):
                 }
             }
             template = self.update_template_property(template, self.NODE_NAME, testing_parameter)
+            testing_parameter = {
+                "architecture": "x86_64",
+                "type": "ubuntu",
+                "distribution": "xenial",
+                "version": 16.04
+            }
+            template = self.update_template_capability_properties(template, self.NODE_NAME, "os", testing_parameter)
             template['node_types'] = {
                 'clouni.nodes.ServerExample': {
                     'derived_from': 'tosca.nodes.SoftwareComponent'
@@ -301,7 +311,7 @@ class TestProvider(BaseProvider):
                     }
                 }
             }
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_host_of_software_component.__name__)
             testing_value = 'service_1_server_example'
             self.check_host_of_software_component(provider_template, testing_value)
 
@@ -321,7 +331,7 @@ class TestProvider(BaseProvider):
                 }
             }
             template = self.update_template_property(template, self.NODE_NAME, testing_parameter)
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_get_input.__name__)
 
             self.check_get_input(provider_template, testing_value)
 
@@ -344,7 +354,7 @@ class TestProvider(BaseProvider):
                     }
                 }
             }
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_get_property.__name__)
 
             self.check_get_property(provider_template, testing_value)
 
@@ -367,7 +377,7 @@ class TestProvider(BaseProvider):
                     }
                 }
             }
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_get_attribute.__name__)
 
             self.check_get_attribute(provider_template, testing_value)
 
@@ -386,7 +396,7 @@ class TestProvider(BaseProvider):
                         "get_attribute": [ self.NODE_NAME, "public_address" ] }
                 }
             }
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_outputs.__name__)
 
             self.check_outputs(provider_template, testing_value)
 
@@ -398,7 +408,7 @@ class TestProvider(BaseProvider):
                 "private_address": "192.168.12.25"
             }
             template = self.update_template_property(template, self.NODE_NAME, testing_parameter)
-            provider_template = self.get_provider_template_output(template)
+            provider_template = self.get_provider_template_output(template, test_name=self.test_multiple_relationships.__name__)
 
             self.check_public_address(provider_template, "10.100.115.15")
             self.check_private_address(provider_template, "192.168.12.25")
@@ -428,7 +438,7 @@ class TestProvider(BaseProvider):
                 "version": "0.4.0"
             }
             template = self.update_template_capability_properties(template, self.NODE_NAME, 'os', testing_parameter)
-            provider_template = self.get_provider_template_output(template, host_ip_parameter='networks.default')
+            provider_template = self.get_provider_template_output(template, host_ip_parameter='networks.default', test_name=self.test_host_ip_parameter.__name__)
 
             self.check_host_ip_parameter(provider_template, testing_value)
 
@@ -464,7 +474,7 @@ class TestProvider(BaseProvider):
             }
             template = self.update_template_property(template, self.NODE_NAME, testing_parameter)
 
-            provider_template = self.get_provider_template_output(template, host_ip_parameter='public_address')
+            provider_template = self.get_provider_template_output(template, host_ip_parameter='public_address', test_name=self.test_nodes_interfaces_operations.__name__)
 
             self.check_nodes_interfaces_operations(provider_template, testing_value)
 
@@ -560,7 +570,6 @@ class TestProvider(BaseProvider):
                     }
                 }
             }
-            provider_template = self.get_provider_template_output(template, host_ip_parameter='public_address')
-            print(yaml.dump(template))
+            provider_template = self.get_provider_template_output(template, host_ip_parameter='public_address', test_name=self.test_relationships_interfaces_operations.__name__)
 
             self.check_relationships_interfaces_operations(provider_template, rel_name, soft_name, testing_value)
