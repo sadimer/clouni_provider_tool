@@ -28,6 +28,11 @@ tosca.nodes.Compute:
         ansible_user: "{self[buffer][add_host][ansible_user]}"
         host_ip: '\\{\\{ host_ip | default([]) + [[ "{self[keyname]}_private_address_" + item, {self[keyname]}_server.results[item | int - 1].server.public_v4 ]] \\}\\}'
         group: "{self[name]}_server_private_address"
+  - parameter: openstack.nodes.Server.interfaces.Standard.delete
+    value:
+      implementation: delete_host.yaml
+      inputs:
+        server_name: "{self[name]}_server_private_address"
   - properties:
       tosca_name:
         parameter: "{self[name]}"
@@ -143,6 +148,11 @@ tosca.nodes.Compute:
               ansible_user: "{self[buffer][add_host][ansible_user]}"
               host_ip: '\\{\\{ host_ip | default([]) + [[ "{self[keyname]}_public_address_" + item, {self[keyname]}_floating_ip.results[item | int - 1].floating_ip.floating_ip_address ]] \\}\\}'
               group: "{self[name]}_server_public_address"
+        - parameter: openstack.nodes.FloatingIp.interfaces.Standard.delete
+          value:
+            implementation: delete_host.yaml
+            inputs:
+              server_name: "{self[name]}_server_public_address"
       networks.*.network_name:
         parameter: openstack.nodes.Server.properties.nics
         value:

@@ -34,6 +34,11 @@ tosca.nodes.Compute:
               ansible_user: "{self[buffer][add_host][ansible_user]}"
               host_ip: '\\{\\{ host_ip | default([]) + [[ "{self[keyname]}_public_address_" + item, {self[keyname]}_instance.results[item | int - 1].instances[0].public_ip_address ]] \\}\\}'
               group: "{self[name]}_instance_public_address"
+        - parameter: amazon.nodes.Instance.interfaces.Standard.delete
+          value:
+            implementation: delete_host.yaml
+            inputs:
+              server_name: "{self[name]}_instance_public_address"
       networks.*.network_name:
         - parameter: "{self[buffer][network_name]}"
           value: "{self[value]}"
