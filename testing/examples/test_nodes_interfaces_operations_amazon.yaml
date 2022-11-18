@@ -15,6 +15,10 @@ topology_template:
               host_ip: '{{ host_ip | default([]) + [[ "tosca_server_example_public_address_"
                 + item, tosca_server_example_instance.results[item | int - 1].instances[0].public_ip_address
                 ]] }}'
+          delete:
+            implementation: delete_host.yaml
+            inputs:
+              server_name: tosca_server_example_instance_public_address
           start:
             implementation: testing/examples/ansible-operation-example.yaml
             inputs:

@@ -6,9 +6,9 @@ topology_template:
         public_key: '{{ lookup(''file'', ''~/.ssh/id_rsa.pub'') }}'
       requirements:
       - dependency:
-          node: tosca_server_example_keypair
-      - dependency:
           node: tosca_server_example_server
+      - dependency:
+          node: tosca_server_example_keypair
       type: openstack.nodes.Keypair
     tosca_server_example_2_server:
       interfaces:
@@ -21,6 +21,10 @@ topology_template:
               host_ip: '{{ host_ip | default([]) + [[ "tosca_server_example_2_private_address_"
                 + item, tosca_server_example_2_server.results[item | int - 1].server.public_v4
                 ]] }}'
+          delete:
+            implementation: delete_host.yaml
+            inputs:
+              server_name: tosca_server_example_2_server_private_address
       properties:
         auto_ip: false
         meta: master=true
@@ -29,9 +33,9 @@ topology_template:
       - key_name:
           node: tosca_server_example_2_keypair
       - dependency:
-          node: tosca_server_example_keypair
-      - dependency:
           node: tosca_server_example_server
+      - dependency:
+          node: tosca_server_example_keypair
       type: openstack.nodes.Server
     tosca_server_example_keypair:
       properties:
@@ -49,6 +53,10 @@ topology_template:
               host_ip: '{{ host_ip | default([]) + [[ "tosca_server_example_private_address_"
                 + item, tosca_server_example_server.results[item | int - 1].server.public_v4
                 ]] }}'
+          delete:
+            implementation: delete_host.yaml
+            inputs:
+              server_name: tosca_server_example_server_private_address
       properties:
         auto_ip: false
         meta: master=true

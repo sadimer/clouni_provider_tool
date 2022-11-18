@@ -16,7 +16,10 @@ tosca.nodes.Compute:
   - parameter: openstack.nodes.Server.properties.name
     value: "{self[name]}"
   - attributes:
-      meta: openstack.nodes.Server.attributes.meta
+      public_address: openstack.nodes.FloatingIp.attributes.floating_ip_address
+      private_address: openstack.nodes.Server.attributes.private_v4
+      tosca_id: openstack.nodes.Server.attributes.id
+      tosca_name: openstack.nodes.Server.attributes.name
   - properties:
       meta: openstack.nodes.Server.properties.meta
   - parameter: openstack.nodes.Server.properties.auto_ip
@@ -413,6 +416,10 @@ tosca.nodes.Compute:
     interfaces: openstack.nodes.Server.interfaces
 
 tosca.nodes.network.Network:
+  - attributes:
+      segmentation_id: openstack.nodes.Network.attributes.provider:segmentation_id
+      tosca_id: openstack.nodes.Network.attributes.id
+      tosca_name: openstack.nodes.Network.attributes.name
   - interfaces: openstack.nodes.Network.interfaces
   - properties:
       network_name:
