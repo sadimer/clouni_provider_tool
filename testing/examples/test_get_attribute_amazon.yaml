@@ -4,7 +4,10 @@ topology_template:
       properties:
         name: tosca_server_example_2
         tags:
-          metadata: master=true
+          metadata:
+            get_attribute:
+            - tosca_server_example_compute
+            - tosca_id
       requirements:
       - key_name:
           node: tosca_server_example_2_key
@@ -26,8 +29,6 @@ topology_template:
     tosca_server_example_instance:
       properties:
         name: tosca_server_example
-        tags:
-          metadata: master=true
       requirements:
       - key_name:
           node: tosca_server_example_key

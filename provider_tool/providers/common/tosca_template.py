@@ -18,7 +18,8 @@ class ProviderToscaTemplate(object):
     DEPENDENCY_FUNCTIONS = (GET_PROPERTY, GET_ATTRIBUTE, GET_OPERATION_OUTPUT)
     DEFAULT_ARTIFACTS_DIRECTORY = ARTIFACTS
 
-    def __init__(self, tosca_parser_template_object, provider, configuration_tool, cluster_name, host_ip_parameter,
+    def __init__(self, template, tosca_parser_template_object, provider, configuration_tool, cluster_name,
+                 host_ip_parameter,
                  public_key_path,
                  is_delete, common_map_files=[], grpc_cotea_endpoint=None):
         self.provider = provider
@@ -61,13 +62,13 @@ class ProviderToscaTemplate(object):
         self.node_templates = {}
         self.relationship_templates = {}
         self.template_mapping = {}
-        for tmpl in topology_template.nodetemplates:
-            self.node_templates[tmpl.name] = tmpl.entity_tpl
 
-        for tmpl in topology_template.relationship_templates:
-            self.relationship_templates[tmpl.name] = tmpl.entity_tpl
         import_definition_file = ImportsLoader([self.definition_file()], None, list(SERVICE_TEMPLATE_KEYS),
                                                topology_template.tpl)
+
+        topology_template = template.get(TOPOLOGY_TEMPLATE, {})
+        self.node_templates = topology_template.get(NODE_TEMPLATES, {})
+        self.relationship_templates = topology_template.get(RELATIONSHIP_TEMPLATES, {})
         self.definitions.update(import_definition_file.get_custom_defs())
         self.software_types = set()
         self.fulfil_definitions_with_parents()
@@ -81,13 +82,13 @@ class ProviderToscaTemplate(object):
         self._relation_target_source = dict()
         self.resolve_in_template_dependencies()
 
-        self.dict_tpl = tosca_parser_template_object.tpl
+        self.dict_tpl = template
 
         self.node_templates = self.inherit_type_interfaces(self.node_templates)
         self.relationship_templates = self.inherit_type_interfaces(self.relationship_templates)
 
-        self.node_templates = self.resolve_get_property_and_attributes_functions(self.node_templates)
-        self.relationship_templates = self.resolve_get_property_and_attributes_functions(self.relationship_templates)
+        self.node_templates = self.checked_resolve_get_property_and_attributes_functions(self.node_templates)
+        self.relationship_templates = self.checked_resolve_get_property_and_attributes_functions(self.relationship_templates)
 
         self.normative_nodes_graph = self.normative_nodes_graph_dependency()
 
@@ -312,36 +313,46 @@ class ProviderToscaTemplate(object):
                 logging.error('No input with name %s' % value[0])
                 raise Exception('No input with name %s' % value[0])
             return default
+        elif isinstance(value, six.string_types):
+            result = self.inputs.get(value)
+            default = result.get(DEFAULT)
+            if not result or not default:
+                logging.error('No input with name %s' % value)
+                raise Exception('No input with name %s' % value)
+            return default
         else:
-            logging.error('Parameter of get_input should be a list')
-            raise Exception('Parameter of get_input should be a list')
+            logging.error('Parameter of get_input should be a list or str')
+            raise Exception('Parameter of get_input should be a list or str')
+
+    def _resolve_tosca_travers(self, value, tmpl_name):
+        if value[0] == 'SELF':
+            value[0] = tmpl_name
+        if value[0] == 'HOST':
+            value = [tmpl_name, 'host'] + value[1:]
+        if value[0] == 'SOURCE':
+            if not self.relationship_templates.get(tmpl_name):
+                logging.error("Relationship %s not found" % tmpl_name)
+                raise Exception("Relationship %s not found" % tmpl_name)
+            else:
+                value[0] = self._relation_target_source[tmpl_name]['source']
+        if value[0] == 'TARGET':
+            if not self.relationship_templates.get(tmpl_name):
+                logging.error("Relationship %s not found" % tmpl_name)
+                raise Exception("Relationship %s not found" % tmpl_name)
+            else:
+                value[0] = self._relation_target_source[tmpl_name]['target']
+        if self.node_templates.get(value[0]):
+            node_tmpl = self.node_templates[value[0]]
+            if node_tmpl.get(REQUIREMENTS, None) is not None:
+                for req in node_tmpl[REQUIREMENTS]:
+                    if req.get(value[1], None) is not None:
+                        if req[value[1]].get(NODE, None) is not None:
+                            return self._resolve_tosca_travers([req[value[1]][NODE]] + value[2:], req[value[1]][NODE])
+        return value
 
     def _get_attribute_value(self, value, tmpl_name):
         if isinstance(value, list):
-            if value[0] == 'SELF':
-                value[0] = tmpl_name
-            if value[0] == 'HOST':
-                value = [tmpl_name, 'host'] + value[1:]
-            if value[0] == 'SOURCE':
-                if not self.relationship_templates.get(tmpl_name):
-                    logging.error("Relationship %s not found" % tmpl_name)
-                    raise Exception("Relationship %s not found" % tmpl_name)
-                else:
-                    value[0] = self._relation_target_source[tmpl_name]['source']
-            if value[0] == 'TARGET':
-                if not self.relationship_templates.get(tmpl_name):
-                    logging.error("Relationship %s not found" % tmpl_name)
-                    raise Exception("Relationship %s not found" % tmpl_name)
-                else:
-                    value[0] = self._relation_target_source[tmpl_name]['target']
-            if self.node_templates.get(value[0]):
-                node_tmpl = self.node_templates[value[0]]
-                if node_tmpl.get(REQUIREMENTS, None) is not None:
-                    for req in node_tmpl[REQUIREMENTS]:
-                        if req.get(value[1], None) is not None:
-                            if req[value[1]].get(NODE, None) is not None:
-                                return self._get_attribute_value([req[value[1]][NODE]] + value[2:], req[value[1]][NODE])
-            return {GET_ATTRIBUTE: value}
+            return self._resolve_tosca_travers(value, tmpl_name)
         else:
             logging.error('Parameter of get_attribute should be a list')
             raise Exception('Parameter of get_attribute should be a list')
@@ -350,23 +361,7 @@ class ProviderToscaTemplate(object):
         if isinstance(value, list):
             prop_keys = []
             tmpl_properties = None
-
-            if value[0] == 'SELF':
-                value[0] = tmpl_name
-            if value[0] == 'HOST':
-                value = [tmpl_name, 'host'] + value[1:]
-            if value[0] == 'SOURCE':
-                if not self.relationship_templates.get(tmpl_name):
-                    logging.error("Relationship %s not found" % tmpl_name)
-                    raise Exception("Relationship %s not found" % tmpl_name)
-                else:
-                    value[0] = self._relation_target_source[tmpl_name]['source']
-            if value[0] == 'TARGET':
-                if not self.relationship_templates.get(tmpl_name):
-                    logging.error("Relationship %s not found" % tmpl_name)
-                    raise Exception("Relationship %s not found" % tmpl_name)
-                else:
-                    value[0] = self._relation_target_source[tmpl_name]['target']
+            value = self._resolve_tosca_travers(value, tmpl_name)
             if self.node_templates.get(value[0]):
                 node_tmpl = self.node_templates[value[0]]
                 if node_tmpl.get(REQUIREMENTS, None) is not None:
@@ -408,6 +403,12 @@ class ProviderToscaTemplate(object):
             logging.error('Parameter of get_property should be a list')
             raise Exception('Parameter of get_property should be a list')
 
+    # it's not a good solution, but works when we need get property with get_attribute
+    # for correct translation # TODO make normal solution
+    def checked_resolve_get_property_and_attributes_functions(self, templates):
+        templates = self.resolve_get_property_and_attributes_functions(templates)
+        return self.resolve_get_property_and_attributes_functions(templates)
+
     def resolve_get_property_and_attributes_functions(self, data=None, tmpl_name=None):
         if data is None:
             data = self.node_templates
@@ -417,9 +418,13 @@ class ProviderToscaTemplate(object):
                 if key == GET_PROPERTY:
                     new_data = self._get_property_value(value, tmpl_name)
                 elif key == GET_ATTRIBUTE:
-                    new_data = self._get_attribute_value(value, tmpl_name)
+                    new_data = {GET_ATTRIBUTE: self._get_attribute_value(value, tmpl_name)}
                 elif key == GET_INPUT:
                     new_data = self._get_input_value(value, tmpl_name)
+                elif key == OUTPUTS:
+                    for k in value:
+                        value[k] = self._get_attribute_value(value[k], tmpl_name)
+                    new_data[key] = value
                 else:
                     new_data[key] = self.resolve_get_property_and_attributes_functions(value,
                                                                                        tmpl_name if tmpl_name is not None else key)
@@ -434,7 +439,7 @@ class ProviderToscaTemplate(object):
             return self._get_property_value(value, tmpl_name)
         elif isinstance(data, GetAttribute):
             value = data.args
-            return self._get_attribute_value(value, tmpl_name)
+            return {GET_ATTRIBUTE: self._get_attribute_value(value, tmpl_name)}
         elif isinstance(data, GetInput):
             value = data.args
             return self._get_input_value(value, tmpl_name)

@@ -540,6 +540,7 @@ tosca.nodes.SoftwareComponent:
         value: "{self[value]}_hosted_on"
   - properties: tosca.nodes.SoftwareComponent.properties
   - interfaces: tosca.nodes.SoftwareComponent.interfaces
+  - attributes: tosca.nodes.SoftwareComponent.attributes
 
 tosca.relationships.DependsOn:
   - requirements: openstack.relationships.DependsOn.requirements

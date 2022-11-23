@@ -263,6 +263,13 @@ class TestOpenStackOutput (unittest.TestCase, TestProvider):
         self.assertTrue(checked_1)
         self.assertTrue(checked_2)
 
+    def test_get_attribute(self):
+        super(TestOpenStackOutput, self).test_get_attribute()
+
+    def check_get_attribute(self, provider_template, testing_value=None):
+        server_2 = self.get_node(provider_template, self.NODE_NAME + '_2' + self.COMPUTE)
+        self.assertIsNotNone(server_2.get(PROPERTIES))
+        self.assertEqual(server_2.get(PROPERTIES).get('meta'), {GET_ATTRIBUTE: [self.NODE_NAME + self.COMPUTE, ID]})
 
     def test_get_property(self):
         super(TestOpenStackOutput, self).test_get_property()
