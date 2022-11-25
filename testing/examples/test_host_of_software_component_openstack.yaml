@@ -16,11 +16,11 @@ topology_template:
       - host:
           node: tosca_server_example_server
       - dependency:
+          node: tosca_server_example_server
+      - dependency:
           node: tosca_server_example_floating_ip
       - dependency:
           node: tosca_server_example_keypair
-      - dependency:
-          node: tosca_server_example_server
       type: clouni.nodes.ServerExample
     tosca_server_example_floating_ip:
       interfaces:

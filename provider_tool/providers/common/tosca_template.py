@@ -94,6 +94,7 @@ class ProviderToscaTemplate(object):
 
         self.translate_to_provider()
         self.make_extended_notations()
+
         self.add_dependency_requirements()
 
         del self.dict_tpl[IMPORTS]
@@ -458,7 +459,8 @@ class ProviderToscaTemplate(object):
                 for art_name, art_body in tpl[ARTIFACTS].items():
                     if isinstance(art_body, six.string_types):
                         tpl[ARTIFACTS][art_name] = {
-                            'file': art_body
+                            'file': art_body,
+                            'type': 'tosca.artifacts.File'
                         }
             if tpl.get(INTERFACES, None) is not None:
                 for inf_name, inf_body in tpl[INTERFACES].items():
@@ -467,21 +469,17 @@ class ProviderToscaTemplate(object):
                             if isinstance(op_body, six.string_types):
                                 tpl[INTERFACES][inf_name][op_name] = {
                                     IMPLEMENTATION: {
-                                        'primary': op_body,
-                                        'dependencies': []
-                                    },
-                                    INPUTS: []
+                                        'primary': op_body
+                                    }
                                 }
                             elif isinstance(op_body, list):
                                 tpl[INTERFACES][inf_name][op_name] = {
                                     IMPLEMENTATION: {
                                         'primary': op_body[0] if len(op_body) >= 1 else [],
                                         'dependencies': op_body[1:] if len(op_body) >= 2 else []
-                                    },
-                                    INPUTS: []
+                                    }
                                 }
 
-    # выглядит пока как то костыльно...
     def inherit_type_interfaces(self, templates=None):
         if templates is None:
             templates = self.node_templates

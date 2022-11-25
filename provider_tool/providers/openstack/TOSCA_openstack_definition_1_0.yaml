@@ -214,7 +214,7 @@ node_types:
         type: scalar-unit.time
         required: false
     artifacts:
-      filename: # TODO artifacts supports
+      filename:
         type: openstack.artifacts.Deployment.Image
         required: false
         file: /tmp/image.img
@@ -241,7 +241,7 @@ node_types:
         type: string
         required: false
     artifacts:
-      public_key_file: # TODO artifacts supports
+      public_key_file:
         type: openstack.artifacts.File
         required: false
         file: ~/.ssh/id_rsa.pub

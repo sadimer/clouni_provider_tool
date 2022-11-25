@@ -16,9 +16,9 @@ topology_template:
       - host:
           node: tosca_server_example_instance
       - dependency:
-          node: tosca_server_example_instance
-      - dependency:
           node: tosca_server_example_key
+      - dependency:
+          node: tosca_server_example_instance
       type: clouni.nodes.ServerExample
     tosca_server_example_instance:
       interfaces:

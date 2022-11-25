@@ -21,9 +21,9 @@ topology_template:
           node: tosca_server_example_instance
           relationship: test_relationship_hosted_on
       - dependency:
-          node: tosca_server_example_instance
-      - dependency:
           node: tosca_server_example_key
+      - dependency:
+          node: tosca_server_example_instance
       type: clouni.nodes.ServerExample
     tosca_server_example_instance:
       interfaces:

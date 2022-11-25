@@ -9,9 +9,9 @@ topology_template:
       - key_name:
           node: tosca_server_example_2_key
       - dependency:
-          node: tosca_server_example_instance
-      - dependency:
           node: tosca_server_example_key
+      - dependency:
+          node: tosca_server_example_instance
       type: amazon.nodes.Instance
     tosca_server_example_2_key:
       properties:
@@ -19,9 +19,9 @@ topology_template:
         name: tosca_server_example_2_key
       requirements:
       - dependency:
-          node: tosca_server_example_instance
-      - dependency:
           node: tosca_server_example_key
+      - dependency:
+          node: tosca_server_example_instance
       type: amazon.nodes.Key
     tosca_server_example_instance:
       properties:

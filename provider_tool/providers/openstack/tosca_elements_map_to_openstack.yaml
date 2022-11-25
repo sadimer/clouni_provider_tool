@@ -414,6 +414,7 @@ tosca.nodes.Compute:
       error: true
       reason: Bad description in TOSCA Profile YAML v1.0
     interfaces: openstack.nodes.Server.interfaces
+    artifacts: openstack.nodes.Server.artifacts
 
 tosca.nodes.network.Network:
   - attributes:
@@ -421,6 +422,7 @@ tosca.nodes.network.Network:
       tosca_id: openstack.nodes.Network.attributes.id
       tosca_name: openstack.nodes.Network.attributes.name
   - interfaces: openstack.nodes.Network.interfaces
+  - artifacts: openstack.nodes.Network.artifacts
   - properties:
       network_name:
           - parameter: openstack.nodes.Network.properties.name
@@ -462,6 +464,7 @@ tosca.nodes.network.Network:
 
 tosca.nodes.network.Port:
   - interfaces: openstack.nodes.Port.interfaces
+  - artifacts: openstack.nodes.Port.artifacts
   - properties:
       ip_address:
         - parameter: openstack.nodes.Port.properties.fixed_ips
@@ -487,6 +490,7 @@ tosca.nodes.network.Trunk:
   - parameter: openstack.nodes.Trunk.requirements.port.node
     value: "{self[name]}_port"
   - interfaces: openstack.nodes.Port.interfaces
+  - artifacts: openstack.nodes.Port.artifacts
   - properties:
       segmentations.*.segmentation_id:
         - parameter: "{self[extra][ansible][{self[keyname]}_trunk][vars][segmentation_ids]}"
@@ -541,6 +545,7 @@ tosca.nodes.SoftwareComponent:
   - properties: tosca.nodes.SoftwareComponent.properties
   - interfaces: tosca.nodes.SoftwareComponent.interfaces
   - attributes: tosca.nodes.SoftwareComponent.attributes
+  - artifacts: tosca.nodes.SoftwareComponent.artifacts
 
 tosca.relationships.DependsOn:
   - requirements: openstack.relationships.DependsOn.requirements
@@ -548,6 +553,7 @@ tosca.relationships.DependsOn:
   - properties: openstack.relationships.DependsOn.properties
   - capabilities: openstack.relationships.DependsOn.capabilities
   - interfaces: openstack.relationships.DependsOn.interfaces
+  - artifacts: openstack.relationships.DependsOn.artifacts
 
 tosca.relationships.HostedOn:
   - requirements: openstack.relationships.HostedOn.requirements
@@ -555,6 +561,7 @@ tosca.relationships.HostedOn:
   - properties: openstack.relationships.HostedOn.properties
   - capabilities: openstack.relationships.HostedOn.capabilities
   - interfaces: openstack.relationships.HostedOn.interfaces
+  - artifacts: openstack.relationships.HostedOn.artifacts
 
 tosca.relationships.ConnectsTo:
   - requirements: openstack.relationships.ConnectsTo.requirements
@@ -562,6 +569,7 @@ tosca.relationships.ConnectsTo:
   - properties: openstack.relationships.ConnectsTo.properties
   - capabilities: openstack.relationships.ConnectsTo.capabilities
   - interfaces: openstack.relationships.ConnectsTo.interfaces
+  - artifacts: openstack.relationships.ConnectsTo.artifacts
 
 tosca.relationships.AttachesTo:
   - requirements: openstack.relationships.AttachesTo.requirements
@@ -569,6 +577,7 @@ tosca.relationships.AttachesTo:
   - properties: openstack.relationships.AttachesTo.properties
   - capabilities: openstack.relationships.AttachesTo.capabilities
   - interfaces: openstack.relationships.AttachesTo.interfaces
+  - artifacts: openstack.relationships.RoutesTo.artifacts
 
 tosca.relationships.RoutesTo:
   - requirements: openstack.relationships.RoutesTo.requirements
@@ -576,6 +585,7 @@ tosca.relationships.RoutesTo:
   - properties: openstack.relationships.RoutesTo.properties
   - capabilities: openstack.relationships.RoutesTo.capabilities
   - interfaces: openstack.relationships.RoutesTo.interfaces
+  - artifacts: openstack.relationships.RoutesTo.artifacts
 
 tosca.relationships.network.LinksTo:
   - requirements: openstack.relationships.network.LinksTo.requirements
@@ -583,6 +593,7 @@ tosca.relationships.network.LinksTo:
   - properties: openstack.relationships.network.LinksTo.properties
   - capabilities: openstack.relationships.network.LinksTo.capabilities
   - interfaces: openstack.relationships.network.LinksTo.interfaces
+  - artifacts: openstack.relationships.network.LinksTo.artifacts
 
 tosca.relationships.network.BindsTo:
   - requirements: openstack.relationships.network.BindsTo.requirements
@@ -590,3 +601,4 @@ tosca.relationships.network.BindsTo:
   - properties: openstack.relationships.network.BindsTo.properties
   - capabilities: openstack.relationships.network.BindsTo.capabilities
   - interfaces: openstack.relationships.network.BindsTo.interfaces
+  - artifacts: openstack.relationships.network.BindsTo.artifacts
