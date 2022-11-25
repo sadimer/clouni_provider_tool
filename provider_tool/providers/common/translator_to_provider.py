@@ -13,7 +13,7 @@ SEPARATOR = '.'
 MAP_KEY = "map"
 SET_FACT_SOURCE = "set_fact"
 IMPORT_TASKS_MODULE = "include"
-INDIVISIBLE_KEYS = [GET_OPERATION_OUTPUT, INPUTS, IMPLEMENTATION, GET_ATTRIBUTE]
+INDIVISIBLE_KEYS = [GET_OPERATION_OUTPUT, INPUTS, IMPLEMENTATION, OUTPUTS, GET_ATTRIBUTE, CONCAT, JOIN, TOKEN]
 BUFFER = 'buffer'
 PUBLIC_KEY = 'public_key_path'
 
@@ -807,7 +807,44 @@ def restructure_mapping_facts(elements_map, self, is_delete, extra_elements_map=
     return elements_map, extra_elements_map
 
 
-def restructure_get_attribute(data, service_tmpl, self):
+def translate_attribute(v, data, service_tmpl, self):
+    args = restructure_get_attribute(v, service_tmpl, self)
+    node_type = service_tmpl.node_templates[args[0]]['type']
+    parameter = SEPARATOR.join([node_type, ATTRIBUTES] + args[1:])
+    self = copy.copy(self)
+    self[PARAMETER] = parameter
+    value = True
+    for i in range(len(args) - 1, 0, -1):
+        value = {args[i]: value}
+    value = {node_type: {ATTRIBUTES: value}}
+    self[VALUE] = value
+    self[NAME] = args[0]
+    self[KEYNAME] = args[0]
+    items = get_restructured_mapping_item('', '', service_tmpl.tosca_elements_map_to_provider(), value,
+                                          self)
+    attribute_items = []
+    for item in items:
+        if re.search(parameter, item[PARAMETER]):
+            attribute_items.append(item)
+    if len(attribute_items) == 0:
+        logging.warning("Can not parse \'get_attribute\', mapping not found: %s" % json.dumps(args))
+        (_, _, type) = utils.tosca_type_parse(node_type)
+        v[0] = utils.snake_case(v[0] + type)
+        return v
+    if len(attribute_items) > 1:
+        logging.critical("Not implemented, must have an example to work through logic")
+        raise Exception("Not implemented, must have an example to work through logic")
+    mapping_parameter = attribute_items[0][MAP_KEY][PARAMETER]
+    map_node_type, splitted_param = split_parameter(mapping_parameter)
+    if splitted_param[0] != ATTRIBUTES:
+        logging.error("Attributes can only be mapped to the attributes, error occured with %s"
+                      % json.dumps(data))
+        raise Exception("Attributes can only be mapped to the attributes, error occured with %s"
+                        % json.dumps(data))
+    return [get_keyname_from_type(self[KEYNAME], map_node_type)] + splitted_param[1:]
+
+
+def restructure_get_attribute(data, service_tmpl, self, outputs=False):
     r = data
     if isinstance(data, list):
         r = []
@@ -816,39 +853,10 @@ def restructure_get_attribute(data, service_tmpl, self):
     elif isinstance(data, dict):
         r = {}
         for k, v in data.items():
-            if k == GET_ATTRIBUTE:
-                args = restructure_get_attribute(v, service_tmpl, self)
-                node_type = service_tmpl.node_templates[args[0]]['type']
-                parameter = SEPARATOR.join([node_type, ATTRIBUTES] + args[1:])
-                self = copy.copy(self)
-                self[PARAMETER] = parameter
-                value = True
-                for i in range(len(args) - 1, 0, -1):
-                    value = {args[i]: value}
-                value = {node_type: {ATTRIBUTES: value}}
-                self[VALUE] = value
-                self[NAME] = args[0]
-                self[KEYNAME] = args[0]
-                items = get_restructured_mapping_item('', '', service_tmpl.tosca_elements_map_to_provider(), value,
-                                                      self)
-                attribute_items = []
-                for item in items:
-                    if re.search(parameter, item[PARAMETER]):
-                        attribute_items.append(item)
-                if len(attribute_items) == 0:
-                    logging.error("Can not parse \'get_attribute\', mapping not found: %s" % json.dumps(args))
-                    raise Exception("Can not parse \'get_attribute\', mapping not found: %s" % json.dumps(args))
-                if len(attribute_items) > 1:
-                    logging.critical("Not implemented, must have an example to work through logic")
-                    raise Exception("Not implemented, must have an example to work through logic")
-                mapping_parameter = attribute_items[0][MAP_KEY][PARAMETER]
-                map_node_type, splitted_param = split_parameter(mapping_parameter)
-                if splitted_param[0] != ATTRIBUTES:
-                    logging.error("Attributes can only be mapped to the attributes, error occured with %s"
-                                  % json.dumps(data))
-                    raise Exception("Attributes can only be mapped to the attributes, error occured with %s"
-                                    % json.dumps(data))
-                r[k] = [get_keyname_from_type(self[KEYNAME], map_node_type)] + splitted_param[1:]
+            if k == GET_ATTRIBUTE or outputs:
+                r[k] = translate_attribute(v, data, service_tmpl, self)
+            elif k == OUTPUTS:
+                r[k] = restructure_get_attribute(v, service_tmpl, self, outputs=True)
             else:
                 r[k] = restructure_get_attribute(v, service_tmpl, self)
     return r

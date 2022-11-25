@@ -4,14 +4,17 @@ topology_template:
       properties:
         name: tosca_server_example_2
         tags:
-          metadata: master=true
+          metadata:
+            get_attribute:
+            - tosca_server_example_compute
+            - tosca_id
       requirements:
       - key_name:
           node: tosca_server_example_2_key
       - dependency:
-          node: tosca_server_example_key
-      - dependency:
           node: tosca_server_example_instance
+      - dependency:
+          node: tosca_server_example_key
       type: amazon.nodes.Instance
     tosca_server_example_2_key:
       properties:
@@ -19,15 +22,13 @@ topology_template:
         name: tosca_server_example_2_key
       requirements:
       - dependency:
-          node: tosca_server_example_key
-      - dependency:
           node: tosca_server_example_instance
+      - dependency:
+          node: tosca_server_example_key
       type: amazon.nodes.Key
     tosca_server_example_instance:
       properties:
         name: tosca_server_example
-        tags:
-          metadata: master=true
       requirements:
       - key_name:
           node: tosca_server_example_key

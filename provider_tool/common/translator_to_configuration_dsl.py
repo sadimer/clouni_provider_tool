@@ -1,3 +1,5 @@
+import copy
+
 import six
 from toscaparser.tosca_template import ToscaTemplate
 
@@ -39,7 +41,7 @@ def translate(template_file, validate_only, provider, configuration_tool, cluste
     )
 
     logging_format = "%(asctime)s %(levelname)s %(message)s"
-    logging.basicConfig(filename=os.path.join(os.getenv('HOME'), '.clouni.log'), filemode='a', level=log_map[log_level],
+    logging.basicConfig(filename='.clouni-provider-tool.log', filemode='a', level=log_map[log_level],
                         format=logging_format, datefmt='%Y-%m-%d %H:%M:%S')
     logging.info("Started translation of TOSCA template \'%s\' for provider \'%s\' and configuration tool \'%s\'" %
                  (template_file if a_file else 'raw', provider, configuration_tool))
@@ -94,8 +96,9 @@ def translate(template_file, validate_only, provider, configuration_tool, cluste
     for i in range(len(template[IMPORTS])):
         template[IMPORTS][i] = os.path.abspath(template[IMPORTS][i])
 
+    copy_of_template = copy.deepcopy(template)
     try:
-        tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=template, a_file=a_file)
+        tosca_parser_template_object = ToscaTemplate(yaml_dict_tpl=copy_of_template, a_file=a_file)
     except Exception as e:
         logging.exception("Got exception from OpenStack tosca-parser: %s" % e)
         raise Exception("Got exception from OpenStack tosca-parser: %s" % e)
@@ -115,7 +118,7 @@ def translate(template_file, validate_only, provider, configuration_tool, cluste
     logging.info("Default TOSCA template map file to be used \'%s\'" % json.dumps(default_map_files))
 
     # Parse and generate new TOSCA service template with only provider specific TOSCA types from normative types
-    tosca = ProviderToscaTemplate(tosca_parser_template_object, provider, configuration_tool, cluster_name,
+    tosca = ProviderToscaTemplate(template, tosca_parser_template_object, provider, configuration_tool, cluster_name,
                                   host_ip_parameter, public_key_path, is_delete, common_map_files=default_map_files,
                                   grpc_cotea_endpoint=grpc_cotea_endpoint)
     if not extra:

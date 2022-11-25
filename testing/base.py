@@ -362,17 +362,13 @@ class TestProvider(BaseProvider):
         if hasattr(self, 'check_get_attribute'):
             template = copy.deepcopy(self.DEFAULT_TEMPLATE)
             testing_value = "master=true"
-            testing_parameter = {
-                "meta": testing_value
-            }
-            template = self.update_template_property(template, self.NODE_NAME, testing_parameter)
             template['topology_template']['node_templates'][self.NODE_NAME + '_2'] = {
                 'type': 'tosca.nodes.Compute',
                 'properties': {
                     'meta': {
                         'get_attribute': [
                             self.NODE_NAME,
-                            'meta'
+                            TOSCA + '_' + ID
                         ]
                     }
                 }

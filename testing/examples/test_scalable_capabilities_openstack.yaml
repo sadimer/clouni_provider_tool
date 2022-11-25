@@ -16,6 +16,10 @@ topology_template:
               host_ip: '{{ host_ip | default([]) + [[ "tosca_server_example_private_address_"
                 + item, tosca_server_example_server.results[item | int - 1].server.public_v4
                 ]] }}'
+          delete:
+            implementation: delete_host.yaml
+            inputs:
+              server_name: tosca_server_example_server_private_address
       properties:
         auto_ip: false
         name: tosca_server_example_{{ item }}

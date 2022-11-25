@@ -1,6 +1,6 @@
 from toscaparser.imports import ImportsLoader
 from toscaparser.topology_template import TopologyTemplate
-from toscaparser.functions import GetProperty, Concat
+from toscaparser.functions import GetProperty, Concat, GetAttribute, GetInput
 
 from provider_tool.common import utils
 from provider_tool.common.tosca_reserved_keys import *
@@ -8,17 +8,19 @@ from provider_tool.common.tosca_reserved_keys import *
 from provider_tool.providers.common.provider_configuration import ProviderConfiguration
 from provider_tool.providers.common.translator_to_provider import translate as translate_to_provider
 
-
 import os, copy, json, yaml, logging, sys, six
 
 SEPARATOR = ':'
+
 
 class ProviderToscaTemplate(object):
     REQUIRED_CONFIG_PARAMS = (TOSCA_ELEMENTS_MAP_FILE, TOSCA_ELEMENTS_DEFINITION_FILE)
     DEPENDENCY_FUNCTIONS = (GET_PROPERTY, GET_ATTRIBUTE, GET_OPERATION_OUTPUT)
     DEFAULT_ARTIFACTS_DIRECTORY = ARTIFACTS
 
-    def __init__(self, tosca_parser_template_object, provider, configuration_tool, cluster_name, host_ip_parameter, public_key_path,
+    def __init__(self, template, tosca_parser_template_object, provider, configuration_tool, cluster_name,
+                 host_ip_parameter,
+                 public_key_path,
                  is_delete, common_map_files=[], grpc_cotea_endpoint=None):
         self.provider = provider
         self.grpc_cotea_endpoint = grpc_cotea_endpoint
@@ -60,13 +62,13 @@ class ProviderToscaTemplate(object):
         self.node_templates = {}
         self.relationship_templates = {}
         self.template_mapping = {}
-        for tmpl in topology_template.nodetemplates:
-            self.node_templates[tmpl.name] = tmpl.entity_tpl
 
-        for tmpl in topology_template.relationship_templates:
-            self.relationship_templates[tmpl.name] = tmpl.entity_tpl
         import_definition_file = ImportsLoader([self.definition_file()], None, list(SERVICE_TEMPLATE_KEYS),
                                                topology_template.tpl)
+
+        topology_template = template.get(TOPOLOGY_TEMPLATE, {})
+        self.node_templates = topology_template.get(NODE_TEMPLATES, {})
+        self.relationship_templates = topology_template.get(RELATIONSHIP_TEMPLATES, {})
         self.definitions.update(import_definition_file.get_custom_defs())
         self.software_types = set()
         self.fulfil_definitions_with_parents()
@@ -80,18 +82,19 @@ class ProviderToscaTemplate(object):
         self._relation_target_source = dict()
         self.resolve_in_template_dependencies()
 
-        self.dict_tpl = tosca_parser_template_object.tpl
+        self.dict_tpl = template
 
         self.node_templates = self.inherit_type_interfaces(self.node_templates)
         self.relationship_templates = self.inherit_type_interfaces(self.relationship_templates)
 
-        self.node_templates = self.resolve_get_property_and_intrinsic_functions(self.node_templates)
-        self.relationship_templates = self.resolve_get_property_and_intrinsic_functions(self.relationship_templates)
+        self.node_templates = self.checked_resolve_get_property_and_attributes_functions(self.node_templates)
+        self.relationship_templates = self.checked_resolve_get_property_and_attributes_functions(self.relationship_templates)
 
         self.normative_nodes_graph = self.normative_nodes_graph_dependency()
 
         self.translate_to_provider()
         self.make_extended_notations()
+
         self.add_dependency_requirements()
 
         del self.dict_tpl[IMPORTS]
@@ -288,11 +291,14 @@ class ProviderToscaTemplate(object):
         logging.debug("TOSCA template with non normative types for provider %s was generated: \n%s"
                       % (self.provider, yaml.dump(dict_tpl)))
 
+        copy_of_dict_tpl = copy.deepcopy(dict_tpl)
         try:
-            topology_tpl = TopologyTemplate(dict_tpl, self.definitions, rel_types=rel_types)
+            topology_tpl = TopologyTemplate(copy_of_dict_tpl, self.definitions, rel_types=rel_types)
         except Exception as e:
-            logging.exception("Failed to parse intermidiate non-normative TOSCA template with OpenStack tosca-parser with error: %s" % e)
-            raise Exception("Failed to parse intermidiate non-normative TOSCA template with OpenStack tosca-parser with error: %s" % e)
+            logging.exception(
+                "Failed to parse intermidiate non-normative TOSCA template with OpenStack tosca-parser with error: %s" % e)
+            raise Exception(
+                "Failed to parse intermidiate non-normative TOSCA template with OpenStack tosca-parser with error: %s" % e)
 
         self.extra_configuration_tool_params = utils.deep_update_dict(self.extra_configuration_tool_params, new_extra)
 
@@ -300,10 +306,26 @@ class ProviderToscaTemplate(object):
         self.relationship_templates = new_element_templates.get(RELATIONSHIPS, {})
         self.outputs = new_element_templates.get(OUTPUTS, {})
 
-    def _get_property_value(self, value, tmpl_name):
-        prop_keys = []
-        tmpl_properties = None
+    def _get_input_value(self, value, tmpl_name):
+        if isinstance(value, list):
+            result = self.inputs.get(value[0])
+            default = result.get(DEFAULT)
+            if not result or not default:
+                logging.error('No input with name %s' % value[0])
+                raise Exception('No input with name %s' % value[0])
+            return default
+        elif isinstance(value, six.string_types):
+            result = self.inputs.get(value)
+            default = result.get(DEFAULT)
+            if not result or not default:
+                logging.error('No input with name %s' % value)
+                raise Exception('No input with name %s' % value)
+            return default
+        else:
+            logging.error('Parameter of get_input should be a list or str')
+            raise Exception('Parameter of get_input should be a list or str')
 
+    def _resolve_tosca_travers(self, value, tmpl_name):
         if value[0] == 'SELF':
             value[0] = tmpl_name
         if value[0] == 'HOST':
@@ -326,39 +348,69 @@ class ProviderToscaTemplate(object):
                 for req in node_tmpl[REQUIREMENTS]:
                     if req.get(value[1], None) is not None:
                         if req[value[1]].get(NODE, None) is not None:
-                            return self._get_property_value([req[value[1]][NODE]] + value[2:], req[value[1]][NODE])
-                        if req[value[1]].get(NODE_FILTER, None) is not None:
-                            tmpl_properties = {}
-                            node_filter_props = req[value[1]][NODE_FILTER].get(PROPERTIES, [])
-                            for prop in node_filter_props:
-                                tmpl_properties.update(prop)
-                            prop_keys = value[2:]
-            if node_tmpl.get(CAPABILITIES, {}).get(value[1], None) is not None:
-                tmpl_properties = node_tmpl[CAPABILITIES][value[1]].get(PROPERTIES, {})
-                prop_keys = value[2:]
-            if node_tmpl.get(PROPERTIES, {}).get(value[1], None) is not None:
-                tmpl_properties = node_tmpl[PROPERTIES]
-                prop_keys = value[1:]
-        elif self.relationship_templates.get(value[0]):
-            rel_tmpl = self.relationship_templates[value[0]]
-            if rel_tmpl.get(PROPERTIES, {}).get(value[1], None) is not None:
-                tmpl_properties = rel_tmpl[PROPERTIES]
-                prop_keys = value[1:]
+                            return self._resolve_tosca_travers([req[value[1]][NODE]] + value[2:], req[value[1]][NODE])
+        return value
+
+    def _get_attribute_value(self, value, tmpl_name):
+        if isinstance(value, list):
+            return self._resolve_tosca_travers(value, tmpl_name)
         else:
-            logging.error("Value %s not found in %s" % (value[0], tmpl_name))
-            raise Exception("Value %s not found in %s" % (value[0], tmpl_name))
+            logging.error('Parameter of get_attribute should be a list')
+            raise Exception('Parameter of get_attribute should be a list')
 
-        for key in prop_keys:
-            if tmpl_properties.get(key, None) is None:
-                tmpl_properties = None
-                break
-            tmpl_properties = tmpl_properties[key]
-        if tmpl_properties is None:
-            logging.error("Failed to get property: %s" % json.dumps(value))
-            raise Exception("Failed to get property: %s" % json.dumps(value))
-        return tmpl_properties
+    def _get_property_value(self, value, tmpl_name):
+        if isinstance(value, list):
+            prop_keys = []
+            tmpl_properties = None
+            value = self._resolve_tosca_travers(value, tmpl_name)
+            if self.node_templates.get(value[0]):
+                node_tmpl = self.node_templates[value[0]]
+                if node_tmpl.get(REQUIREMENTS, None) is not None:
+                    for req in node_tmpl[REQUIREMENTS]:
+                        if req.get(value[1], None) is not None:
+                            if req[value[1]].get(NODE, None) is not None:
+                                return self._get_property_value([req[value[1]][NODE]] + value[2:], req[value[1]][NODE])
+                            if req[value[1]].get(NODE_FILTER, None) is not None:
+                                tmpl_properties = {}
+                                node_filter_props = req[value[1]][NODE_FILTER].get(PROPERTIES, [])
+                                for prop in node_filter_props:
+                                    tmpl_properties.update(prop)
+                                prop_keys = value[2:]
+                if node_tmpl.get(CAPABILITIES, {}).get(value[1], None) is not None:
+                    tmpl_properties = node_tmpl[CAPABILITIES][value[1]].get(PROPERTIES, {})
+                    prop_keys = value[2:]
+                if node_tmpl.get(PROPERTIES, {}).get(value[1], None) is not None:
+                    tmpl_properties = node_tmpl[PROPERTIES]
+                    prop_keys = value[1:]
+            elif self.relationship_templates.get(value[0]):
+                rel_tmpl = self.relationship_templates[value[0]]
+                if rel_tmpl.get(PROPERTIES, {}).get(value[1], None) is not None:
+                    tmpl_properties = rel_tmpl[PROPERTIES]
+                    prop_keys = value[1:]
+            else:
+                logging.error("Value %s not found in %s" % (value[0], tmpl_name))
+                raise Exception("Value %s not found in %s" % (value[0], tmpl_name))
 
-    def resolve_get_property_and_intrinsic_functions(self, data=None, tmpl_name=None):
+            for key in prop_keys:
+                if tmpl_properties.get(key, None) is None:
+                    tmpl_properties = None
+                    break
+                tmpl_properties = tmpl_properties[key]
+            if tmpl_properties is None:
+                logging.error("Failed to get property: %s" % json.dumps(value))
+                raise Exception("Failed to get property: %s" % json.dumps(value))
+            return tmpl_properties
+        else:
+            logging.error('Parameter of get_property should be a list')
+            raise Exception('Parameter of get_property should be a list')
+
+    # it's not a good solution, but works when we need get property with get_attribute
+    # for correct translation # TODO make normal solution
+    def checked_resolve_get_property_and_attributes_functions(self, templates):
+        templates = self.resolve_get_property_and_attributes_functions(templates)
+        return self.resolve_get_property_and_attributes_functions(templates)
+
+    def resolve_get_property_and_attributes_functions(self, data=None, tmpl_name=None):
         if data is None:
             data = self.node_templates
         if isinstance(data, dict):
@@ -366,63 +418,32 @@ class ProviderToscaTemplate(object):
             for key, value in data.items():
                 if key == GET_PROPERTY:
                     new_data = self._get_property_value(value, tmpl_name)
-                elif key == CONCAT:
-                    if isinstance(value, list):
-                        new_data = ""
-                        for elem in value:
-                            if isinstance(elem, (six.string_types, int, float)):
-                                new_data += str(elem)
-                            else:
-                                new_data += str(self.resolve_get_property_and_intrinsic_functions(elem, tmpl_name))
-                    else:
-                        logging.error("Concat function should have 1 argument - list of string expressions")
-                        raise Exception("Concat function should have 1 argument - list of string expressions")
-                elif key == JOIN:
-                    if isinstance(value, list) and len(value) == 2 and isinstance(value[0], list):
-                        new_data = []
-                        for elem in value[0]:
-                            if isinstance(elem, (six.string_types, int, float)):
-                                new_data += [str(elem)]
-                            else:
-                                new_data += [str(self.resolve_get_property_and_intrinsic_functions(elem, tmpl_name))]
-                        new_data = str(value[1]).join(new_data)
-                    else:
-                        logging.error("Join function should have 1 argument - list with 2 elements: "
-                                      "list of string expressions and delimiter")
-                        raise Exception("Join function should have 1 argument - list with 2 elements: "
-                                        "list of string expressions and delimiter")
-                elif key == TOKEN:
-                    if isinstance(value, list) and len(value) == 3:
-                        if isinstance(value[0], (six.string_types, int, float)):
-                            value[0] = str(value[0])
-                        else:
-                            value[0] = str(self.resolve_get_property_and_intrinsic_functions(value[0], tmpl_name))
-                        if isinstance(value[1], (six.string_types, int, float)):
-                            value[1] = str(value[1])
-                        else:
-                            value[1] = str(self.resolve_get_property_and_intrinsic_functions(value[1], tmpl_name))
-                        if isinstance(value[2], (six.string_types, int, float)):
-                            value[2] = int(value[2])
-                        else:
-                            value[2] = int(self.resolve_get_property_and_intrinsic_functions(value[2], tmpl_name))
-                        new_data = value[0].split(value[1])[value[2]]
-                    else:
-                        logging.error("Token function should have 1 argument - list with 3 elements: "
-                                      "string_with_tokens, string_of_token_chars, substring_index")
-                        raise Exception("Token function should have 1 argument - list with 3 elements: "
-                                        "string_with_tokens, string_of_token_chars, substring_index")
+                elif key == GET_ATTRIBUTE:
+                    new_data = {GET_ATTRIBUTE: self._get_attribute_value(value, tmpl_name)}
+                elif key == GET_INPUT:
+                    new_data = self._get_input_value(value, tmpl_name)
+                elif key == OUTPUTS:
+                    for k in value:
+                        value[k] = self._get_attribute_value(value[k], tmpl_name)
+                    new_data[key] = value
                 else:
-                    new_data[key] = self.resolve_get_property_and_intrinsic_functions(value,
-                                                                        tmpl_name if tmpl_name is not None else key)
+                    new_data[key] = self.resolve_get_property_and_attributes_functions(value,
+                                                                                       tmpl_name if tmpl_name is not None else key)
             return new_data
         elif isinstance(data, list):
             new_data = []
             for v in data:
-                new_data.append(self.resolve_get_property_and_intrinsic_functions(v, tmpl_name))
+                new_data.append(self.resolve_get_property_and_attributes_functions(v, tmpl_name))
             return new_data
         elif isinstance(data, GetProperty):
             value = data.args
             return self._get_property_value(value, tmpl_name)
+        elif isinstance(data, GetAttribute):
+            value = data.args
+            return {GET_ATTRIBUTE: self._get_attribute_value(value, tmpl_name)}
+        elif isinstance(data, GetInput):
+            value = data.args
+            return self._get_input_value(value, tmpl_name)
         return data
 
     def make_extended_notations(self):
@@ -438,7 +459,8 @@ class ProviderToscaTemplate(object):
                 for art_name, art_body in tpl[ARTIFACTS].items():
                     if isinstance(art_body, six.string_types):
                         tpl[ARTIFACTS][art_name] = {
-                            'file': art_body
+                            'file': art_body,
+                            'type': 'tosca.artifacts.File'
                         }
             if tpl.get(INTERFACES, None) is not None:
                 for inf_name, inf_body in tpl[INTERFACES].items():
@@ -447,21 +469,17 @@ class ProviderToscaTemplate(object):
                             if isinstance(op_body, six.string_types):
                                 tpl[INTERFACES][inf_name][op_name] = {
                                     IMPLEMENTATION: {
-                                        'primary': op_body,
-                                        'dependencies': []
-                                    },
-                                    INPUTS: []
+                                        'primary': op_body
+                                    }
                                 }
                             elif isinstance(op_body, list):
                                 tpl[INTERFACES][inf_name][op_name] = {
                                     IMPLEMENTATION: {
                                         'primary': op_body[0] if len(op_body) >= 1 else [],
                                         'dependencies': op_body[1:] if len(op_body) >= 2 else []
-                                    },
-                                    INPUTS: []
+                                    }
                                 }
 
-    # выглядит пока как то костыльно...
     def inherit_type_interfaces(self, templates=None):
         if templates is None:
             templates = self.node_templates
@@ -478,7 +496,8 @@ class ProviderToscaTemplate(object):
                     def_interfaces = definitions.get(templates[name].get(TYPE)).get(INTERFACES)
                     if def_interfaces is not None:
                         if templates[name].get(INTERFACES) is not None:
-                            templates[name][INTERFACES] = utils.deep_update_dict(copy.deepcopy(def_interfaces), templates[name][INTERFACES])
+                            templates[name][INTERFACES] = utils.deep_update_dict(copy.deepcopy(def_interfaces),
+                                                                                 templates[name][INTERFACES])
                         else:
                             templates[name][INTERFACES] = copy.deepcopy(def_interfaces)
         return templates

@@ -242,7 +242,7 @@ def parse_args(argv):
     return args.max_workers, args.host, args.port, args.verbose, args.no_host_error, args.stop, args.foreground
 
 
-def serve(argv =  None):
+def serve(argv = None):
     # Log init
     logger = logging.getLogger("ClouniProviderTool server")
     fh = logging.FileHandler(".clouni-provider-tool.log")
@@ -290,7 +290,7 @@ def serve(argv =  None):
         hosts = ['[::]', ]
     logger.info("Logging clouni-provider-tool started")
     logger.debug("Arguments successfully parsed: max_workers %s, port %s, host %s", max_workers, port, str(hosts))
-    # Argument checkа
+    # Argument check
     if max_workers < 1:
         logger.critical("Invalid max_workers argument: should be greater than 0. Exiting")
         raise Exception("Invalid max_workers argument: should be greater than 0. Exiting")
