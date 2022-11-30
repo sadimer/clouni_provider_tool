@@ -3,4 +3,4 @@ grpcio==1.37.1
 grpcio-tools==1.37.1
 pyyaml
 graphlib_backport
-tosca-parser@git+https://github.com/sadimer/tosca-parser
+clouni-tosca-parser
