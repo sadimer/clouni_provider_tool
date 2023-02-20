@@ -79,6 +79,7 @@ class TranslatorServer(object):
             request.provider_template = self.output
             request.cluster_name = self.cluster_name
             request.delete = self.is_delete
+            request.host_parameter = self.host_parameter
             request.configuration_tool = self.configuration_tool
             request.extra = self.extra
             request.log_level = self.log_level

@@ -34,7 +34,7 @@ def run_ansible(ansible_tasks, grpc_cotea_endpoint, extra_env, extra_vars, hosts
     request = Config()
     request.session_ID = session_id
     request.hosts = hosts
-    request.inv_path = os.path.join('pb_starts', 'hosts.ini')
+    request.inv_path = os.path.join('pb_starts', hosts + '_' + 'hosts.ini')
     request.extra_vars = str(extra_vars)
     if ansible_library:
         request.ansible_library = ansible_library
