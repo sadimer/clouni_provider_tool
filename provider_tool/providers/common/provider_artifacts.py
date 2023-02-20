@@ -5,7 +5,7 @@ from random import seed, randint
 from time import time
 
 from provider_tool.common.configuration import Configuration
-from provider_tool.ansible_runner.runner import run_ansible
+from provider_tool.runner.runner import run_ansible
 
 ARTIFACT_RANGE_START = 1000
 ARTIFACT_RANGE_END = 9999

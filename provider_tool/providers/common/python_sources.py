@@ -62,3 +62,7 @@ def get_unit_numb(source_value, source_unit, target_unit):
         converted = (float(source_value)
                      / pow(digit, target_grade_abs)) * ratio
     return converted
+
+
+def capitalize(string):
+    return string.upper()

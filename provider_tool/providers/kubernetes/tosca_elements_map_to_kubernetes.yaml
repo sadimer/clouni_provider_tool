@@ -20,9 +20,7 @@ tosca.nodes.Compute:
     host.properties:
       num_cpus:
         - parameter: "kubernetes.nodes.Deployment.properties.spec.template.spec.containers"
-          value:
-            - parameter: args
-              value: "{self[value]}"
+          value: [args: ["{self[value]}"]]
       cpu_frequency:
         error: true
         reason: "cpu_frequency not supported in Kubernetes"
@@ -45,11 +43,14 @@ tosca.nodes.Compute:
           - "{self[buffer][container_port]}"
       - protocol:
           parameter: "{self[buffer][endpoint][protocol]}"
-          value: "{self[value]}"
+          value:
+            source: capitalize # TODO try to use it fo trunks/sec groups and other complex structures
+            parameters:
+              string: "{self[value]}"
+            executor: python
+            value: default
         port:
           - parameter: "{self[buffer][endpoint][port]}"
-            value: "{self[value]}"
-          - parameter: "{self[buffer][container_port][port]}"
             value: "{self[value]}"
           - parameter: "{self[buffer][container_port][containerPort]}"
             value: "{self[value]}"

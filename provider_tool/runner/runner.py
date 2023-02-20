@@ -5,8 +5,8 @@ import os
 import grpc
 
 from provider_tool.common import utils
-from provider_tool.ansible_runner import cotea_pb2_grpc
-from provider_tool.ansible_runner.cotea_pb2 import SessionID, EmptyMsg, Config, MapFieldEntry, Task
+from provider_tool.runner import cotea_pb2_grpc
+from provider_tool.runner.cotea_pb2 import SessionID, EmptyMsg, Config, MapFieldEntry, Task
 
 SEPARATOR = '.'
 
